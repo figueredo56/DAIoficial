@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZARD & PANGA | SECURITY & TRUST</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { background-color: #050508; color: #c9d1d9; font-family: 'Inter', sans-serif; overflow: hidden; }
+        .fade-out { animation: fadeOut 1.5s forwards ease-in-out; }
+        @keyframes fadeOut { to { opacity: 0; visibility: hidden; } }
+        .glitch-text { text-shadow: 2px 0 #00ffff, -2px 0 #a855f7; }
+    </style>
+</head>
+<body>
+
+    <!-- PANTALLA DE BIENVENIDA (EPIC INTRO) -->
+    <div id="welcome-screen" class="fixed inset-0 z-50 flex flex-col items-center justify-center bg-[#050508]">
+        <div class="text-center space-y-6 p-8">
+            <!-- Imagen de bienvenida -->
+            <img src="https://raw.githubusercontent.com/figueredo56/zaard-assets/main/logo-zaard.png" alt="ZAARD LOGO" class="w-32 h-32 mx-auto mb-4 animate-pulse">
+            
+            <h1 class="text-5xl font-black text-white tracking-tighter uppercase glitch-text">
+                DIVE INTO THE PANGA EFFECT
+            </h1>
+            <p class="text-cyan-400 font-mono text-lg">ZAARD & PANGA | UNCOMPROMISING SECURITY & TRUST</p>
+            
+            <button onclick="enterTerminal()" class="mt-8 px-8 py-3 bg-transparent border border-cyan-500 text-cyan-500 hover:bg-cyan-500 hover:text-black font-bold transition-all uppercase tracking-widest">
+                Initialize System
+            </button>
+        </div>
+    </div>
+
+    <!-- TERMINAL (Se muestra después del click) -->
+    <div id="terminal-content" class="p-6 max-w-6xl mx-auto opacity-0 transition-opacity duration-1000">
+        <div class="border border-cyan-900/30 p-8 rounded-2xl bg-[#0d1117]">
+            <header class="flex justify-between items-center mb-8 border-b border-gray-800 pb-6">
+                <div>
+                    <h1 class="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500 uppercase">ZARD QUANT TERMINAL</h1>
+                    <p class="text-gray-500 text-sm">ZAARD INNOVATION | PANGA PROTOCOL ARCHITECTURE</p>
+                </div>
+            </header>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="p-6 border border-gray-800 rounded-xl bg-black/40">
+                    <h3 class="text-emerald-400 font-bold mb-2">● SECURITY PROTOCOL</h3>
+                    <p class="text-sm text-gray-400">Panga high-frequency trading assets locked within secure liquidity pools.</p>
+                </div>
+                <div class="p-6 border border-gray-800 rounded-xl bg-black/40">
+                    <h3 class="text-purple-400 font-bold mb-2">● TRUST & QUALITY</h3>
+                    <p class="text-sm text-gray-400">Elite smart contract auditing for institutional-grade reliability.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function enterTerminal() {
+            const welcome = document.getElementById('welcome-screen');
+            const content = document.getElementById('terminal-content');
+            welcome.classList.add('fade-out');
+            setTimeout(() => {
+                content.classList.remove('opacity-0');
+            }, 500);
+        }
+    </script>
+</body>
+</html>
