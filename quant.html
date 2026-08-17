@@ -3,186 +3,212 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZAARD SOCIAL | Space Ecosystem & Terminal</title>
+    <title>ZAARD INNOVATION | Space Ecosystem</title>
     
-    <meta property="og:title" content="ZAARD SOCIAL | Web3 Space Terminal">
-    <meta property="og:description" content="Red social descentralizada, chat global y pasaporte de identidad ZAARD INNOVATION.">
-    <meta property="og:image" content="https://raw.githubusercontent.com/figueredo56/zaard-assets/main/banner-zaard.png">
+    <meta property="og:title" content="ZAARD INNOVATION | Web3 Space Terminal">
+    <meta property="og:description" content="Ecosistema descentralizado, pasaporte ID, tracker y arcade oficial de ZAARD.">
+    <meta property="og:image" content="https://raw.githubusercontent.com/figueredo56/ZARD.token/refs/heads/main/170%20sin%20t%C3%ADtulo_20260707213436.png">
     
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body {
-            background-color: #030307;
-            color: #d2d6dc;
+            background-color: #030308;
+            color: #e2e8f0;
             font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
             overflow-x: hidden;
             background-image: 
-                radial-gradient(circle at 20% 30%, rgba(147, 51, 234, 0.15) 0%, transparent 40%),
-                radial-gradient(circle at 80% 70%, rgba(6, 182, 212, 0.15) 0%, transparent 40%),
-                radial-gradient(circle at 50% 50%, rgba(15, 23, 42, 0.8) 0%, #030307 100%);
+                radial-gradient(circle at 15% 20%, rgba(147, 51, 234, 0.18) 0%, transparent 45%),
+                radial-gradient(circle at 85% 80%, rgba(6, 182, 212, 0.18) 0%, transparent 45%),
+                radial-gradient(circle at 50% 50%, rgba(10, 10, 20, 0.9) 0%, #030308 100%);
             background-attachment: fixed;
         }
-        .space-card {
-            background: linear-gradient(135deg, rgba(13, 17, 23, 0.9) 0%, rgba(5, 5, 12, 0.95) 100%);
-            border: 1px solid rgba(0, 255, 255, 0.15);
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-            backdrop-filter: blur(12px);
+        .glass-panel {
+            background: linear-gradient(135deg, rgba(13, 17, 28, 0.85) 0%, rgba(5, 7, 14, 0.95) 100%);
+            border: 1px solid rgba(0, 255, 255, 0.2);
+            box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.5), inset 0 0 20px rgba(147, 51, 234, 0.05);
+            backdrop-filter: blur(16px);
         }
-        .title-gradient {
+        .title-glow {
             background: linear-gradient(90deg, #00ffff, #c084fc, #38bdf8);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 0 20px rgba(0, 255, 255, 0.3));
         }
         .neon-border {
-            box-shadow: 0 0 25px rgba(0, 255, 255, 0.25);
+            box-shadow: 0 0 30px rgba(0, 255, 255, 0.25);
         }
         .oculto {
-            display: none !important;
+            display: !important; display: none;
         }
+        /* Scrollbar personalizada */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #030308; }
+        ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #00ffff; }
     </style>
 </head>
 <body class="min-h-screen pb-32">
 
-    <!-- 🌌 PANTALLA DE BIENVENIDA / REGISTRO DE IDENTIDAD -->
-    <div id="welcome-overlay" class="fixed inset-0 z-50 flex items-center justify-center bg-[#030307]/98 px-4">
-        <div class="space-card p-6 md:p-8 rounded-3xl max-w-md w-full space-y-6 text-center relative overflow-hidden neon-border">
-            <div class="absolute -top-16 -right-16 w-40 h-40 bg-cyan-500/10 rounded-full blur-3xl"></div>
-            <div class="absolute -bottom-16 -left-16 w-40 h-40 bg-purple-500/10 rounded-full blur-3xl"></div>
+    <!-- 🌌 PANTALLA DE BIENVENIDA / EMISIÓN DE PASAPORTE ID (ESTILO HOLOGRÁFICO) -->
+    <div id="welcome-overlay" class="fixed inset-0 z-50 flex items-center justify-center bg-[#030308]/95 backdrop-blur-2xl px-4">
+        <div class="glass-panel p-8 rounded-3xl max-w-md w-full space-y-6 text-center relative overflow-hidden neon-border">
+            <div class="absolute -top-20 -right-20 w-48 h-48 bg-cyan-500/15 rounded-full blur-3xl"></div>
+            <div class="absolute -bottom-20 -left-20 w-48 h-48 bg-purple-500/15 rounded-full blur-3xl"></div>
 
-            <img src="https://raw.githubusercontent.com/figueredo56/zaard-assets/main/logo-zaard.png" alt="ZAARD LOGO" class="w-20 h-20 mx-auto animate-pulse filter drop-shadow-[0_0_15px_rgba(0,255,255,0.4)]">
+            <!-- Logo oficial de ZARD -->
+            <div class="relative w-28 h-28 mx-auto">
+                <div class="absolute inset-0 bg-cyan-500/20 rounded-full blur-xl animate-pulse"></div>
+                <img src="https://raw.githubusercontent.com/figueredo56/ZARD.token/refs/heads/main/170%20sin%20t%C3%ADtulo_20260707213436.png" alt="ZAARD LOGO" class="relative w-full h-full object-contain filter drop-shadow-[0_0_15px_rgba(0,255,255,0.6)]">
+            </div>
             
             <div>
-                <h2 class="text-2xl font-black text-white tracking-tight uppercase">ZAARD SPACE ID</h2>
-                <p class="text-xs text-cyan-400 mt-1 font-mono tracking-widest">DECENTRALIZED PASSPORT</p>
+                <h2 class="text-2xl font-black text-white tracking-wider uppercase">ZAARD SPACE ID</h2>
+                <p class="text-xs text-cyan-400 mt-1 font-mono tracking-widest">SECURE DECENTRALIZED PASSPORT</p>
             </div>
 
-            <div class="space-y-4 text-left w-full">
+            <div class="space-y-4 text-left">
                 <div>
-                    <label class="block text-[10px] font-bold text-purple-400 uppercase tracking-wider mb-1">Alias / Nombre de Usuario</label>
-                    <input type="text" id="reg-username" placeholder="Ej: ZaardCommander" class="w-full bg-black/70 border border-cyan-900/50 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-cyan-400">
+                    <label class="block text-[10px] font-bold text-purple-400 uppercase tracking-widest mb-1">Comandante / Alias</label>
+                    <input type="text" id="reg-username" placeholder="Ej: ZaardCommander" class="w-full bg-black/70 border border-cyan-900/60 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-cyan-400 transition-all">
                 </div>
                 <div>
-                    <label class="block text-[10px] font-bold text-purple-400 uppercase tracking-wider mb-1">Correo Electrónico</label>
-                    <input type="email" id="reg-email" placeholder="tucorreo@domain.com" class="w-full bg-black/70 border border-cyan-900/50 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-cyan-400">
+                    <label class="block text-[10px] font-bold text-purple-400 uppercase tracking-widest mb-1">Correo Electrónico (Recuperación)</label>
+                    <input type="email" id="reg-email" placeholder="tucorreo@domain.com" class="w-full bg-black/70 border border-cyan-900/60 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-cyan-400 transition-all">
                 </div>
             </div>
 
-            <button onclick="registrarIdentidad()" class="w-full py-3.5 bg-gradient-to-r from-cyan-400 via-purple-500 to-indigo-500 text-black font-black uppercase tracking-widest rounded-xl hover:opacity-95 transition-all text-xs shadow-lg shadow-cyan-500/25 cursor-pointer">
-                Generar ID Sideral & Entrar
+            <button onclick="registrarIdentidad()" class="w-full py-4 bg-gradient-to-r from-cyan-400 via-purple-500 to-indigo-500 text-black font-black uppercase tracking-widest rounded-xl hover:opacity-95 transition-all text-xs shadow-xl shadow-cyan-500/30 cursor-pointer">
+                Acuñar Pasaporte & Entrar
             </button>
-            <p class="text-[10px] text-gray-500 font-mono">Tus credenciales están protegidas localmente.</p>
+            <p class="text-[10px] text-gray-500 font-mono">Credenciales cifradas de forma segura en el nodo local.</p>
         </div>
     </div>
 
-    <!-- HEADER SUPERIOR -->
-    <header class="border-b border-cyan-950/60 bg-[#030307]/90 backdrop-blur-md sticky top-0 z-40 px-4 py-3">
-        <div class="max-w-4xl mx-auto flex justify-between items-center">
-            <div class="flex items-center gap-2.5">
-                <img src="https://raw.githubusercontent.com/figueredo56/zaard-assets/main/logo-zaard.png" alt="Logo" class="w-7 h-7">
-                <h1 class="text-base font-black title-gradient tracking-tighter uppercase">ZAARD SOCIAL</h1>
+    <!-- HEADER SUPERIOR ESTILO COCKPIT -->
+    <header class="border-b border-cyan-950/80 bg-[#030308]/90 backdrop-blur-md sticky top-0 z-40 px-4 py-3">
+        <div class="max-w-5xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <img src="https://raw.githubusercontent.com/figueredo56/ZARD.token/refs/heads/main/170%20sin%20t%C3%ADtulo_20260707213436.png" alt="Logo" class="w-8 h-8 object-contain filter drop-shadow-[0_0_8px_rgba(0,255,255,0.5)]">
+                <h1 class="text-base md:text-lg font-black title-glow tracking-tighter uppercase">ZAARD INNOVATION</h1>
             </div>
             
-            <div class="flex items-center gap-2 bg-black/70 border border-cyan-500/30 px-3 py-1 rounded-full text-xs shadow-inner">
+            <div class="flex items-center gap-2.5 bg-black/80 border border-cyan-500/40 px-3.5 py-1.5 rounded-full text-xs shadow-inner">
                 <span class="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span>
                 <span id="current-username" class="text-cyan-300 font-bold">Commander</span>
-                <span id="current-id" class="text-purple-400 font-mono text-[10px] bg-purple-950/60 px-2 py-0.5 rounded border border-purple-900/40">#ZRD-0000</span>
-                <button onclick="cambiarVistaPerfil()" class="text-gray-400 hover:text-white ml-1 text-xs cursor-pointer" title="Cambiar Nombre">✏️</button>
+                <span id="current-id" class="text-purple-400 font-mono text-[10px] bg-purple-950/70 px-2 py-0.5 rounded border border-purple-900/50">#ZRD-0000</span>
+                <button onclick="cambiarVistaPerfil()" class="text-gray-400 hover:text-white ml-1 text-xs cursor-pointer" title="Cambiar Alias">✏️</button>
             </div>
         </div>
     </header>
 
     <!-- CONTENEDOR PRINCIPAL -->
-    <main class="max-w-4xl mx-auto p-4 space-y-6 mt-2">
+    <main class="max-w-5xl mx-auto p-4 space-y-6 mt-4">
 
-        <!-- SECCIÓN 1: FEED DE PUBLICACIONES -->
+        <!-- SECCIÓN 1: FEED DE TRANSMISIONES (MURO SOCIAL) -->
         <section id="view-feed" class="space-y-6">
-            <div class="space-card p-5 rounded-3xl space-y-3.5 w-full">
-                <div class="flex items-center gap-2 pb-2 border-b border-gray-800/60">
-                    <span class="text-xs font-bold text-cyan-400 uppercase tracking-wider">● Transmisión al Ecosistema</span>
+            <!-- Caja de Publicación -->
+            <div class="glass-panel p-5 md:p-6 rounded-3xl space-y-4">
+                <div class="flex items-center justify-between pb-2 border-b border-gray-800/80">
+                    <span class="text-xs font-bold text-cyan-400 uppercase tracking-widest flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span> Transmisión Estelar
+                    </span>
+                    <span class="text-[10px] font-mono text-gray-500">Red BEP-20 Active</span>
                 </div>
-                <textarea id="post-text" rows="3" placeholder="Comparte tus análisis, trades o el efecto Panga..." class="w-full bg-black/60 border border-gray-800/80 rounded-2xl p-3.5 text-sm text-white focus:outline-none focus:border-cyan-400 resize-none"></textarea>
+                <textarea id="post-text" rows="3" placeholder="Comparte tus análisis, impresiones del token o el efecto Panga..." class="w-full bg-black/60 border border-gray-800/90 rounded-2xl p-4 text-sm text-white focus:outline-none focus:border-cyan-400 resize-none transition-all"></textarea>
                 
-                <div class="flex flex-col md:flex-row justify-between items-center gap-3 w-full">
-                    <div class="w-full flex items-center gap-2 bg-black/60 border border-gray-800/80 rounded-xl px-3 py-2.5">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-3">
+                    <div class="w-full flex items-center gap-2 bg-black/60 border border-gray-800/90 rounded-xl px-3.5 py-2.5">
                         <span class="text-xs">📷</span>
                         <input type="text" id="post-img" placeholder="URL de imagen pública (opcional)" class="w-full bg-transparent text-xs text-gray-300 focus:outline-none">
                     </div>
-                    <button onclick="crearPublicacion()" class="w-full md:w-auto px-6 py-2.5 bg-gradient-to-r from-cyan-500 to-blue-600 text-black font-extrabold rounded-xl hover:opacity-90 transition-all text-xs tracking-wider uppercase cursor-pointer whitespace-nowrap">Publicar</button>
+                    <button onclick="crearPublicacion()" class="w-full md:w-auto px-7 py-3 bg-gradient-to-r from-cyan-400 to-blue-600 text-black font-extrabold rounded-xl hover:opacity-90 transition-all text-xs tracking-widest uppercase cursor-pointer whitespace-nowrap shadow-lg shadow-cyan-500/20">Transmitir</button>
                 </div>
             </div>
 
-            <!-- Muro de Posts -->
-            <div id="posts-container" class="space-y-4 w-full">
-                <div class="space-card p-5 rounded-3xl space-y-3 w-full">
+            <!-- Muro de Publicaciones -->
+            <div id="posts-container" class="space-y-4">
+                <div class="glass-panel p-6 rounded-3xl space-y-3.5">
                     <div class="flex justify-between items-center">
-                        <div class="flex items-center gap-2">
+                        <div class="flex items-center gap-2.5">
+                            <img src="https://raw.githubusercontent.com/figueredo56/ZARD.token/refs/heads/main/170%20sin%20t%C3%ADtulo_20260707213436.png" class="w-6 h-6 object-contain" alt="Z">
                             <span class="font-bold text-white text-sm">ZAARD_SYSTEM</span>
-                            <span class="text-[10px] font-mono text-cyan-400 bg-cyan-950/60 border border-cyan-800/50 px-2 py-0.5 rounded">#ZRD-0001</span>
+                            <span class="text-[10px] font-mono text-cyan-400 bg-cyan-950/70 border border-cyan-800/60 px-2 py-0.5 rounded">#ZRD-0001</span>
                         </div>
                         <span class="text-xs text-gray-500">Oficial</span>
                     </div>
-                    <p class="text-sm text-gray-300">¡Canal principal abierto! Conéctate con la red sideral, comparte imágenes de tus logros y disfruta de todo el ecosistema ZAARD INNOVATION 🚀✨</p>
-                    <div class="flex gap-6 text-xs text-gray-400 pt-3 border-t border-gray-800/50">
-                        <button onclick="likePost(this)" class="hover:text-cyan-400 flex items-center gap-1.5 cursor-pointer">❤️ <span class="likes-count">42</span></button>
+                    <p class="text-sm text-gray-300 leading-relaxed">¡Bienvenido al nuevo núcleo visual de ZAARD INNOVATION! Explora los accesos directos al ecosistema, revisa el tracker en tiempo real y diviértete en el arcade on-chain 🚀💎</p>
+                    <div class="flex gap-6 text-xs text-gray-400 pt-3 border-t border-gray-800/60">
+                        <button onclick="likePost(this)" class="hover:text-cyan-400 flex items-center gap-1.5 cursor-pointer">❤️ <span class="likes-count">84</span></button>
                         <button class="hover:text-purple-400 cursor-pointer">💬 Comentarios</button>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- SECCIÓN 2: CHAT GLOBAL -->
-        <section id="view-chat" class="oculto space-y-4 w-full">
-            <div class="space-card rounded-3xl p-5 h-[500px] flex flex-col justify-between w-full">
-                <div class="border-b border-gray-800/80 pb-3 flex justify-between items-center">
+        <!-- SECCIÓN 2: CHAT GLOBAL CUÁNTICO -->
+        <section id="view-chat" class="oculto space-y-4">
+            <div class="glass-panel rounded-3xl p-6 h-[540px] flex flex-col justify-between">
+                <div class="border-b border-gray-800/80 pb-3.5 flex justify-between items-center">
                     <div class="flex items-center gap-2">
                         <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
                         <h3 class="text-xs font-bold text-cyan-400 uppercase tracking-widest">ZAARD GLOBAL QUANT CHAT</h3>
                     </div>
-                    <span class="text-[10px] text-purple-400 font-mono">ID Activa</span>
+                    <span class="text-[10px] text-purple-400 font-mono">Pasaporte Verificado</span>
                 </div>
                 
-                <div id="chat-messages" class="flex-1 overflow-y-auto space-y-3 py-4 pr-2 w-full">
-                    <div class="bg-black/50 p-3.5 rounded-2xl border border-gray-800/60 text-xs space-y-1.5">
+                <div id="chat-messages" class="flex-1 overflow-y-auto space-y-3.5 py-4 pr-2">
+                    <div class="bg-black/50 p-4 rounded-2xl border border-gray-800/70 text-xs space-y-1.5">
                         <div class="flex justify-between text-[10px]">
                             <span class="text-purple-400 font-bold">AlphaTrader <span class="text-gray-500 font-mono">#ZRD-7734</span></span>
-                            <span class="text-gray-600">20:00</span>
+                            <span class="text-gray-600">21:15</span>
                         </div>
-                        <p class="text-gray-300">¡Excelente atmósfera espacial! El chat con ID único funciona a la perfección.</p>
+                        <p class="text-gray-300">¡Impresionante el diseño estelar! El ecosistema completo está tomando un nivel brutal.</p>
                     </div>
                 </div>
 
-                <div class="flex gap-2 pt-3 border-t border-gray-800/80 w-full">
-                    <input type="text" id="chat-input" placeholder="Escribe un mensaje..." class="flex-1 bg-black/60 border border-gray-800 rounded-2xl px-4 py-3 text-xs text-white focus:outline-none focus:border-cyan-400" onkeypress="if(event.key === 'Enter') enviarMensajeChat()">
-                    <button onclick="enviarMensajeChat()" class="px-6 py-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-black font-extrabold rounded-2xl text-xs hover:opacity-90 transition-all cursor-pointer">Enviar</button>
+                <div class="flex gap-2 pt-3.5 border-t border-gray-800/80">
+                    <input type="text" id="chat-input" placeholder="Escribe un mensaje cifrado a la comunidad..." class="flex-1 bg-black/60 border border-gray-800 rounded-2xl px-4 py-3 text-xs text-white focus:outline-none focus:border-cyan-400" onkeypress="if(event.key === 'Enter') enviarMensajeChat()">
+                    <button onclick="enviarMensajeChat()" class="px-7 py-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-black font-extrabold rounded-2xl text-xs hover:opacity-90 transition-all cursor-pointer">Enviar</button>
                 </div>
             </div>
         </section>
 
     </main>
 
-    <!-- 📌 BARRA DE NAVEGACIÓN INFERIOR (PESTAÑAS) -->
-    <nav class="fixed bottom-0 left-0 right-0 z-40 bg-[#030307]/95 backdrop-blur-xl border-t border-cyan-950/80 px-2 py-2">
-        <div class="max-w-4xl mx-auto grid grid-cols-5 gap-1.5 text-center">
-            <button onclick="cambiarVista('feed')" id="tab-feed" class="flex flex-col items-center justify-center p-2 rounded-2xl bg-cyan-500/10 border border-cyan-500/40 text-cyan-400 transition-all cursor-pointer">
+    <!-- 📌 BARRA DE NAVEGACIÓN INFERIOR (PESTAÑAS OFICIALES CON TUS LINKS) -->
+    <nav class="fixed bottom-0 left-0 right-0 z-40 bg-[#030308]/95 backdrop-blur-2xl border-t border-cyan-950/80 px-2 py-2.5">
+        <div class="max-w-5xl mx-auto grid grid-cols-5 gap-1.5 text-center">
+            
+            <!-- 1. FEED SOCIAL (Pestaña interna) -->
+            <button onclick="cambiarVista('feed')" id="tab-feed" class="flex flex-col items-center justify-center p-2 rounded-2xl bg-cyan-500/15 border border-cyan-500/50 text-cyan-400 transition-all cursor-pointer">
                 <span class="text-base">💬</span>
-                <span class="text-[9px] font-bold mt-0.5 tracking-wider">FEED</span>
+                <span class="text-[9px] font-bold mt-0.5 tracking-wider">SOCIAL</span>
             </button>
-            <button onclick="cambiarVista('chat')" id="tab-chat" class="flex flex-col items-center justify-center p-2 rounded-2xl bg-black/50 border border-gray-800 text-gray-400 hover:border-cyan-500/40 transition-all cursor-pointer">
+
+            <!-- 2. CHAT GLOBAL (Pestaña interna) -->
+            <button onclick="cambiarVista('chat')" id="tab-chat" class="flex flex-col items-center justify-center p-2 rounded-2xl bg-black/50 border border-gray-800/80 text-gray-400 hover:border-cyan-500/40 transition-all cursor-pointer">
                 <span class="text-base">👥</span>
                 <span class="text-[9px] font-bold mt-0.5 tracking-wider">CHAT</span>
             </button>
-            <a href="https://figueredo56.github.io/zaard-quant-tracker/quant.html" target="_blank" class="flex flex-col items-center justify-center p-2 rounded-2xl bg-black/50 border border-gray-800 text-gray-400 hover:border-purple-500/40 transition-all">
+
+            <!-- 3. TRACKER (Link externo oficial) -->
+            <a href="https://figueredo56.github.io/zaard-tracker/" target="_blank" class="flex flex-col items-center justify-center p-2 rounded-2xl bg-black/50 border border-gray-800/80 text-gray-400 hover:border-purple-500/50 transition-all">
                 <span class="text-base">📊</span>
                 <span class="text-[9px] font-bold mt-0.5 tracking-wider">TRACKER</span>
             </a>
-            <a href="https://figueredo56.github.io/zaard-wallet/wallet.html" target="_blank" class="flex flex-col items-center justify-center p-2 rounded-2xl bg-black/50 border border-gray-800 text-gray-400 hover:border-cyan-500/40 transition-all">
-                <span class="text-base">💳</span>
-                <span class="text-[9px] font-bold mt-0.5 tracking-wider">WALLET</span>
+
+            <!-- 4. ECOSISTEMA (Link externo oficial) -->
+            <a href="https://figueredo56.github.io/index.html/?img=zaard" target="_blank" class="flex flex-col items-center justify-center p-2 rounded-2xl bg-black/50 border border-gray-800/80 text-gray-400 hover:border-cyan-500/50 transition-all">
+                <span class="text-base">💎</span>
+                <span class="text-[9px] font-bold mt-0.5 tracking-wider">ECOSYSTEM</span>
             </a>
-            <a href="https://figueredo56.github.io/ZAARD-Arcade/" target="_blank" class="flex flex-col items-center justify-center p-2 rounded-2xl bg-black/50 border border-gray-800 text-gray-400 hover:border-emerald-500/40 transition-all">
+
+            <!-- 5. JUEGOS / ARCADE (Link externo oficial) -->
+            <a href="https://figueredo56.github.io/ZAARD-Arcade/index-menu.html" target="_blank" class="flex flex-col items-center justify-center p-2 rounded-2xl bg-black/50 border border-gray-800/80 text-gray-400 hover:border-emerald-500/50 transition-all">
                 <span class="text-base">🎮</span>
                 <span class="text-[9px] font-bold mt-0.5 tracking-wider">JUEGOS</span>
             </a>
+
         </div>
     </nav>
 
@@ -193,7 +219,6 @@
             id: localStorage.getItem('zaard_userid')
         };
 
-        // Comprobar registro al cargar
         window.addEventListener('DOMContentLoaded', () => {
             if (userProfile.name && userProfile.id) {
                 document.getElementById('welcome-overlay').classList.add('oculto');
@@ -206,7 +231,7 @@
             let emailInput = document.getElementById('reg-email').value.trim();
 
             if (!nameInput) {
-                alert("Por favor ingresa tu alias o nombre de usuario.");
+                alert("Por favor ingresa tu alias de comandante.");
                 return;
             }
             if (!emailInput || !emailInput.includes('@')) {
@@ -249,13 +274,13 @@
             if (vista === 'feed') {
                 feedView.classList.remove('oculto');
                 chatView.classList.add('oculto');
-                tabFeed.className = "flex flex-col items-center justify-center p-2 rounded-2xl bg-cyan-500/10 border border-cyan-500/40 text-cyan-400 transition-all cursor-pointer";
-                tabChat.className = "flex flex-col items-center justify-center p-2 rounded-2xl bg-black/50 border border-gray-800 text-gray-400 hover:border-cyan-500/40 transition-all cursor-pointer";
+                tabFeed.className = "flex flex-col items-center justify-center p-2 rounded-2xl bg-cyan-500/15 border border-cyan-500/50 text-cyan-400 transition-all cursor-pointer";
+                tabChat.className = "flex flex-col items-center justify-center p-2 rounded-2xl bg-black/50 border border-gray-800/80 text-gray-400 hover:border-cyan-500/40 transition-all cursor-pointer";
             } else {
                 feedView.classList.add('oculto');
                 chatView.classList.remove('oculto');
-                tabChat.className = "flex flex-col items-center justify-center p-2 rounded-2xl bg-cyan-500/10 border border-cyan-500/40 text-cyan-400 transition-all cursor-pointer";
-                tabFeed.className = "flex flex-col items-center justify-center p-2 rounded-2xl bg-black/50 border border-gray-800 text-gray-400 hover:border-cyan-500/40 transition-all cursor-pointer";
+                tabChat.className = "flex flex-col items-center justify-center p-2 rounded-2xl bg-cyan-500/15 border border-cyan-500/50 text-cyan-400 transition-all cursor-pointer";
+                tabFeed.className = "flex flex-col items-center justify-center p-2 rounded-2xl bg-black/50 border border-gray-800/80 text-gray-400 hover:border-cyan-500/40 transition-all cursor-pointer";
             }
         }
 
@@ -270,17 +295,18 @@
 
             let container = document.getElementById('posts-container');
             let postHtml = `
-                <div class="space-card p-5 rounded-3xl space-y-3 w-full animate-pulse">
+                <div class="glass-panel p-6 rounded-3xl space-y-3.5 w-full animate-pulse">
                     <div class="flex justify-between items-center">
-                        <div class="flex items-center gap-2">
+                        <div class="flex items-center gap-2.5">
+                            <img src="https://raw.githubusercontent.com/figueredo56/ZARD.token/refs/heads/main/170%20sin%20t%C3%ADtulo_20260707213436.png" class="w-6 h-6 object-contain" alt="Z">
                             <span class="font-bold text-white text-sm">${escapeHtml(userProfile.name)}</span>
-                            <span class="text-[10px] font-mono text-cyan-400 bg-cyan-950/60 border border-cyan-800/50 px-2 py-0.5 rounded">${userProfile.id}</span>
+                            <span class="text-[10px] font-mono text-cyan-400 bg-cyan-950/70 border border-cyan-800/60 px-2 py-0.5 rounded">${userProfile.id}</span>
                         </div>
                         <span class="text-xs text-gray-500">Justo ahora</span>
                     </div>
-                    <p class="text-sm text-gray-300">${escapeHtml(texto)}</p>
+                    <p class="text-sm text-gray-300 leading-relaxed">${escapeHtml(texto)}</p>
                     ${imgUrl ? `<img src="${escapeHtml(imgUrl)}" class="rounded-2xl max-h-80 w-full object-cover border border-gray-800" onerror="this.style.display='none'">` : ''}
-                    <div class="flex gap-6 text-xs text-gray-400 pt-3 border-t border-gray-800/50">
+                    <div class="flex gap-6 text-xs text-gray-400 pt-3 border-t border-gray-800/60">
                         <button onclick="likePost(this)" class="hover:text-cyan-400 flex items-center gap-1.5 cursor-pointer">❤️ <span class="likes-count">0</span></button>
                         <button class="hover:text-purple-400 cursor-pointer">💬 Comentar</button>
                     </div>
@@ -307,12 +333,12 @@
             let horaActual = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
 
             let msgHtml = `
-                <div class="bg-black/50 p-3.5 rounded-2xl border border-gray-800/60 text-xs space-y-1.5 w-full">
+                <div class="bg-black/50 p-4 rounded-2xl border border-gray-800/70 text-xs space-y-1.5 w-full">
                     <div class="flex justify-between text-[10px]">
                         <span class="text-cyan-400 font-bold">${escapeHtml(userProfile.name)} <span class="text-gray-500 font-mono">${userProfile.id}</span></span>
                         <span class="text-gray-600">${horaActual}</span>
                     </div>
-                    <p class="text-gray-300">${escapeHtml(mensaje)}</p>
+                    <p class="text-gray-300 leading-relaxed">${escapeHtml(mensaje)}</p>
                 </div>
             `;
 
