@@ -3,128 +3,306 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZARD QUANT TERMINAL | ZAARD INNOVATION</title>
+    <title>ZAARD SOCIAL & QUANT TERMINAL</title>
     
-    <!-- Meta tags para redes sociales -->
-    <meta property="og:title" content="ZARD QUANT TERMINAL | Live Analytics">
-    <meta property="og:description" content="Dashboard profesional de monitoreo técnico para el ecosistema ZAARD INNOVATION. Liquidez, PnL y métricas on-chain en tiempo real.">
+    <meta property="og:title" content="ZAARD SOCIAL | Web3 Ecosystem">
+    <meta property="og:description" content="Red social y terminal descentralizada de ZAARD INNOVATION. Conecta tu identidad on-chain.">
     <meta property="og:image" content="https://raw.githubusercontent.com/figueredo56/zaard-assets/main/banner-zaard.png">
-    <meta property="og:url" content="https://figueredo56.github.io/zaard-quant-tracker/quant.html">
-    <meta name="twitter:card" content="summary_large_image">
-
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body {
             background-color: #050508;
             color: #c9d1d9;
-            font-family: 'Inter', ui-monospace, Consolas, monospace;
+            font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
             overflow-x: hidden;
-        }
-        .fade-out { 
-            animation: fadeOut 0.8s forwards ease-in-out; 
-        }
-        @keyframes fadeOut { 
-            to { opacity: 0; visibility: hidden; pointer-events: none; } 
         }
         .terminal-bg {
             background: linear-gradient(180deg, #0d1117 0%, #050508 100%);
             border: 1px solid #30363d;
-        }
-        .neon-glow {
-            text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
         }
         .title-gradient {
             background: linear-gradient(90deg, #00ffff, #a855f7);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        .glitch-text { 
-            text-shadow: 2px 0 #00ffff, -2px 0 #a855f7; 
+        .neon-glow {
+            text-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
+        }
+        .fade-out {
+            animation: fadeOut 0.6s forwards ease-in-out;
+        }
+        @keyframes fadeOut {
+            to { opacity: 0; visibility: hidden; pointer-events: none; }
         }
     </style>
 </head>
-<body class="p-4 md:p-6">
+<body class="min-h-screen pb-24">
 
-    <!-- PANTALLA DE BIENVENIDA (EPIC INTRO) -->
-    <div id="welcome-screen" class="fixed inset-0 z-50 flex flex-col items-center justify-center bg-[#050508] px-4">
-        <div class="text-center space-y-6 max-w-xl">
-            <!-- Imagen de bienvenida -->
-            <img src="https://raw.githubusercontent.com/figueredo56/zaard-assets/main/logo-zaard.png" alt="ZAARD LOGO" class="w-28 h-28 mx-auto mb-4 animate-pulse">
-            
-            <h1 class="text-3xl md:text-5xl font-black text-white tracking-tighter uppercase glitch-text">
-                DIVE INTO THE PANGA EFFECT
-            </h1>
-            <p class="text-cyan-400 font-mono text-sm md:text-lg">ZAARD & PANGA | UNCOMPROMISING SECURITY & TRUST</p>
-            
-            <button onclick="enterTerminal()" class="mt-6 px-8 py-3 bg-transparent border border-cyan-500 text-cyan-500 hover:bg-cyan-500 hover:text-black font-bold transition-all uppercase tracking-widest cursor-pointer">
-                Initialize System
-            </button>
-        </div>
-    </div>
+    <!-- 🌟 PANTALLA DE BIENVENIDA / REGISTRO DE IDENTIDAD (ESTILO BINANCE / WEB3) -->
+    <div id="welcome-overlay" class="fixed inset-0 z-50 flex items-center justify-center bg-[#050508]/95 backdrop-blur-xl px-4">
+        <div class="terminal-bg p-8 rounded-3xl border border-cyan-500/30 max-w-md w-full shadow-2xl space-y-6 text-center relative overflow-hidden">
+            <div class="absolute -top-12 -right-12 w-32 h-32 bg-cyan-500/10 rounded-full blur-2xl"></div>
+            <div class="absolute -bottom-12 -left-12 w-32 h-32 bg-purple-500/10 rounded-full blur-2xl"></div>
 
-    <!-- TERMINAL / DASHBOARD (Se muestra después del click) -->
-    <div id="terminal-content" class="max-w-6xl mx-auto terminal-bg rounded-2xl p-6 md:p-8 border border-cyan-900/30 opacity-0 transition-opacity duration-1000">
-        
-        <!-- Header -->
-        <header class="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 border-b border-gray-800 pb-6 gap-4">
+            <img src="https://raw.githubusercontent.com/figueredo56/zaard-assets/main/logo-zaard.png" alt="ZAARD" class="w-20 h-20 mx-auto animate-pulse">
+            
             <div>
-                <h1 class="text-3xl md:text-4xl font-black title-gradient tracking-tighter uppercase neon-glow">ZARD QUANT TERMINAL</h1>
-                <p class="text-gray-500 text-xs md:text-sm mt-1">ZAARD INNOVATION | PANGA PROTOCOL ARCHITECTURE</p>
+                <h2 class="text-2xl font-black text-white tracking-tight uppercase">WELCOME TO ZAARD ID</h2>
+                <p class="text-xs text-cyan-400 mt-1 font-mono">SECURE DECENTRALIZED IDENTITY PASSPORT</p>
             </div>
-            <div class="text-left md:text-right">
-                <span class="block text-emerald-400 font-bold text-base md:text-lg animate-pulse">● LIVE STATUS</span>
-                <span class="text-[10px] text-gray-600">BSC MAINNET OPERATIONAL</span>
-            </div>
-        </header>
 
-        <!-- Dashboard Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <!-- PnL Stat -->
-            <div class="md:col-span-2 terminal-bg p-6 rounded-xl border border-gray-800">
-                <h3 class="text-gray-400 text-xs font-bold uppercase mb-2">Total Profit & Loss</h3>
-                <h2 class="text-4xl md:text-5xl font-black text-white">$1,250,964</h2>
-                <div class="mt-4 flex gap-4 text-xs">
-                    <span class="text-emerald-400 font-bold">+2,148% PNL</span>
-                    <span class="text-gray-500">TRADES: 110,235</span>
+            <div class="space-y-4 text-left">
+                <div>
+                    <label class="block text-[11px] font-bold text-gray-400 uppercase mb-1">Nombre de Usuario / Alias</label>
+                    <input type="text" id="reg-username" placeholder="Ej: Satoshi_ZRD" class="w-full bg-black/60 border border-gray-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-cyan-500 transition-all">
+                </div>
+                <div>
+                    <label class="block text-[11px] font-bold text-gray-400 uppercase mb-1">Correo Electrónico (Recuperación y Alerta)</label>
+                    <input type="email" id="reg-email" placeholder="tucorreo@domain.com" class="w-full bg-black/60 border border-gray-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-cyan-500 transition-all">
                 </div>
             </div>
 
-            <!-- Quick Access -->
-            <div class="terminal-bg p-6 rounded-xl border border-cyan-900/50">
-                <h3 class="text-cyan-400 text-xs font-bold uppercase mb-4">Ecosystem Quick Links</h3>
-                <nav class="space-y-2">
-                    <a href="https://figueredo56.github.io/zaard-wallet/wallet.html" class="block p-3 bg-black rounded border border-gray-800 hover:border-cyan-500 transition-all text-sm font-bold text-center">💳 WALLET ZARD</a>
-                    <a href="https://bscscan.com/token/0x11433c80133f6f098b8a1f3e8b3533b3e7da9901" target="_blank" class="block p-3 bg-black rounded border border-gray-800 hover:border-blue-500 transition-all text-sm font-bold text-center">🔍 BSC SCAN</a>
-                </nav>
-            </div>
+            <button onclick="registrarIdentidad()" class="w-full py-3.5 bg-gradient-to-r from-cyan-400 to-purple-600 text-black font-black uppercase tracking-wider rounded-xl hover:opacity-90 transition-all text-xs shadow-lg shadow-cyan-500/20 cursor-pointer">
+                Generar ID & Entrar al Ecosistema
+            </button>
+            <p class="text-[10px] text-gray-600">Tus credenciales se cifran de forma segura en tu navegador.</p>
         </div>
-
-        <!-- Protocol Cards Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
-            <div class="p-6 border border-gray-800 rounded-xl bg-black/40">
-                <h3 class="text-emerald-400 font-bold mb-2">● SECURITY PROTOCOL</h3>
-                <p class="text-sm text-gray-400">Panga high-frequency trading assets locked within secure liquidity pools.</p>
-            </div>
-            <div class="p-6 border border-gray-800 rounded-xl bg-black/40">
-                <h3 class="text-purple-400 font-bold mb-2">● TRUST & QUALITY</h3>
-                <p class="text-sm text-gray-400">Elite smart contract auditing for institutional-grade reliability.</p>
-            </div>
-        </div>
-
-        <!-- Footer -->
-        <footer class="mt-12 text-center text-[10px] text-gray-700 uppercase tracking-widest">
-            Developed by ZAARD_ALX • © 2026 ZAARD INNOVATION
-        </footer>
     </div>
 
+    <!-- HEADER SUPERIOR -->
+    <header class="border-b border-gray-800 bg-[#0d1117]/80 backdrop-blur sticky top-0 z-40 px-4 py-3">
+        <div class="max-w-4xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-cyan-400 animate-pulse"></span>
+                <h1 class="text-lg font-black title-gradient tracking-tighter uppercase">ZAARD SOCIAL</h1>
+            </div>
+            
+            <div id="user-identity-badge" class="flex items-center gap-2 bg-black/60 border border-cyan-900/50 px-3 py-1.5 rounded-full text-xs">
+                <span id="current-username" class="text-cyan-400 font-bold">Trader</span>
+                <span id="current-id" class="text-gray-500 font-mono text-[10px] bg-gray-900 px-1.5 py-0.5 rounded">#ZRD-0000</span>
+                <button onclick="cambiarVistaPerfil()" class="text-gray-400 hover:text-white ml-1" title="Editar Perfil">⚙️</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- CONTENEDOR PRINCIPAL -->
+    <main class="max-w-4xl mx-auto p-4 space-y-6">
+
+        <!-- PESTAÑAS DE NAVEGACIÓN INFERIOR / SUPERIOR -->
+        <nav class="grid grid-cols-2 md:grid-cols-4 gap-2 text-center text-xs font-bold">
+            <button onclick="cambiarVista('feed')" id="tab-feed" class="p-3 rounded-xl bg-cyan-500/10 border border-cyan-500 text-cyan-400 transition-all cursor-pointer">💬 FEED SOCIAL</button>
+            <button onclick="cambiarVista('chat')" id="tab-chat" class="p-3 rounded-xl bg-black/40 border border-gray-800 text-gray-400 hover:border-cyan-500 transition-all cursor-pointer">👥 CHAT GLOBAL</button>
+            <a href="https://figueredo56.github.io/zaard-quant-tracker/quant.html" target="_blank" class="p-3 rounded-xl bg-black/40 border border-gray-800 text-gray-400 hover:border-purple-500 transition-all block">📊 TRACKER & PNL</a>
+            <a href="https://figueredo56.github.io/ZAARD-Arcade/" target="_blank" class="p-3 rounded-xl bg-black/40 border border-gray-800 text-gray-400 hover:border-emerald-500 transition-all block">🎮 JUEGOS & ECOSYSTEM</a>
+        </nav>
+
+        <!-- SECCIÓN 1: FEED DE PUBLICACIONES (ESTILO TWITTER / TELEGRAM CHANNEL) -->
+        <section id="view-feed" class="space-y-6">
+            <!-- Caja para crear publicación -->
+            <div class="terminal-bg p-4 md:p-5 rounded-2xl border border-cyan-900/40 space-y-3 shadow-lg">
+                <textarea id="post-text" rows="3" placeholder="¿Qué hay de nuevo en ZAARD INNOVATION / PANGA?" class="w-full bg-black/50 border border-gray-800 rounded-xl p-3 text-sm text-white focus:outline-none focus:border-cyan-500 resize-none"></textarea>
+                
+                <div class="flex flex-col md:flex-row justify-between items-center gap-3">
+                    <div class="w-full md:w-2/3 flex items-center gap-2 bg-black/50 border border-gray-800 rounded-lg px-3 py-2">
+                        <span class="text-xs text-gray-500">📷</span>
+                        <input type="text" id="post-img" placeholder="URL de imagen pública (opcional)" class="w-full bg-transparent text-xs text-gray-300 focus:outline-none">
+                    </div>
+                    <button onclick="crearPublicacion()" class="w-full md:w-auto px-6 py-2.5 bg-cyan-500 text-black font-extrabold rounded-lg hover:bg-cyan-400 transition-all text-xs tracking-wider uppercase cursor-pointer">Publicar</button>
+                </div>
+            </div>
+
+            <!-- Muro / Timeline -->
+            <div id="posts-container" class="space-y-4">
+                <!-- Publicación inicial de demostración -->
+                <div class="terminal-bg p-5 rounded-2xl border border-gray-800 space-y-3">
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center gap-2">
+                            <span class="font-bold text-white text-sm">ZAARD_SYSTEM</span>
+                            <span class="text-[10px] font-mono text-cyan-400 bg-cyan-950/40 border border-cyan-900 px-2 py-0.5 rounded">#ZRD-0001</span>
+                        </div>
+                        <span class="text-xs text-gray-600">Oficial</span>
+                    </div>
+                    <p class="text-sm text-gray-300">¡Bienvenido al nuevo entorno social de alta fidelidad! Comparte tus análisis, conéctate con otros holders mediante tu ID y disfruta del ecosistema completo. 🚀💎</p>
+                    <div class="flex gap-6 text-xs text-gray-400 pt-2 border-t border-gray-800/60">
+                        <button onclick="likePost(this)" class="hover:text-cyan-400 flex items-center gap-1 cursor-pointer">❤️ <span class="likes-count">24</span></button>
+                        <button class="hover:text-purple-400 cursor-pointer">💬 Comentarios</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 2: CHAT GLOBAL DE USUARIOS -->
+        <section id="view-chat" class="hidden space-y-4">
+            <div class="terminal-bg rounded-2xl border border-gray-800 p-4 h-[520px] flex flex-col justify-between shadow-xl">
+                <div class="border-b border-gray-800 pb-3 flex justify-between items-center">
+                    <div class="flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                        <h3 class="text-xs font-bold text-cyan-400 uppercase tracking-wider">ZAARD GLOBAL SECURE CHAT</h3>
+                    </div>
+                    <span class="text-[10px] text-gray-500 font-mono">ID Linked Enabled</span>
+                </div>
+                
+                <!-- Historial -->
+                <div id="chat-messages" class="flex-1 overflow-y-auto space-y-3 py-4 pr-2">
+                    <div class="bg-black/40 p-3 rounded-xl border border-gray-800/80 text-xs space-y-1">
+                        <div class="flex justify-between text-[10px]">
+                            <span class="text-purple-400 font-bold">AlphaTrader <span class="text-gray-600 font-mono">#ZRD-7734</span></span>
+                            <span class="text-gray-600">19:40</span>
+                        </div>
+                        <p class="text-gray-300">Excelente actualización de la interfaz, el sistema de ID da mucha confianza.</p>
+                    </div>
+                </div>
+
+                <!-- Input -->
+                <div class="flex gap-2 pt-3 border-t border-gray-800">
+                    <input type="text" id="chat-input" placeholder="Escribe un mensaje cifrado a la comunidad..." class="flex-1 bg-black/50 border border-gray-800 rounded-xl px-4 py-2.5 text-xs text-white focus:outline-none focus:border-cyan-500" onkeypress="if(event.key === 'Enter') enviarMensajeChat()">
+                    <button onclick="enviarMensajeChat()" class="px-5 py-2.5 bg-cyan-500 text-black font-extrabold rounded-xl text-xs hover:bg-cyan-400 transition-all cursor-pointer">Enviar</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
     <script>
-        function enterTerminal() {
-            const welcome = document.getElementById('welcome-screen');
-            const content = document.getElementById('terminal-content');
-            welcome.classList.add('fade-out');
-            setTimeout(() => {
-                content.classList.remove('opacity-0');
-            }, 400);
+        // Verificar si el usuario ya tiene identidad creada
+        let userProfile = {
+            name: localStorage.getItem('zaard_username'),
+            email: localStorage.getItem('zaard_email'),
+            id: localStorage.getItem('zaard_userid')
+        };
+
+        // Si ya está registrado, ocultar la pantalla de bienvenida
+        if (userProfile.name && userProfile.id) {
+            document.getElementById('welcome-overlay').classList.add('fade-out');
+            actualizarUIPerfil();
+        }
+
+        function registrarIdentidad() {
+            let nameInput = document.getElementById('reg-username').value.trim();
+            let emailInput = document.getElementById('reg-email').value.trim();
+
+            if (!nameInput) {
+                alert("Por favor ingresa un nombre de usuario o alias.");
+                return;
+            }
+            if (!emailInput || !emailInput.includes('@')) {
+                alert("Por favor ingresa un correo electrónico válido para la recuperación.");
+                return;
+            }
+
+            userProfile.name = nameInput;
+            userProfile.email = emailInput;
+            userProfile.id = '#ZRD-' + Math.floor(Math.random() * 9000 + 1000);
+
+            localStorage.setItem('zaard_username', userProfile.name);
+            localStorage.setItem('zaard_email', userProfile.email);
+            localStorage.setItem('zaard_userid', userProfile.id);
+
+            actualizarUIPerfil();
+            document.getElementById('welcome-overlay').classList.add('fade-out');
+        }
+
+        function actualizarUIPerfil() {
+            document.getElementById('current-username').innerText = userProfile.name;
+            document.getElementById('current-id').innerText = userProfile.id;
+        }
+
+        function cambiarVistaPerfil() {
+            let nuevoNombre = prompt("Actualiza tu alias (tu ID permanente se mantiene):", userProfile.name);
+            if (nuevoNombre && nuevoNombre.trim() !== "") {
+                userProfile.name = nuevoNombre.trim();
+                localStorage.setItem('zaard_username', userProfile.name);
+                actualizarUIPerfil();
+            }
+        }
+
+        // Control de Pestañas
+        function cambiarVista(vista) {
+            const feedView = document.getElementById('view-feed');
+            const chatView = document.getElementById('view-chat');
+            const tabFeed = document.getElementById('tab-feed');
+            const tabChat = document.getElementById('tab-chat');
+
+            if (vista === 'feed') {
+                feedView.classList.remove('hidden');
+                chatView.classList.add('hidden');
+                tabFeed.className = "p-3 rounded-xl bg-cyan-500/10 border border-cyan-500 text-cyan-400 transition-all cursor-pointer";
+                tabChat.className = "p-3 rounded-xl bg-black/40 border border-gray-800 text-gray-400 hover:border-cyan-500 transition-all cursor-pointer";
+            } else {
+                feedView.classList.add('hidden');
+                chatView.classList.remove('hidden');
+                tabChat.className = "p-3 rounded-xl bg-cyan-500/10 border border-cyan-500 text-cyan-400 transition-all cursor-pointer";
+                tabFeed.className = "p-3 rounded-xl bg-black/40 border border-gray-800 text-gray-400 hover:border-cyan-500 transition-all cursor-pointer";
+            }
+        }
+
+        // Publicar en el muro
+        function crearPublicacion() {
+            let texto = document.getElementById('post-text').value.trim();
+            let imgUrl = document.getElementById('post-img').value.trim();
+
+            if (!texto && !imgUrl) {
+                alert("Escribe un texto o añade una imagen para compartir.");
+                return;
+            }
+
+            let container = document.getElementById('posts-container');
+            let postHtml = `
+                <div class="terminal-bg p-5 rounded-2xl border border-gray-800 space-y-3 animate-pulse">
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center gap-2">
+                            <span class="font-bold text-white text-sm">${escapeHtml(userProfile.name)}</span>
+                            <span class="text-[10px] font-mono text-cyan-400 bg-cyan-950/40 border border-cyan-900 px-2 py-0.5 rounded">${userProfile.id}</span>
+                        </div>
+                        <span class="text-xs text-gray-600">Justo ahora</span>
+                    </div>
+                    <p class="text-sm text-gray-300">${escapeHtml(texto)}</p>
+                    ${imgUrl ? `<img src="${escapeHtml(imgUrl)}" class="rounded-xl max-h-80 w-full object-cover border border-gray-800" onerror="this.style.display='none'">` : ''}
+                    <div class="flex gap-6 text-xs text-gray-400 pt-2 border-t border-gray-800/60">
+                        <button onclick="likePost(this)" class="hover:text-cyan-400 flex items-center gap-1 cursor-pointer">❤️ <span class="likes-count">0</span></button>
+                        <button class="hover:text-purple-400 cursor-pointer">💬 Comentar</button>
+                    </div>
+                </div>
+            `;
+
+            container.insertAdjacentHTML('afterbegin', postHtml);
+            document.getElementById('post-text').value = '';
+            document.getElementById('post-img').value = '';
+        }
+
+        function likePost(btn) {
+            let span = btn.querySelector('.likes-count');
+            span.innerText = parseInt(span.innerText) + 1;
+            btn.classList.add('text-cyan-400');
+        }
+
+        // Enviar mensaje al chat
+        function enviarMensajeChat() {
+            let input = document.getElementById('chat-input');
+            let mensaje = input.value.trim();
+            if (!mensaje) return;
+
+            let chatContainer = document.getElementById('chat-messages');
+            let horaActual = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+
+            let msgHtml = `
+                <div class="bg-black/40 p-3 rounded-xl border border-gray-800/80 text-xs space-y-1">
+                    <div class="flex justify-between text-[10px]">
+                        <span class="text-cyan-400 font-bold">${escapeHtml(userProfile.name)} <span class="text-gray-600 font-mono">${userProfile.id}</span></span>
+                        <span class="text-gray-600">${horaActual}</span>
+                    </div>
+                    <p class="text-gray-300">${escapeHtml(mensaje)}</p>
+                </div>
+            `;
+
+            chatContainer.insertAdjacentHTML('beforeend', msgHtml);
+            input.value = '';
+            chatContainer.scrollTop = chatContainer.scrollHeight;
+        }
+
+        function escapeHtml(text) {
+            return text.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
         }
     </script>
 </body>
