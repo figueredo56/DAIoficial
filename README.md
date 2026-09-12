@@ -10,8 +10,7 @@
 
   <p align="center">
     <img src="https://img.shields.io/badge/NETWORK-Binance%20Smart%20Chain-f3ba2f?style=for-the-badge&logo=binance&logoColor=black" />
-    <img src="https://img.shields.io/badge/STANDARD-BEP--20-00ffcc?style=for-the-badge&logo=solidity&logoColor=black" />
-    <img src="https://img.shields.io/badge/SECURITY-Block%20Verified-ffd700?style=for-the-badge&logo=shield&logoColor=black" />
+ 
   </p>
 
 </div>
