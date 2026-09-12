@@ -10,7 +10,8 @@
 
   <p align="center">
     <img src="https://img.shields.io/badge/NETWORK-Binance%20Smart%20Chain-f3ba2f?style=for-the-badge&logo=binance&logoColor=black" />
- 
+    <img src="https://img.shields.io/badge/STANDARD-BEP--20-00ffcc?style=for-the-badge&logo=solidity&logoColor=black" />
+    <img src="https://img.shields.io/badge/SECURITY-Block%20Verified-ffd700?style=for-the-badge&logo=shield&logoColor=black" />
   </p>
 
 </div>
@@ -33,8 +34,6 @@
   <img src="https://raw.githubusercontent.com/figueredo56/DAIoficial/refs/heads/main/Gemini_Generated_Image_lonmnslonmnslonm_1.jpeg" width="48%" alt="DAI Aesthetic 2" />
 </p>
 <p align="center">
-  <img src="https://raw.githubusercontent.com/figueredo56/DAIoficial/refs/heads/main/Gemini_Generated_Image_bsb1mpbsb1mpbsb1_1.jpeg" width="48%" alt="DAI Aesthetic 3" />
-  <img src="https://raw.githubusercontent.com/figueredo56/DAIoficial/refs/heads/main/CC_20260911_151110.png" width="48%" alt="DAI Brand Emblem" />
 </p>
 
 ---
