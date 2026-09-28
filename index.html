@@ -7,9 +7,9 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="ZARD Token - High Performance Web3 Asset">
     <meta property="og:description" content="Ecosistema oficial ZARD. Smart contract verificado, DApps y comunidad descentralizada.">
-    <meta property="og:image" content="https://gateway.pinata.cloud/ipfs/bafybeicfmcwvoukadvqjdb4kqpa6mxi3guogqxhefskntussd5gpmopar4">
+    <meta property="og:image" content="https://photos.pinksale.finance/file/pinksale-logo-upload/1790285851823-4955b8f5511ea8235af22dfb82371c91.png">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="https://gateway.pinata.cloud/ipfs/bafybeicfmcwvoukadvqjdb4kqpa6mxi3guogqxhefskntussd5gpmopar4">
+    <meta name="twitter:image" content="https://photos.pinksale.finance/file/pinksale-logo-upload/1790285851823-4955b8f5511ea8235af22dfb82371c91.png">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
@@ -17,7 +17,7 @@
             --neon-blue: #00f2fe;
             --neon-purple: #9b51e5;
             --neon-gold: #d4af37;
-            --bg-image: url('https://photos.pinksale.finance/file/pinksale-logo-upload/1790375348672-4de629a77b910ca4b3f245dda1b233f0.png');
+            --bg-image: url('https://photos.pinksale.finance/file/pinksale-logo-upload/1790285851823-4955b8f5511ea8235af22dfb82371c91.png');
         }
 
         body {
@@ -27,7 +27,6 @@
             font-family: 'Inter', 'Segoe UI', Roboto, Arial, sans-serif;
             text-align: center;
             background-color: #030308;
-            /* Fondo más transparente para que la imagen se perciba mucho mejor */
             background-image: linear-gradient(rgba(3, 3, 8, 0.60), rgba(3, 3, 8, 0.75)), var(--bg-image);
             background-size: cover;
             background-position: center;
@@ -145,22 +144,50 @@
             text-shadow: 0 0 12px rgba(212, 175, 55, 0.6);
         }
 
-        .section {
-            border: 1px solid rgba(0, 242, 254, 0.3);
+        /* --- SECCIÓN CON MARCO PARPAEANTE MORADO Y AZUL --- */
+        .section-pulse-frame {
+            border: 4px solid;
+            border-image: linear-gradient(45deg, var(--neon-purple), var(--neon-blue)) 1;
+            animation: borderPulse 2s infinite alternate ease-in-out;
             padding: 30px 20px;
             border-radius: 24px;
             margin: 30px 0;
-            background: rgba(8, 4, 18, 0.80);
+            background: rgba(10, 6, 22, 0.88);
             backdrop-filter: blur(16px);
-            box-shadow: 0 0 25px rgba(0, 242, 254, 0.15);
+            box-shadow: 0 0 30px rgba(155, 81, 229, 0.3);
+        }
+
+        @keyframes borderPulse {
+            0% { 
+                box-shadow: 0 0 15px rgba(155, 81, 229, 0.4), inset 0 0 10px rgba(155, 81, 229, 0.2); 
+            }
+            100% { 
+                box-shadow: 0 0 30px rgba(0, 242, 254, 0.7), inset 0 0 20px rgba(0, 242, 254, 0.3); 
+            }
+        }
+
+        /* --- AVISO EN VERDE SUPERIOR --- */
+        .notice-green-banner {
+            background-color: #00ff66;
+            color: #030308;
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 800;
+            text-align: center;
+            padding: 10px 15px;
+            margin-bottom: 22px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 0 20px rgba(0, 255, 102, 0.6);
         }
 
         .token-explanation {
-            font-size: 0.95rem;
-            line-height: 1.7;
+            font-size: 0.98rem;
+            line-height: 1.8;
             color: #cbd5e1;
             text-align: justify;
-            max-width: 750px;
+            max-width: 780px;
             margin: 0 auto;
         }
 
@@ -343,9 +370,9 @@
 </head>
 <body>
 
-    <!-- PANTALLA DE BIENVENIDA (INTRO SPLASH) -->
+    <!-- PANTALLA DE BIENVENIDA CON LA NUEVA IMAGEN -->
     <div id="splash-screen">
-        <img src="https://gateway.pinata.cloud/ipfs/bafybeicfmcwvoukadvqjdb4kqpa6mxi3guogqxhefskntussd5gpmopar4" alt="ZARD Logo" class="splash-logo">
+        <img src="https://photos.pinksale.finance/file/pinksale-logo-upload/1790285851823-4955b8f5511ea8235af22dfb82371c91.png" alt="ZARD Logo" class="splash-logo">
         <h1 class="splash-title">¡Bienvenidos a la evolución de la Web3!</h1>
         <p class="splash-subtitle">ZAARD INNOVATION PROTOCOL</p>
     </div>
@@ -356,7 +383,7 @@
             <!-- Cabecera y Logo Animado -->
             <div class="hero-container">
                 <div class="sonic-floating-logo">
-                    <img src="https://gateway.pinata.cloud/ipfs/bafybeicfmcwvoukadvqjdb4kqpa6mxi3guogqxhefskntussd5gpmopar4" alt="ZARD Token Logo">
+                    <img src="https://photos.pinksale.finance/file/pinksale-logo-upload/1790285851823-4955b8f5511ea8235af22dfb82371c91.png" alt="ZARD Token Logo">
                 </div>
 
                 <h1 class="neon-title">ZARD TOKEN</h1>
@@ -370,25 +397,30 @@
                 </a>
             </div>
 
-            <!-- SECCIÓN EXPLICATIVA DEL TOKEN -->
-            <div class="section">
+            <!-- SECCIÓN EXPLICATIVA CON MARCO PARPADEANTE MORADO/AZUL Y AVISO VERDE -->
+            <div class="section-pulse-frame">
+                <!-- Aviso Verde Superior -->
+                <div class="notice-green-banner">
+                    ⚠️ ¡Cada imagen te llevará a un link específico! Haz clic y explora el ecosistema.
+                </div>
+
                 <h3 class="gold" style="margin-top: 0; font-family: 'Orbitron', sans-serif; font-size: 1.4rem; margin-bottom: 15px;">
                     📜 ¿Qué es ZARD Protocol?
                 </h3>
                 <div class="token-explanation">
                     <p>
-                        <strong>ZARD</strong> representa la cúspide de la ingeniería de contratos inteligentes en la Binance Smart Chain (BSC). Diseñado bajo estrictos estándares de seguridad y transparencia, este activo digital descentralizado integra mecánicas de utilidad avanzada orientadas a respaldar el ecosistema de aplicaciones Web3, dapps de alto rendimiento y pasarelas de liquidez automatizada.
+                        <strong>ZARD</strong> representa la cúspide absoluta de la ingeniería de contratos inteligentes en la Binance Smart Chain (BSC). Diseñado bajo estrictos estándares de seguridad descentralizada, transparencia algorítmica y gobernanza avanzada, este activo digital integra mecánicas de utilidad de última generación orientadas a respaldar todo el ecosistema de aplicaciones Web3, dapps de alto rendimiento y pasarelas de liquidez automatizada.
                     </p>
-                    <p style="margin-top: 12px;">
-                        Operando de forma totalmente autónoma, el protocolo garantiza una gestión eficiente de activos con trazabilidad en tiempo real, permitiendo a los usuarios interactuar con total confianza a través de plataformas líderes del mercado como Binance Web3 y DexTools.
+                    <p style="margin-top: 14px;">
+                        Operando de forma totalmente autónoma y optimizada, el protocolo garantiza una gestión eficiente de activos con trazabilidad total en tiempo real. Esto permite a los holders y desarrolladores interactuar con absoluta confianza a través de plataformas líderes del mercado como Binance Web3, DexTools y DexScreener, consolidando un pilar financiero sólido y seguro.
                     </p>
                 </div>
             </div>
 
             <!-- Smart Contract Box -->
-            <div class="section" style="max-width: 700px; margin: 0 auto 30px auto;">
+            <div class="section-pulse-frame" style="max-width: 700px; margin: 0 auto 30px auto; padding: 20px;">
                 <h3 class="gold" style="margin-top: 0; margin-bottom: 10px;">💎 Smart Contract Oficial (BSC)</h3>
-                <p style="color: #aaa; font-size: 0.85em; margin-bottom: 10px;">Verificado en BscScan bajo los más altos estándares de seguridad descentralizada.</p>
+                <p style="color: #aaa; font-size: 0.85em; margin-bottom: 10px;">Verificado en BscScan bajo los más altos estándares de seguridad.</p>
                 <div class="contract-box">
                     0x62a6d58cbcf24932ae5ec2c233720487407d2ed3
                 </div>
@@ -479,7 +511,7 @@
             </div>
 
             <!-- Panel de Seguridad en Vivo (GoPlus) -->
-            <div class="section" style="border: 1px solid rgba(212, 175, 55, 0.4); text-align: left; max-width: 650px; margin: 30px auto;">
+            <div class="section-pulse-frame" style="border: 2px solid rgba(212, 175, 55, 0.4); text-align: left; max-width: 650px; margin: 30px auto; padding: 22px;">
                 <h3 class="gold" style="text-align: center; margin-bottom: 10px;">🛡️ Auditoría en Vivo (GoPlus Security)</h3>
                 <div id="zaard-security-box" style="background: rgba(0, 0, 0, 0.7); border: 1px solid rgba(0, 242, 254, 0.3); padding: 18px; border-radius: 14px; text-align: center;">
                     <p style="color: #fff; font-size: 0.9em;">🔄 Analizando contrato 0x62a6...047d2ed3...</p>
