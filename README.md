@@ -75,30 +75,3 @@ The ZARD official web interface is constructed using a high-performance, lightwe
 
 To ensure absolute trust and transparency for investors, the platform embeds real-time API queries to security indexers like **GoPlus Security**, validating the contract’s integrity dynamically on load.
 
-```javascript
-/**
- * Core Security Verification Script embedded in ZARD Interface
- * Queries GoPlus Labs API for real-time risk assessment on BNB Smart Chain.
- */
-async function verifyZardContractSecurity() {
-    const CONTRACT_ADDRESS = "0x5f8a5f349f72d27d994c38e8de3976fcedaf5abb";
-    const CHAIN_ID = "56"; // BSC Mainnet
-    
-    try {
-        const endpoint = `[https://api.gopluslabs.io/api/v1/token_security/$](https://api.gopluslabs.io/api/v1/token_security/$){CHAIN_ID}?contract_addresses=${CONTRACT_ADDRESS}`;
-        const response = await fetch(endpoint);
-        const result = await response.json();
-        
-        if (result.code === 1 && result.result[CONTRACT_ADDRESS.toLowerCase()]) {
-            const data = result.result[CONTRACT_ADDRESS.toLowerCase()];
-            console.log("🛡️ ZARD Security Audit Passed:", {
-                isOpenSource: data.is_open_source === "1",
-                isHoneypot: data.is_honeypot === "0",
-                buyTax: data.buy_tax,
-                sellTax: data.sell_tax
-            });
-        }
-    } catch (error) {
-        console.error("⚠️ Failed to fetch real-time security data:", error);
-    }
-}
