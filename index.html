@@ -42,7 +42,10 @@
             left: 0;
             width: 100%;
             height: 100vh;
-            background: radial-gradient(circle at center, rgba(15, 5, 29, 0.95) 0%, rgba(3, 3, 8, 0.98) 100%);
+            background-color: #030308;
+            background-image: linear-gradient(rgba(3, 3, 8, 0.85), rgba(3, 3, 8, 0.92)), url('https://photos.pinksale.finance/file/pinksale-logo-upload/1790375348672-4de629a77b910ca4b3f245dda1b233f0.png');
+            background-size: cover;
+            background-position: center;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -69,7 +72,7 @@
 
         .splash-title {
             font-family: 'Orbitron', sans-serif;
-            font-size: 2rem;
+            font-size: 2.2rem;
             font-weight: 900;
             color: #fff;
             text-transform: uppercase;
@@ -81,12 +84,13 @@
 
         .splash-subtitle {
             font-family: 'Inter', sans-serif;
-            font-size: 1rem;
+            font-size: 1.1rem;
             color: var(--neon-gold);
-            letter-spacing: 2px;
+            letter-spacing: 3px;
             text-transform: uppercase;
             margin: 0;
-            opacity: 0.9;
+            opacity: 0.95;
+            text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
         }
 
         @keyframes fadeInText {
@@ -386,7 +390,7 @@
     <!-- PANTALLA DE BIENVENIDA (INTRO SPLASH) -->
     <div id="splash-screen">
         <img src="https://photos.pinksale.finance/file/pinksale-logo-upload/1790285851823-4955b8f5511ea8235af22dfb82371c91.png" alt="ZARD Logo Splash" class="splash-logo">
-        <h1 class="splash-title">¡Bienvenidos a la evolución de la Web3!</h1>
+        <h1 class="splash-title">¡Bienvenidos a la nueva era digital!</h1>
         <p class="splash-subtitle">ZAARD INNOVATION PROTOCOL</p>
     </div>
 
@@ -495,6 +499,15 @@
                             </div>
                         </a>
 
+                        <!-- CoinMarketCap Dex Tracker -->
+                        <a href="https://dex.coinmarketcap.com/token/bsc/0x5f8a5f349f72d27d994c38e8de3976fcedaf5abb/" target="_blank" rel="noopener noreferrer" class="zaard-social-btn">
+                            <svg class="zaard-social-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 12h8M12 8v8"/></svg>
+                            <div class="zaard-social-info">
+                                <h4>CoinMarketCap DEX</h4>
+                                <span>Tracker Oficial</span>
+                            </div>
+                        </a>
+
                         <!-- Twitter / X -->
                         <a href="https://x.com/ZAARD_ALX" target="_blank" rel="noopener noreferrer" class="zaard-social-btn">
                             <svg class="zaard-social-icon" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
@@ -547,7 +560,7 @@
             <!-- Gráfico de Mercado / DexTools -->
             <div class="market-section">
                 <h3 class="gold" style="font-family: 'Orbitron', sans-serif; font-size: 1.5rem; margin-bottom: 5px;">
-                    📊 DEX-TOOLS LIVE CHART
+                    📊 DEX-TOOLS & TRACKERS
                 </h3>
                 <p style="color: #cbd5e1; font-size: 0.9em; margin-bottom: 20px;">Monitoreo avanzado de liquidez y transacciones en tiempo real</p>
                 
@@ -558,6 +571,12 @@
                 <div style="margin-top: 25px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
                     <a href="https://app.binance.com/uni-qr/web3-token-details?utm_medium=share&tokenCA=0x5f8a5f349f72d27d994c38e8de3976fcedaf5abb&binanceChainId=56&chain=bsc" target="_blank" class="btn-epic-buy" style="padding: 12px 25px; font-size: 0.95em; margin: 0;">
                         🚀 Binance Web3
+                    </a>
+                    <a href="https://dex.coinmarketcap.com/token/bsc/0x5f8a5f349f72d27d994c38e8de3976fcedaf5abb/" target="_blank" class="btn-epic-buy" style="padding: 12px 25px; font-size: 0.95em; margin: 0; background: linear-gradient(135deg, #d4af37, #9b51e5);">
+                        📈 CoinMarketCap Dex
+                    </a>
+                    <a href="https://figueredo56.github.io/zaard-wallet/wallet.html" target="_blank" class="btn-epic-buy" style="padding: 12px 25px; font-size: 0.95em; margin: 0; background: linear-gradient(135deg, #00ff66, #00f2fe);">
+                        💼 ZAARD Wallet
                     </a>
                 </div>
             </div>
