@@ -557,7 +557,7 @@
 
             <hr>
 
- <!-- BLOQUE: LIVE MARKET TRACKER & ZARD ANALYTICS -->
+<!-- BLOQUE: LIVE MARKET TRACKER & ZARD ANALYTICS -->
     <div class="market-section" style="background: linear-gradient(135deg, #0b0e14 0%, #05070a 100%); border: 1px solid rgba(0, 242, 254, 0.3); border-radius: 20px; padding: 30px; margin-bottom: 40px; box-shadow: 0 10px 40px rgba(0,0,0,0.6);">
         
         <!-- Encabezado de la Sección -->
@@ -568,15 +568,24 @@
             <p style="color: #94a3b8; font-size: 0.95em;">Monitoreo avanzado de liquidez, velas en tiempo real y transacciones en la blockchain</p>
         </div>
 
-        <!-- Contenedor del Gráfico de Velas Oficial en Vivo (DexTools Widget) -->
+        <!-- Contenedor del Gráfico de Velas Oficial en Vivo (DexTools con permisos de despliegue) -->
         <div class="chart-container" style="position: relative; width: 100%; border-radius: 14px; overflow: hidden; border: 2px solid rgba(0, 242, 254, 0.4); box-shadow: 0 0 25px rgba(0, 242, 254, 0.15); background: #000; margin-bottom: 25px;">
             <iframe id="dextools-widget" 
                     title="ZARD Live Trading Chart" 
                     width="100%" 
                     height="550px" 
                     src="https://www.dextools.io/widget-chart/en/bnb/pe-light/0x5f8a5f349f72d27d994c38e8de3976fcedaf5abb?theme=dark&chartType=2&chartResolution=30&drawingToolbars=false" 
-                    style="border: none; display: block; width: 100%;">
+                    allow="clipboard-write; fullscreen"
+                    style="border: none; display: block; width: 100%; background: #000;">
             </iframe>
+        </div>
+
+        <!-- Aviso por si el navegador bloquea iframes y Botón Directo de Emergencia -->
+        <div style="background: rgba(0, 242, 254, 0.05); border: 1px dashed rgba(0, 242, 254, 0.3); border-radius: 12px; padding: 15px; text-align: center; margin-bottom: 25px;">
+            <p style="color: #94a3b8; font-size: 0.85em; margin-bottom: 10px;">¿Tu navegador bloquea el gráfico integrado por extensiones de privacidad?</p>
+            <a href="https://www.dextools.io/app/en/bnb/pair-explorer/0x5f8a5f349f72d27d994c38e8de3976fcedaf5abb" target="_blank" style="display: inline-block; background: linear-gradient(135deg, #00f2fe, #4facfe); color: #030308; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-size: 0.85em; font-weight: 700; box-shadow: 0 0 15px rgba(0,242,254,0.3);">
+                Abrir Gráfico en Pantalla Completa en DexTools ↗
+            </a>
         </div>
 
         <!-- Panel de Métricas Rápidas: Órdenes y Holders -->
@@ -663,7 +672,7 @@
                     <p style="margin-top: 10px; font-size: 0.7em; color: #10b981; margin-bottom: 0;">🟢 Monitoreado por GoPlus Security.</p>
                 `;
             } else {
-                contenedor.innerHTML = `<p style="color: #facc15; font-size: 0.9em; margin: 0;">ℹ️️ Contrato registrado en la red correctamente.</p>`;
+                contenedor.innerHTML = `<p style="color: #facc15; font-size: 0.9em; margin: 0;">ℹ Contrato registrado en la red correctamente.</p>`;
             }
         } catch (error) {
             contenedor.innerHTML = `<p style="color: #ef4444; font-size: 0.9em; margin: 0;">❌ Error al consultar el estado del contrato.</p>`;
