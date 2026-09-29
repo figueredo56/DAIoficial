@@ -557,106 +557,65 @@
 
             <hr>
 
-            <!-- BLOQUE: LIVE MARKET TRACKER & ZARD ANALYTICS -->
-<div class="market-section" style="position: relative; background: linear-gradient(135deg, #0b0e14 0%, #05070a 100%); border: 1px solid rgba(0, 242, 254, 0.3); border-radius: 20px; padding: 30px; margin-bottom: 40px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.6);">
-    
-<!-- BLOQUE: LIVE MARKET TRACKER & ZARD ANALYTICS -->
-<div class="market-section" style="background: linear-gradient(135deg, #0b0e14 0%, #05070a 100%); border: 1px solid rgba(0, 242, 254, 0.3); border-radius: 20px; padding: 25px; margin-bottom: 40px; box-shadow: 0 10px 40px rgba(0,0,0,0.6);">
-    
-    <!-- Encabezado de la Sección -->
-    <div style="text-align: center; margin-bottom: 20px;">
-        <h3 class="gold" style="font-family: 'Orbitron', sans-serif; font-size: 1.5rem; margin-bottom: 5px; color: #f3ba2f; text-shadow: 0 0 15px rgba(243,186,47,0.3);">
-            📊 LIVE MARKET & CHART (ZARD / WBNB)
-        </h3>
-        <p style="color: #94a3b8; font-size: 0.9em;">Monitoreo avanzado de liquidez, velas en tiempo real y transacciones en la blockchain</p>
-    </div>
-
-    <!-- Contenedor del Gráfico de Velas Oficial (DexTools limpio sin interferencias) -->
-    <div class="chart-container" style="border-radius: 14px; overflow: hidden; border: 2px solid rgba(0, 242, 254, 0.4); box-shadow: 0 0 25px rgba(0, 242, 254, 0.15); background: #000; width: 100%;">
-        <iframe src="https://www.dextools.io/widget-chart/en/bnb/pe-light/0x5f8a5f349f72d27d994c38e8de3976fcedaf5abb?theme=dark&viewType=candlestick&chartType=1&chartResolution=30&drawingToolbars=false" 
-                title="ZARD DexTools Live Chart" 
-                width="100%" 
-                height="500px" 
-                style="border: none; display: block;">
-        </iframe>
-    </div>
-
-    <!-- Panel de Métricas Rápidas: Órdenes y Holders -->
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 15px; margin-top: 20px;">
+ <!-- BLOQUE: LIVE MARKET TRACKER & ZARD ANALYTICS -->
+    <div class="market-section" style="background: linear-gradient(135deg, #0b0e14 0%, #05070a 100%); border: 1px solid rgba(0, 242, 254, 0.3); border-radius: 20px; padding: 30px; margin-bottom: 40px; box-shadow: 0 10px 40px rgba(0,0,0,0.6);">
         
-        <!-- Casilla de Últimas Órdenes -->
-        <div style="background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px; padding: 18px;">
-            <h4 style="font-family: 'Orbitron', sans-serif; color: #00f2fe; font-size: 0.95rem; margin-bottom: 10px;">
-                🔄 Actividad Reciente (Swaps)
-            </h4>
-            <p style="color: #94a3b8; font-size: 0.8em; margin-bottom: 12px;">Seguimiento en tiempo real de entradas y salidas de capital.</p>
-            <a href="https://www.dextools.io/app/en/bnb/pair-explorer/0x5f8a5f349f72d27d994c38e8de3976fcedaf5abb" target="_blank" style="display: block; width: 100%; text-align: center; background: rgba(0, 242, 254, 0.1); border: 1px solid rgba(0, 242, 254, 0.3); color: #00f2fe; padding: 10px; border-radius: 8px; text-decoration: none; font-size: 0.85em; font-weight: 600;">
-                Ver Historial de Órdenes ↗
+        <!-- Encabezado de la Sección -->
+        <div style="text-align: center; margin-bottom: 25px;">
+            <h3 class="gold" style="font-family: 'Orbitron', sans-serif; font-size: 1.6rem; margin-bottom: 8px; color: #f3ba2f; text-shadow: 0 0 15px rgba(243,186,47,0.3);">
+                📊 LIVE MARKET & CHART (ZARD / WBNB)
+            </h3>
+            <p style="color: #94a3b8; font-size: 0.95em;">Monitoreo avanzado de liquidez, velas en tiempo real y transacciones en la blockchain</p>
+        </div>
+
+        <!-- Contenedor del Gráfico de Velas Oficial en Vivo (DexTools Widget) -->
+        <div class="chart-container" style="position: relative; width: 100%; border-radius: 14px; overflow: hidden; border: 2px solid rgba(0, 242, 254, 0.4); box-shadow: 0 0 25px rgba(0, 242, 254, 0.15); background: #000; margin-bottom: 25px;">
+            <iframe id="dextools-widget" 
+                    title="ZARD Live Trading Chart" 
+                    width="100%" 
+                    height="550px" 
+                    src="https://www.dextools.io/widget-chart/en/bnb/pe-light/0x5f8a5f349f72d27d994c38e8de3976fcedaf5abb?theme=dark&chartType=2&chartResolution=30&drawingToolbars=false" 
+                    style="border: none; display: block; width: 100%;">
+            </iframe>
+        </div>
+
+        <!-- Panel de Métricas Rápidas: Órdenes y Holders -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 15px; margin-top: 20px;">
+            
+            <!-- Casilla de Últimas Órdenes -->
+            <div style="background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px; padding: 18px;">
+                <h4 style="font-family: 'Orbitron', sans-serif; color: #00f2fe; font-size: 0.95rem; margin-bottom: 10px;">
+                    🔄 Actividad Reciente (Swaps)
+                </h4>
+                <p style="color: #94a3b8; font-size: 0.8em; margin-bottom: 12px;">Seguimiento en tiempo real de entradas y salidas de capital.</p>
+                <a href="https://www.dextools.io/app/en/bnb/pair-explorer/0x5f8a5f349f72d27d994c38e8de3976fcedaf5abb" target="_blank" style="display: block; width: 100%; text-align: center; background: rgba(0, 242, 254, 0.1); border: 1px solid rgba(0, 242, 254, 0.3); color: #00f2fe; padding: 10px; border-radius: 8px; text-decoration: none; font-size: 0.85em; font-weight: 600;">
+                    Ver Historial de Órdenes ↗
+                </a>
+            </div>
+
+            <!-- Casilla de Holders y Estadísticas del Contrato -->
+            <div style="background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px; padding: 18px;">
+                <h4 style="font-family: 'Orbitron', sans-serif; color: #f3ba2f; font-size: 0.95rem; margin-bottom: 10px;">
+                    👥 Distribución & Holders
+                </h4>
+                <p style="color: #94a3b8; font-size: 0.8em; margin-bottom: 12px;">Consulta la cantidad de billeteras poseedoras del token.</p>
+                <a href="https://bscscan.com/token/0x5f8a5f349f72d27d994c38e8de3976fcedaf5abb#balances" target="_blank" style="display: block; width: 100%; text-align: center; background: rgba(243, 186, 47, 0.1); border: 1px solid rgba(243, 186, 47, 0.3); color: #f3ba2f; padding: 10px; border-radius: 8px; text-decoration: none; font-size: 0.85em; font-weight: 600;">
+                    Ver Holders en BscScan ↗
+                </a>
+            </div>
+
+        </div>
+
+        <!-- Botones de Acción Rápida -->
+        <div style="margin-top: 25px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+            <a href="https://app.binance.com/uni-qr/web3-token-details?utm_medium=share&tokenCA=0x5f8a5f349f72d27d994c38e8de3976fcedaf5abb&binanceChainId=56&chain=bsc" target="_blank" class="btn-epic-buy" style="padding: 12px 25px; font-size: 0.95em; margin: 0; text-decoration: none;">
+                🚀 Binance Web3
+            </a>
+            <a href="https://figueredo56.github.io/zaard-wallet/wallet.html" target="_blank" class="btn-epic-buy" style="padding: 12px 25px; font-size: 0.95em; margin: 0; background: linear-gradient(135deg, #00ff66, #00f2fe); text-decoration: none; color: #030308;">
+                💼 <span class="highlight-zard" style="color:#030308;">ZAARD</span> Wallet
             </a>
         </div>
 
-        <!-- Casilla de Holders y Estadísticas del Contrato -->
-        <div style="background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px; padding: 18px;">
-            <h4 style="font-family: 'Orbitron', sans-serif; color: #f3ba2f; font-size: 0.95rem; margin-bottom: 10px;">
-                👥 Distribución & Holders
-            </h4>
-            <p style="color: #94a3b8; font-size: 0.8em; margin-bottom: 12px;">Consulta la cantidad de billeteras poseedoras del token.</p>
-            <a href="https://bscscan.com/token/0x5f8a5f349f72d27d994c38e8de3976fcedaf5abb#balances" target="_blank" style="display: block; width: 100%; text-align: center; background: rgba(243, 186, 47, 0.1); border: 1px solid rgba(243, 186, 47, 0.3); color: #f3ba2f; padding: 10px; border-radius: 8px; text-decoration: none; font-size: 0.85em; font-weight: 600;">
-                Ver Holders en BscScan ↗
-            </a>
-        </div>
-
-    </div>
-
-    <!-- Botones de Acción Rápida -->
-    <div style="margin-top: 20px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
-        <a href="https://app.binance.com/uni-qr/web3-token-details?utm_medium=share&tokenCA=0x5f8a5f349f72d27d994c38e8de3976fcedaf5abb&binanceChainId=56&chain=bsc" target="_blank" class="btn-epic-buy" style="padding: 12px 25px; font-size: 0.95em; margin: 0; text-decoration: none;">
-            🚀 Binance Web3
-        </a>
-        <a href="https://figueredo56.github.io/zaard-wallet/wallet.html" target="_blank" class="btn-epic-buy" style="padding: 12px 25px; font-size: 0.95em; margin: 0; background: linear-gradient(135deg, #00ff66, #00f2fe); text-decoration: none; color: #030308;">
-            💼 <span class="highlight-zard" style="color:#030308;">ZAARD</span> Wallet
-        </a>
-    </div>
-
-</div>
-    <!-- Panel de Métricas Rápidas: Órdenes y Holders -->
-    <div style="position: relative; z-index: 1; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 25px;">
-        
-        <!-- Casilla de Últimas Órdenes -->
-        <div style="background: rgba(15, 23, 42, 0.7); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px; padding: 20px; backdrop-filter: blur(10px);">
-            <h4 style="font-family: 'Orbitron', sans-serif; color: #00f2fe; font-size: 1rem; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
-                🔄 Actividad Reciente (Swaps)
-            </h4>
-            <p style="color: #94a3b8; font-size: 0.85em; margin-bottom: 15px;">Seguimiento en tiempo real de entradas y salidas de capital en el par de PancakeSwap.</p>
-            <a href="https://www.dextools.io/app/en/bnb/pair-explorer/0x5f8a5f349f72d27d994c38e8de3976fcedaf5abb" target="_blank" style="display: block; width: 100%; text-align: center; background: rgba(0, 242, 254, 0.1); border: 1px solid rgba(0, 242, 254, 0.3); color: #00f2fe; padding: 10px; border-radius: 8px; text-decoration: none; font-size: 0.9em; font-weight: 600; transition: all 0.3s ease;">
-                Ver Historial de Órdenes en Vivo ↗
-            </a>
-        </div>
-
-        <!-- Casilla de Holders y Estadísticas del Contrato -->
-        <div style="background: rgba(15, 23, 42, 0.7); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px; padding: 20px; backdrop-filter: blur(10px);">
-            <h4 style="font-family: 'Orbitron', sans-serif; color: #f3ba2f; font-size: 1rem; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
-                👥 Distribución & Holders
-            </h4>
-            <p style="color: #94a3b8; font-size: 0.85em; margin-bottom: 15px;">Consulta la cantidad de billeteras poseedoras y el suministro circulante verificado.</p>
-            <a href="https://bscscan.com/token/0x5f8a5f349f72d27d994c38e8de3976fcedaf5abb#balances" target="_blank" style="display: block; width: 100%; text-align: center; background: rgba(243, 186, 47, 0.1); border: 1px solid rgba(243, 186, 47, 0.3); color: #f3ba2f; padding: 10px; border-radius: 8px; text-decoration: none; font-size: 0.9em; font-weight: 600; transition: all 0.3s ease;">
-                Ver Holders en BscScan ↗
-            </a>
-        </div>
-
-    </div>
-
-    <!-- Botones de Acción Rápida -->
-    <div style="position: relative; z-index: 1; margin-top: 25px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
-        <a href="https://app.binance.com/uni-qr/web3-token-details?utm_medium=share&tokenCA=0x5f8a5f349f72d27d994c38e8de3976fcedaf5abb&binanceChainId=56&chain=bsc" target="_blank" class="btn-epic-buy" style="padding: 12px 25px; font-size: 0.95em; margin: 0; text-decoration: none;">
-            🚀 Binance Web3
-        </a>
-        <a href="https://figueredo56.github.io/zaard-wallet/wallet.html" target="_blank" class="btn-epic-buy" style="padding: 12px 25px; font-size: 0.95em; margin: 0; background: linear-gradient(135deg, #00ff66, #00f2fe); text-decoration: none;">
-            💼 <span class="highlight-zard" style="color:#030308;">ZAARD</span> Wallet
-        </a>
-    </div>
-
-</div>
     </div>
 
     <!-- SCRIPT DE TRANSICIÓN Y VERIFICACIÓN DE SEGURIDAD AUTOMÁTICA -->
@@ -666,9 +625,13 @@
             const splash = document.getElementById('splash-screen');
             const mainContent = document.getElementById('main-content');
             
-            splash.style.opacity = '0';
-            splash.style.visibility = 'hidden';
-            mainContent.style.opacity = '1';
+            if (splash) {
+                splash.style.opacity = '0';
+                splash.style.visibility = 'hidden';
+            }
+            if (mainContent) {
+                mainContent.style.opacity = '1';
+            }
         }, 4000);
     });
 
@@ -676,6 +639,8 @@
         const contrato = "0x5f8a5f349f72d27d994c38e8de3976fcedaf5abb";
         const chainId = "56"; // BSC
         const contenedor = document.getElementById("zaard-security-box");
+
+        if (!contenedor) return;
 
         try {
             const respuesta = await fetch(`https://api.gopluslabs.io/api/v1/token_security/${chainId}?contract_addresses=${contrato}`);
@@ -698,7 +663,7 @@
                     <p style="margin-top: 10px; font-size: 0.7em; color: #10b981; margin-bottom: 0;">🟢 Monitoreado por GoPlus Security.</p>
                 `;
             } else {
-                contenedor.innerHTML = `<p style="color: #facc15; font-size: 0.9em; margin: 0;">ℹ️ Contrato registrado en la red correctamente.</p>`;
+                contenedor.innerHTML = `<p style="color: #facc15; font-size: 0.9em; margin: 0;">ℹ️️ Contrato registrado en la red correctamente.</p>`;
             }
         } catch (error) {
             contenedor.innerHTML = `<p style="color: #ef4444; font-size: 0.9em; margin: 0;">❌ Error al consultar el estado del contrato.</p>`;
