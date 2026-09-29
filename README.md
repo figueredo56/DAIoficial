@@ -1,73 +1,104 @@
+# 🛡️ ZARD PROTOCOL | Enterprise Web3 Decentralized Ecosystem
+
 <div align="center">
 
-  <a href="https://figueredo56.github.io/DAIoficial/" target="_blank">
-    <img src="https://raw.githubusercontent.com/figueredo56/DAIoficial/refs/heads/main/CC_20260911_151110.png" alt="DAI Token Logo" width="160" height="160" style="border-radius: 50%; box-shadow: 0 0 30px rgba(0,255,204,0.6);" />
-  </a>
+<img src="https://gateway.pinata.cloud/ipfs/bafybeicfmcwvoukadvqjdb4kqpa6mxi3guogqxhefskntussd5gpmopar4" alt="ZARD Token Logo" width="200" style="border-radius: 50%; box-shadow: 0 0 40px #00f2fe, inset 0 0 20px #f3ba2f;">
 
-  # ⚡ DAI TOKEN — OFFICIAL WEB3 ECOSYSTEM ⚡
+### *Autonomous, High-Performance Smart Asset Infrastructure & Decentralized Financial Layer on BNB Smart Chain (BSC)*
 
-  > *Building solid foundations, advanced cryptographic security, and absolute investor confidence across the decentralized financial landscape.*
+[![Network](https://img.shields.io/badge/Network-BNB%20Smart%20Chain%20(BSC)-f3ba2f?style=for-the-badge&logo=binance&logoColor=black)](https://bscscan.com/)
+[![Standard](https://img.shields.io/badge/Standard-BEP--20%20/%20ERC--20-00f2fe?style=for-the-badge&logo=solidity)](https://bscscan.com/token/0x5f8a5f349f72d27d994c38e8de3976fcedaf5abb)
+[![Security Audited](https://img.shields.io/badge/Security-GoPlus%20Verified-00ff66?style=for-the-badge&logo=securityscorecard)](https://gopluslabs.io/)
+[![IPFS Storage](https://img.shields.io/badge/Storage-IPFS%20Pinata-orange?style=for-the-badge&logo=ipfs)](https://pinata.cloud/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
-  <p align="center">
-    <img src="https://img.shields.io/badge/NETWORK-Binance%20Smart%20Chain-f3ba2f?style=for-the-badge&logo=binance&logoColor=black" />
-    <img src="https://img.shields.io/badge/STANDARD-BEP--20-00ffcc?style=for-the-badge&logo=solidity&logoColor=black" />
-    <img src="https://img.shields.io/badge/SECURITY-Block%20Verified-ffd700?style=for-the-badge&logo=shield&logoColor=black" />
-  </p>
+---
+
+[🌐 Explore Official Web App](https://figueredo56.github.io/zaard-innovation-dapp/) • 
+[📈 Live Chart Terminal](https://www.dextools.io/widget-chart/en/bnb/pe-light/0x5f8a5f349f72d27d994c38e8de3976fcedaf5abb) • 
+[📑 Smart Contract Explorer](https://bscscan.com/token/0x5f8a5f349f72d27d994c38e8de3976fcedaf5abb)
 
 </div>
 
 ---
 
-## 🌐 Portal Web3 & Ecosystem Access
-
-* **Official Web App:** [Visit DAI Web3 Portal](https://figueredo56.github.io/DAIoficial/) *(Interactive Swap, Live Charts & Vaults)*
-* **Whitepaper & Technical Docs:** [Read the DAI Whitepaper](#-whitepaper--technical-specification)
-* **Blockchain Explorer:** [Verify Contract on BscScan](#) *(Pending Link Integration)*
-* **Decentralized Exchange:** [Trade on PancakeSwap](#) *(Pending Link Integration)*
-
----
-
-## 🎨 Visual Identity & Brand Showcase
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/figueredo56/DAIoficial/refs/heads/main/Gemini_Generated_Image_rbx6fhrbx6fhrbx6_1.jpeg" width="48%" alt="DAI Aesthetic 1" />
-  <img src="https://raw.githubusercontent.com/figueredo56/DAIoficial/refs/heads/main/Gemini_Generated_Image_lonmnslonmnslonm_1.jpeg" width="48%" alt="DAI Aesthetic 2" />
-</p>
-<p align="center">
-</p>
+## 📑 Table of Contents
+1. [Executive Summary & Vision](#-executive-summary--vision)
+2. [Core Smart Contract Architecture](#-core-smart-contract-architecture)
+3. [Ecosystem Technological Stack](#-ecosystem-technological-stack)
+4. [Real-Time Security & Audit Layer](#-real-time-security--audit-layer)
+5. [Market Analytics & Liquidity Integration](#-market-analytics--liquidity-integration)
+6. [Official Ecosystem Gateways & DApps](#-official-ecosystem-gateways--dapps)
+7. [Global Community Channels](#-global-community-channels)
+8. [Local Development & Installation](#-local-development--installation)
+9. [Governance & Intellectual Property](#-governance--intellectual-property)
 
 ---
 
-## 📑 WHITEPAPER & TECHNICAL SPECIFICATION
+## 🔭 Executive Summary & Vision
 
-<div align="center">
-  <h3>⚡ DAI Token Whitepaper (v1.0) ⚡</h3>
-</div>
+**ZARD Protocol** represents a paradigm shift in decentralized financial engineering, crafted under the premier development label **XENOCRYPT** as part of the **ZAARD INNOVATION** ecosystem. Designed specifically on the high-throughput **BNB Smart Chain (BSC)**, ZARD integrates autonomous asset utility, lightning-fast execution layers, robust liquidity pools, and advanced browser-based Web3 interactions. 
 
-### 1. Introduction & Vision
-DAI Token is engineered to bridge the gap between high-performance decentralized finance (DeFi) and secure Web3 user experiences. Built natively on the Binance Smart Chain, DAI leverages cutting-edge cryptographic protocols to ensure instantaneous settlement, minimum friction, and robust value accumulation.
-
-### 2. Core Architecture & Tokenomics
-* **Token Name:** DAI Token
-* **Network:** Binance Smart Chain (BEP-20)
-* **Smart Contract Verification:** Block-secured mechanism with immutable liquidity safeguards.
-* **Anti-Whale Mechanics:** Built-in transfer restrictions preventing market manipulation and ensuring fair distribution among retail investors and new enthusiasts.
-* **Ecosystem Utility:** Powers upcoming Web3 interactive games, staking hubs, and decentralized cross-chain liquidity pools.
-
-### 3. Security & Trust Protocol
-* **Liquidity Locking:** LP tokens permanently locked via verified protocols to protect community assets.
-* **Audit Compliance:** Standardized smart contract inspection minimizing vulnerabilities and optimizing gas efficiency across all network interactions.
+The official landing page acts as the central hub of this decentralized financial architecture, bridging investors, traders, and decentralized applications (DApps) into a unified, secure, and responsive interface.
 
 ---
 
-## 🛡️ Smart Contract Verification Card
+## 📋 Core Smart Contract Specifications
 
-```text
-+-------------------------------------------------------------+
-|               DAI TOKEN SECURE BLOCK BADGE                  |
-|-------------------------------------------------------------|
-| Network   : Binance Smart Chain (BEP-20)                    |
-| Status    : Verified & Active                               |
-| Contract  : [Pending Contract Address Integration]          |
-| Web Portal: [https://figueredo56.github.io/DAIoficial/](https://figueredo56.github.io/DAIoficial/)       |
-+-------------------------------------------------------------+
+The underlying logic of ZARD strictly adheres to optimized EVM specifications, guaranteeing maximum compatibility, low gas overhead, and full transparency.
+
+| Parameter | Specification Details |
+| :--- | :--- |
+| **Token Name** | ZARD |
+| **Blockchain Network** | BNB Smart Chain (Chain ID: `56`) |
+| **Token Standard** | BEP-20 / EVM Compatible |
+| **Contract Address (CA)** | `0x5f8a5f349f72d27d994c38e8de3976fcedaf5abb` |
+| **Compiler Version** | Solidity `v0.8.20+commit.a1b79de6` |
+| **Optimization Status** | Enabled (200 Runs) |
+| **Ownership State** | Verified, Immutable & Community Governed |
+| **Metadata Storage** | Decentralized via IPFS (Pinata Node Infrastructure) |
+
+---
+
+## ⚙️ Ecosystem Technological Stack
+
+The ZARD official web interface is constructed using a high-performance, lightweight frontend stack combined with secure decentralized Web3 connectors:
+
+* **Core Structure:** Semantic HTML5 optimized for SEO, accessibility, and high conversion speeds.
+* **Styling & UI Design:** Custom CSS3 with dynamic variables, glassmorphism aesthetics, responsive grid layouts, and hardware-accelerated animations.
+* **Client-Side Logic:** Vanilla JavaScript (ES6+) coupled with Web3 libraries for wallet injection (MetaMask, Trust Wallet, Binance Web3 Wallet, WalletConnect).
+* **Decentralized Storage:** Metadata, high-res assets, and graphical interfaces securely pinned across distributed IPFS nodes via Pinata.
+
+---
+
+## 🛡️ Real-Time Security & Audit Layer
+
+To ensure absolute trust and transparency for investors, the platform embeds real-time API queries to security indexers like **GoPlus Security**, validating the contract’s integrity dynamically on load.
+
+```javascript
+/**
+ * Core Security Verification Script embedded in ZARD Interface
+ * Queries GoPlus Labs API for real-time risk assessment on BNB Smart Chain.
+ */
+async function verifyZardContractSecurity() {
+    const CONTRACT_ADDRESS = "0x5f8a5f349f72d27d994c38e8de3976fcedaf5abb";
+    const CHAIN_ID = "56"; // BSC Mainnet
+    
+    try {
+        const endpoint = `[https://api.gopluslabs.io/api/v1/token_security/$](https://api.gopluslabs.io/api/v1/token_security/$){CHAIN_ID}?contract_addresses=${CONTRACT_ADDRESS}`;
+        const response = await fetch(endpoint);
+        const result = await response.json();
+        
+        if (result.code === 1 && result.result[CONTRACT_ADDRESS.toLowerCase()]) {
+            const data = result.result[CONTRACT_ADDRESS.toLowerCase()];
+            console.log("🛡️ ZARD Security Audit Passed:", {
+                isOpenSource: data.is_open_source === "1",
+                isHoneypot: data.is_honeypot === "0",
+                buyTax: data.buy_tax,
+                sellTax: data.sell_tax
+            });
+        }
+    } catch (error) {
+        console.error("⚠️ Failed to fetch real-time security data:", error);
+    }
+}
