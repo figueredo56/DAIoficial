@@ -557,39 +557,30 @@
 
             <hr>
 
-<!-- BLOQUE: LIVE MARKET TRACKER & ZARD ANALYTICS -->
-    <div class="market-section" style="background: linear-gradient(135deg, #0b0e14 0%, #05070a 100%); border: 1px solid rgba(0, 242, 254, 0.3); border-radius: 20px; padding: 30px; margin-bottom: 40px; box-shadow: 0 10px 40px rgba(0,0,0,0.6);">
+<!-- ======================================================= -->
+    <!-- BLOQUE MAESTRO: DEXTOOLS + EVOLUCIÓN TÉCNICA Y ECOSYSTEM -->
+    <!-- ======================================================= -->
+    <div class="section" style="position: relative; overflow: hidden; border: 2px solid var(--gold); box-shadow: 0 0 35px rgba(212, 175, 55, 0.35); background: linear-gradient(135deg, rgba(15,15,15,0.95), rgba(26,26,46,0.9)); padding: 25px; border-radius: 16px; margin-bottom: 40px;">
         
-        <!-- Encabezado de la Sección -->
-        <div style="text-align: center; margin-bottom: 25px;">
-            <h3 class="gold" style="font-family: 'Orbitron', sans-serif; font-size: 1.6rem; margin-bottom: 8px; color: #f3ba2f; text-shadow: 0 0 15px rgba(243,186,47,0.3);">
-                📊 LIVE MARKET & CHART (ZARD / WBNB)
-            </h3>
-            <p style="color: #94a3b8; font-size: 0.95em;">Monitoreo avanzado de liquidez, velas en tiempo real y transacciones en la blockchain</p>
-        </div>
+        <!-- PARTE 1: GRÁFICO Y MERCADO EN VIVO (DEXTOOLS) -->
+        <h2 class="gold" style="text-align: center; font-size: 1.8em; margin-bottom: 5px; text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);">
+            📈 LIVE MARKET & CHART
+        </h2>
+        <p style="text-align: center; color: #00ffcc; font-size: 0.9em; letter-spacing: 2px; margin-bottom: 20px; text-transform: uppercase;">
+            ZARD / BNB Real-Time Analytics & Orders
+        </p>
 
-        <!-- Contenedor del Gráfico de Velas Oficial en Vivo (DexTools con permisos de despliegue) -->
-        <div class="chart-container" style="position: relative; width: 100%; border-radius: 14px; overflow: hidden; border: 2px solid rgba(0, 242, 254, 0.4); box-shadow: 0 0 25px rgba(0, 242, 254, 0.15); background: #000; margin-bottom: 25px;">
-            <iframe id="dextools-widget" 
-                    title="ZARD Live Trading Chart" 
-                    width="100%" 
-                    height="550px" 
-                    src="https://www.dextools.io/widget-chart/en/bnb/pe-light/0x5f8a5f349f72d27d994c38e8de3976fcedaf5abb?theme=dark&chartType=2&chartResolution=30&drawingToolbars=false" 
-                    allow="clipboard-write; fullscreen"
-                    style="border: none; display: block; width: 100%; background: #000;">
+        <!-- Widget Iframe DexTools configurado con la ruta estable y el contrato correcto -->
+        <div style="width: 100%; height: 600px; border-radius: 12px; overflow: hidden; border: 1px solid rgba(0, 255, 204, 0.4); background: rgba(0, 0, 0, 0.85); box-shadow: inset 0 0 20px rgba(0,0,0,0.8); margin-bottom: 25px;">
+            <iframe src="https://www.dextools.io/widget-chart/es/bnb/pe-chart/0x5f8a5f349f72d27d994c38e8de3976fcedaf5abb?theme=dark&chartType=1&chartResolution=5&drawingToolbars=false&roundedCorners=true&loadingscreen=true" 
+                    style="width: 100%; height: 100%; border: none;" 
+                    title="ZARD Live Chart & Order Book"
+                    allow="clipboard-write; fullscreen">
             </iframe>
         </div>
 
-        <!-- Aviso por si el navegador bloquea iframes y Botón Directo de Emergencia -->
-        <div style="background: rgba(0, 242, 254, 0.05); border: 1px dashed rgba(0, 242, 254, 0.3); border-radius: 12px; padding: 15px; text-align: center; margin-bottom: 25px;">
-            <p style="color: #94a3b8; font-size: 0.85em; margin-bottom: 10px;">¿Tu navegador bloquea el gráfico integrado por extensiones de privacidad?</p>
-            <a href="https://www.dextools.io/app/en/bnb/pair-explorer/0x5f8a5f349f72d27d994c38e8de3976fcedaf5abb" target="_blank" style="display: inline-block; background: linear-gradient(135deg, #00f2fe, #4facfe); color: #030308; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-size: 0.85em; font-weight: 700; box-shadow: 0 0 15px rgba(0,242,254,0.3);">
-                Abrir Gráfico en Pantalla Completa en DexTools ↗
-            </a>
-        </div>
-
         <!-- Panel de Métricas Rápidas: Órdenes y Holders -->
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 15px; margin-top: 20px;">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 15px; margin-bottom: 25px;">
             
             <!-- Casilla de Últimas Órdenes -->
             <div style="background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px; padding: 18px;">
@@ -615,14 +606,35 @@
 
         </div>
 
-        <!-- Botones de Acción Rápida -->
-        <div style="margin-top: 25px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
-            <a href="https://app.binance.com/uni-qr/web3-token-details?utm_medium=share&tokenCA=0x5f8a5f349f72d27d994c38e8de3976fcedaf5abb&binanceChainId=56&chain=bsc" target="_blank" class="btn-epic-buy" style="padding: 12px 25px; font-size: 0.95em; margin: 0; text-decoration: none;">
-                🚀 Binance Web3
+        <!-- Botones de Acción y Enlaces Web3 (Binance Web3 + DexTools) -->
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px;">
+            
+            <!-- Acceso Directo: Binance Web3 Token Details -->
+            <a href="https://app.binance.com/uni-qr/web3-token-details?utm_medium=share&tokenCA=0x5f8a5f349f72d27d994c38e8de3976fcedaf5abb&binanceChainId=56&chain=bsc" 
+               target="_blank" 
+               class="card-link"
+               style="display: inline-block; width: 100%; max-width: 320px; padding: 15px 25px; background: linear-gradient(135deg, rgba(0,255,204,0.25), rgba(176,0,255,0.2)); border: 2px solid #00ffcc; border-radius: 12px; box-shadow: 0 0 20px rgba(0,255,204,0.3); text-decoration: none; transition: all 0.3s ease; text-align: center;">
+                <span style="display: block; color: #00ffcc; font-size: 1.1em; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; text-shadow: 0 0 8px rgba(0,255,204,0.6);">
+                    🌐 VER EN BINANCE WEB3
+                </span>
+                <span style="display: block; color: #fff; font-size: 0.8em; margin-top: 4px; opacity: 0.9; word-break: break-all;">
+                    CA: 0x5f8a...5abb
+                </span>
             </a>
-            <a href="https://figueredo56.github.io/zaard-wallet/wallet.html" target="_blank" class="btn-epic-buy" style="padding: 12px 25px; font-size: 0.95em; margin: 0; background: linear-gradient(135deg, #00ff66, #00f2fe); text-decoration: none; color: #030308;">
-                💼 <span class="highlight-zard" style="color:#030308;">ZAARD</span> Wallet
+
+            <!-- Acceso Directo a DexTools Pair Explorer -->
+            <a href="https://www.dextools.io/app/en/bnb/pair-explorer/0x5f8a5f349f72d27d994c38e8de3976fcedaf5abb" 
+               target="_blank" 
+               class="card-link"
+               style="display: inline-block; width: 100%; max-width: 320px; padding: 15px 25px; background: linear-gradient(135deg, rgba(212,175,55,0.2), rgba(0,255,204,0.2)); border: 2px solid var(--gold); border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.5); text-decoration: none; transition: all 0.3s ease; text-align: center;">
+                <span style="display: block; color: var(--gold); font-size: 1.1em; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; text-shadow: 0 0 8px rgba(212,175,55,0.6);">
+                    🚀 DEXTOOLS EXPLORER
+                </span>
+                <span style="display: block; color: #fff; font-size: 0.8em; margin-top: 4px; opacity: 0.9;">
+                    Analizar swaps y liquidez
+                </span>
             </a>
+
         </div>
 
     </div>
@@ -684,4 +696,4 @@
     });
     </script>
 </body>
-</html>
+        </html>
