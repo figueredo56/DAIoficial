@@ -127,7 +127,7 @@
             padding-top: 15px;
         }
 
-        /* Logo superior ampliado para mayor impacto visual */
+        /* Logo superior ampliado */
         .sonic-floating-logo img {
             max-width: 270px;
             width: 100%;
@@ -151,7 +151,6 @@
             text-shadow: 0 0 12px rgba(212, 175, 55, 0.6);
         }
 
-        /* Secciones con fondo translúcido y elegante */
         .section {
             border: 1px solid rgba(176, 132, 204, 0.35);
             padding: 30px 20px;
@@ -339,7 +338,7 @@
             color: #b084cc;
         }
 
-        /* --- SECCIÓN DE VELAS EN VIVO CON MARCA DE AGUA DELICADA --- */
+        /* --- SECCIÓN DE VELAS EN VIVO CON MARCA DE AGUA --- */
         .market-section {
             background: linear-gradient(135deg, rgba(8, 3, 18, 0.78), rgba(15, 8, 30, 0.85));
             border-radius: 24px;
@@ -388,18 +387,6 @@
             width: 100%;
             height: 100%;
             border: none;
-        }
-
-        .contract-box {
-            background: rgba(0, 0, 0, 0.5);
-            border: 1px dashed var(--neon-blue);
-            padding: 15px;
-            border-radius: 12px;
-            word-break: break-all;
-            font-family: monospace;
-            color: var(--neon-blue);
-            font-size: 0.9em;
-            margin: 15px 0;
         }
 
         .footer {
@@ -462,12 +449,17 @@
                 </div>
             </div>
 
-            <!-- Smart Contract Box -->
-            <div class="section" style="max-width: 700px; margin: 0 auto 30px auto;">
-                <h3 class="gold" style="margin-top: 0; margin-bottom: 10px;">💎 Smart Contract Oficial (BSC)</h3>
-                <p style="color: var(--text-purple); font-size: 0.85em; margin-bottom: 10px;">Verificado en BscScan bajo los más altos estándares de seguridad descentralizada.</p>
-                <div class="contract-box">
-                    0x5f8a5f349f72d27d994c38e8de3976fcedaf5abb
+            <!-- ========================================== -->
+            <!-- SECCIÓN DE SEGURIDAD EN VIVO - GOPLUS      -->
+            <!-- ========================================== -->
+            <div class="section" style="border: 1px solid rgba(212, 175, 55, 0.3); padding: 20px; border-radius: 15px; margin: 25px auto; max-width: 650px; background: rgba(0, 0, 0, 0.5); text-align: left;">
+                <h3 style="color: #d4af37; text-align: center; margin-bottom: 10px; font-family: 'Orbitron', sans-serif;">🛡️ Estado de Seguridad del Contrato</h3>
+                <p style="font-size: 0.8em; text-align: center; color: #bbb; margin-bottom: 15px; word-break: break-all;">
+                    Contrato: <code style="color: #00f2fe;">0x5f8a5f349f72d27d994c38e8de3976fcedaf5abb</code>
+                </p>
+                
+                <div id="zaard-security-box" style="background: rgba(0, 0, 0, 0.6); border: 1px solid rgba(0, 242, 254, 0.3); padding: 15px; border-radius: 10px; text-align: center;">
+                    <p style="color: #fff; font-size: 0.9em;">🔄 Verificando contrato en tiempo real...</p>
                 </div>
             </div>
 
@@ -563,14 +555,6 @@
                 </div>
             </div>
 
-            <!-- Panel de Seguridad en Vivo (GoPlus) -->
-            <div class="section" style="border: 1px solid rgba(212, 175, 55, 0.4); text-align: left; max-width: 650px; margin: 30px auto;">
-                <h3 class="gold" style="text-align: center; margin-bottom: 10px;">🛡️ Auditoría en Vivo (GoPlus Security)</h3>
-                <div id="zaard-security-box" style="background: rgba(0, 0, 0, 0.5); border: 1px solid rgba(0, 242, 254, 0.3); padding: 18px; border-radius: 14px; text-align: center;">
-                    <p style="color: var(--text-purple); font-size: 0.9em;">🔄 Analizando contrato 0x5f8a...edaf5abb...</p>
-                </div>
-            </div>
-
             <hr>
 
             <!-- Gráfico de Mercado en Vivo con Marca de Agua Delicada -->
@@ -601,8 +585,7 @@
         </div>
     </div>
 
-
-    <!-- SCRIPT DE TRANSICIÓN Y AUDITORÍA -->
+    <!-- SCRIPT DE TRANSICIÓN Y VERIFICACIÓN DE SEGURIDAD AUTOMÁTICA -->
     <script>
     window.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => {
@@ -617,7 +600,7 @@
 
     async function verificarSeguridadContrato() {
         const contrato = "0x5f8a5f349f72d27d994c38e8de3976fcedaf5abb";
-        const chainId = "56";
+        const chainId = "56"; // BSC
         const contenedor = document.getElementById("zaard-security-box");
 
         try {
@@ -632,19 +615,19 @@
                 const isOpenSource = info.is_open_source === "1" ? "✅ Verificado" : "⚠️ No Verificado";
 
                 contenedor.innerHTML = `
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; font-size: 0.9em; text-align: left;">
-                        <div><strong>Código Fuente:</strong><br><span style="color: #4ade80;">${isOpenSource}</span></div>
-                        <div><strong>Estado Token:</strong><br><span style="color: #4ade80;">${esHoneypot}</span></div>
-                        <div><strong>Impuesto Compra:</strong><br><span style="color: #38bdf8;">${buyTax}</span></div>
-                        <div><strong>Impuesto Venta:</strong><br><span style="color: #38bdf8;">${sellTax}</span></div>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; font-size: 0.85em; text-align: left;">
+                        <div><strong>Código:</strong><br><span style="color: #4ade80;">${isOpenSource}</span></div>
+                        <div><strong>Estado:</strong><br><span style="color: #4ade80;">${esHoneypot}</span></div>
+                        <div><strong>Imp. Compra:</strong><br><span style="color: #38bdf8;">${buyTax}</span></div>
+                        <div><strong>Imp. Venta:</strong><br><span style="color: #38bdf8;">${sellTax}</span></div>
                     </div>
-                    <p style="margin-top: 12px; font-size: 0.75em; color: #10b981; margin-bottom: 0; text-align: center;">🟢 Verificado automáticamente por GoPlus Security.</p>
+                    <p style="margin-top: 10px; font-size: 0.7em; color: #10b981; margin-bottom: 0;">🟢 Monitoreado por GoPlus Security.</p>
                 `;
             } else {
-                contenedor.innerHTML = `<p style="color: #facc15; font-size: 0.9em; margin: 0; text-align: center;">ℹ️ Contrato registrado y activo en Binance Smart Chain.</p>`;
+                contenedor.innerHTML = `<p style="color: #facc15; font-size: 0.9em; margin: 0;">ℹ️ Contrato registrado en la red correctamente.</p>`;
             }
         } catch (error) {
-            contenedor.innerHTML = `<p style="color: #ef4444; font-size: 0.9em; margin: 0; text-align: center;">❌ Información consultada con éxito en la red.</p>`;
+            contenedor.innerHTML = `<p style="color: #ef4444; font-size: 0.9em; margin: 0;">❌ Error al consultar el estado del contrato.</p>`;
         }
     }
 
