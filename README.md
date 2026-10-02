@@ -52,7 +52,7 @@ The underlying logic of ZARD strictly adheres to optimized EVM specifications, g
 | **Token Name** | ZARD |
 | **Blockchain Network** | BNB Smart Chain (Chain ID: `56`) |
 | **Token Standard** | BEP-20 / EVM Compatible |
-| **Contract Address (CA)** | `0x5f8a5f349f72d27d994c38e8de3976fcedaf5abb` |
+| **Contract Address (CA)** | `0x472d59538effe1c85382e3e62e1b2ec995d382ef` |
 | **Compiler Version** | Solidity `v0.8.20+commit.a1b79de6` |
 | **Optimization Status** | Enabled (200 Runs) |
 | **Ownership State** | Verified, Immutable & Community Governed |
