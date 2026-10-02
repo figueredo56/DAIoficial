@@ -16,112 +16,106 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     
     <style>
-        /* ESTILOS PARA EL MODAL DE BIENVENIDA */
-        .welcome-modal-overlay {
+        /* PANTALLA DE BIENVENIDA INICIAL (SPLASH SCREEN) */
+        #splashScreen {
             position: fixed;
             top: 0;
             left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(5, 5, 15, 0.85);
-            backdrop-filter: blur(8px);
+            width: 100vw;
+            height: 100vh;
+            background: radial-gradient(circle at center, #121225 0%, #070710 100%);
             display: flex;
             justify-content: center;
             align-items: center;
-            z-index: 9999;
-            animation: fadeIn 0.4s ease-out;
+            z-index: 99999;
+            transition: opacity 0.6s ease, visibility 0.6s ease;
         }
 
-        .welcome-modal-card {
-            background: linear-gradient(135deg, #121225 0%, #1a1a3a 100%);
-            border: 1px solid rgba(0, 255, 204, 0.3);
-            box-shadow: 0 10px 35px rgba(0, 255, 204, 0.2);
-            border-radius: 20px;
+        .splash-content {
+            background: linear-gradient(135deg, rgba(18, 18, 37, 0.95) 0%, rgba(26, 26, 58, 0.95) 100%);
+            border: 1px solid rgba(0, 255, 204, 0.4);
+            box-shadow: 0 15px 45px rgba(0, 255, 204, 0.25);
+            border-radius: 24px;
             width: 90%;
-            max-width: 450px;
-            padding: 25px;
+            max-width: 460px;
+            padding: 30px;
             text-align: center;
             color: #ffffff;
             font-family: 'Poppins', sans-serif;
-            position: relative;
-            animation: scaleUp 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            animation: splashScale 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
 
-        .welcome-modal-img {
+        .splash-img {
             width: 100%;
-            max-height: 200px;
+            max-height: 210px;
             object-fit: cover;
-            border-radius: 12px;
-            margin-bottom: 15px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .welcome-modal-card h2 {
-            font-size: 22px;
-            color: #00ffcc;
-            margin-bottom: 10px;
-            font-weight: 700;
-        }
-
-        .welcome-modal-card p {
-            font-size: 14px;
-            color: #b0b0d0;
-            line-height: 1.6;
+            border-radius: 14px;
             margin-bottom: 20px;
-        }
-
-        .welcome-jurisdiction-tag {
-            background: rgba(0, 255, 204, 0.1);
-            color: #00ffcc;
-            font-size: 12px;
-            padding: 6px 12px;
-            border-radius: 20px;
-            display: inline-block;
-            margin-bottom: 20px;
-            font-weight: 600;
             border: 1px solid rgba(0, 255, 204, 0.2);
         }
 
-        .welcome-close-btn {
+        .splash-content h1 {
+            font-size: 24px;
+            color: #00ffcc;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        .splash-jurisdiction-badge {
+            background: rgba(0, 255, 204, 0.12);
+            color: #00ffcc;
+            font-size: 12px;
+            padding: 6px 14px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 15px;
+            font-weight: 600;
+            border: 1px solid rgba(0, 255, 204, 0.3);
+            letter-spacing: 0.5px;
+        }
+
+        .splash-content p {
+            font-size: 14px;
+            color: #b0b0d0;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .splash-enter-btn {
             background: linear-gradient(135deg, #00ffcc 0%, #00b386);
             color: #0b0b16;
             border: none;
-            padding: 12px 30px;
-            font-size: 15px;
+            padding: 14px 30px;
+            font-size: 16px;
             font-weight: 700;
             border-radius: 30px;
             cursor: pointer;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 255, 204, 0.4);
+            box-shadow: 0 5px 20px rgba(0, 255, 204, 0.4);
             width: 100%;
         }
 
-        .welcome-close-btn:hover {
+        .splash-enter-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(0, 255, 204, 0.6);
+            box-shadow: 0 8px 25px rgba(0, 255, 204, 0.6);
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        @keyframes scaleUp {
-            from { transform: scale(0.8); opacity: 0; }
+        @keyframes splashScale {
+            from { transform: scale(0.85); opacity: 0; }
             to { transform: scale(1); opacity: 1; }
         }
     </style>
 </head>
 <body>
 
-    <!-- MODAL DE BIENVENIDA AUTOMÁTICO -->
-    <div id="welcomeModal" class="welcome-modal-overlay">
-        <div class="welcome-modal-card">
-            <img src="https://raw.githubusercontent.com/figueredo56/DAIoficial/refs/heads/main/CC_20260925_200839.png" alt="ZAARD Finance Ecosistema" class="welcome-modal-img">
-            <h2>¡Bienvenido a ZAARD FINANCE!</h2>
-            <div class="welcome-jurisdiction-tag">PANGA &bull; ZAARD INNOVATION</div>
-            <p>Te damos la más cordial bienvenida al núcleo de creación de monedas digitales y contratos inteligentes descentralizados, operando bajo la jurisdicción de <strong>PANGA</strong> y gracias a la sólida contribución tecnológica de <strong>ZAARD INNOVATION</strong>.</p>
-            <button class="welcome-close-btn" onclick="closeWelcomeModal()">Comenzar Experiencia</button>
+    <!-- PANTALLA DE BIENVENIDA INICIAL (SE MUESTRA PRIMERO) -->
+    <div id="splashScreen">
+        <div class="splash-content">
+            <img src="https://raw.githubusercontent.com/figueredo56/DAIoficial/refs/heads/main/CC_20260925_200839.png" alt="ZAARD FINANCE Ecosistema" class="splash-img">
+            <h1>ZAARD FINANCE</h1>
+            <div class="splash-jurisdiction-badge">PANGA &bull; ZAARD INNOVATION</div>
+            <p>Bienvenido al núcleo de creación de monedas digitales y contratos inteligentes descentralizados, operando bajo la estricta jurisdicción de <strong>PANGA</strong> y gracias a la sólida contribución de <strong>ZAARD INNOVATION</strong>.</p>
+            <button class="splash-enter-btn" onclick="enterZaardFinance()">Entrar a ZAARD FINANCE</button>
         </div>
     </div>
 
@@ -275,14 +269,11 @@
         // Dirección oficial actualizada del contrato ZARD para PancakeSwap y creación de pares
         const ZARD_TOKEN_ADDRESS = "0x472d59538effe1c85382e3e62e1b2ec995d382ef";
 
-        // Función para cerrar el modal de bienvenida
-        function closeWelcomeModal() {
-            const modal = document.getElementById('welcomeModal');
-            modal.style.opacity = '0';
-            modal.style.transition = 'opacity 0.3s ease';
-            setTimeout(() => {
-                modal.style.display = 'none';
-            }, 300);
+        // Función para ocultar la pantalla de bienvenida y entrar a ZAARD Finance
+        function enterZaardFinance() {
+            const splash = document.getElementById('splashScreen');
+            splash.style.opacity = '0';
+            splash.style.visibility = 'hidden';
         }
 
         const translations = {
