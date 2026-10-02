@@ -35,14 +35,17 @@
             background-attachment: fixed;
         }
 
-        /* PANTALLA DE BIENVENIDA ÉPICA Y ORGÁNICA (4 SEGUNDOS) */
+        /* PANTALLA DE BIENVENIDA ESTILO LIMPIO Y FLOTANTE (SIN CUADROS RÍGIDOS) */
         #splashScreen {
             position: fixed;
             top: 0;
             left: 0;
             width: 100vw;
             height: 100vh;
-            background: radial-gradient(circle at center, rgba(18, 18, 37, 0.95) 0%, rgba(5, 5, 11, 0.98) 100%);
+            /* Fondo solicitado con la imagen exacta y opacidad oscura elegante */
+            background: linear-gradient(rgba(5, 5, 11, 0.92), rgba(5, 5, 11, 0.95)), url('https://photos.pinksale.finance/file/pinksale-logo-upload/1790962130606-0251206d791fbb39393740e4dcfad7f6.png');
+            background-size: cover;
+            background-position: center;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -50,74 +53,59 @@
             opacity: 1;
             visibility: visible;
             transition: opacity 1s ease, visibility 1s ease;
-            backdrop-filter: blur(15px);
         }
 
         .splash-content {
-            background: linear-gradient(135deg, rgba(20, 12, 38, 0.85) 0%, rgba(10, 5, 20, 0.9) 100%);
-            border: 2px solid rgba(0, 242, 254, 0.6);
-            /* Bordes orgánicos y estilizados (no cuadrados) */
-            border-radius: 40px 20px 40px 20px;
-            box-shadow: 0 0 60px rgba(0, 242, 254, 0.4), 0 0 30px rgba(155, 81, 229, 0.5), inset 0 0 20px rgba(0, 242, 254, 0.2);
-            width: 90%;
-            max-width: 440px;
-            padding: 35px 25px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             text-align: center;
             color: #ffffff;
+            padding: 20px;
+            max-width: 400px;
+            width: 100%;
             animation: organicFloat 4s ease-in-out infinite, splashScale 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
 
         .splash-img {
-            width: 100%;
-            max-height: 200px;
+            width: 160px;
+            height: 160px;
             object-fit: cover;
-            border-radius: 25px;
+            border-radius: 50%;
+            border: 3px solid var(--neon-blue);
+            box-shadow: 0 0 30px var(--neon-blue), 0 0 50px var(--neon-purple);
             margin-bottom: 20px;
-            border: 2px solid var(--neon-blue);
-            box-shadow: 0 0 25px rgba(0,242,254,0.5);
         }
 
         .splash-content h1 {
             font-family: 'Orbitron', sans-serif;
-            font-size: 1.6rem;
-            color: var(--neon-blue);
-            margin-bottom: 8px;
-            text-shadow: 0 0 12px rgba(0,242,254,0.7);
+            font-size: 1.8rem;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin: 0 0 5px 0;
+            text-shadow: 0 0 10px var(--neon-blue), 0 0 20px var(--neon-purple);
         }
 
-        .splash-badge {
-            background: rgba(155, 81, 229, 0.25);
-            color: #d8b4fe;
+        .splash-subtitle {
             font-size: 0.75rem;
-            padding: 6px 16px;
-            border-radius: 20px;
-            display: inline-block;
-            margin-bottom: 15px;
-            font-weight: 600;
-            border: 1px solid rgba(155, 81, 229, 0.6);
-            letter-spacing: 1.5px;
-        }
-
-        .splash-content p {
-            font-size: 0.9rem;
-            color: #cbd5e1;
-            line-height: 1.6;
+            color: #94a3b8;
+            letter-spacing: 2px;
+            text-transform: uppercase;
             margin-bottom: 25px;
-            text-align: justify;
         }
 
         .splash-enter-btn {
             background: linear-gradient(135deg, var(--neon-blue), var(--neon-purple));
             color: #05050b;
             border: none;
-            padding: 14px 30px;
-            font-size: 1rem;
+            padding: 12px 28px;
+            font-size: 0.9rem;
             font-weight: 700;
             border-radius: 30px;
             cursor: pointer;
             transition: all 0.3s ease;
-            box-shadow: 0 0 25px rgba(0, 242, 254, 0.6);
-            width: 100%;
+            box-shadow: 0 0 20px rgba(0, 242, 254, 0.6);
             font-family: 'Orbitron', sans-serif;
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -125,13 +113,13 @@
 
         .splash-enter-btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 0 35px rgba(155, 81, 229, 0.9);
+            box-shadow: 0 0 30px var(--neon-blue), 0 0 40px var(--neon-purple);
         }
 
         @keyframes organicFloat {
-            0% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-8px) rotate(0.5deg); }
-            100% { transform: translateY(0px) rotate(0deg); }
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
         }
 
         @keyframes splashScale {
@@ -298,14 +286,13 @@
 </head>
 <body>
 
-    <!-- PANTALLA DE BIENVENIDA ÉPICA Y ORGÁNICA (4 SEGUNDOS AUTOMÁTICA) -->
+    <!-- PANTALLA DE BIENVENIDA ESTILO FLOTANTE (4 SEGUNDOS AUTOMÁTICA) -->
     <div id="splashScreen">
         <div class="splash-content">
-            <img src="https://photos.pinksale.finance/file/pinksale-logo-upload/1790285851823-4955b8f5511ea8235af22dfb82371c91.png" alt="ZARD Welcome" class="splash-img">
-            <h1>ZAARD INNOVATION</h1>
-            <div class="splash-badge">ECOSISTEMA WEB3 & DEFI</div>
-            <p>Bienvenido al portal oficial. Accede a las herramientas descentralizadas, contratos inteligentes verificados y gestión de activos respaldados por <strong>ZAARD INNOVATION</strong>.</p>
-            <button class="splash-enter-btn" onclick="enterEcosystem()">Entrar al Ecosistema</button>
+            <img src="https://photos.pinksale.finance/file/pinksale-logo-upload/1790285851823-4955b8f5511ea8235af22dfb82371c91.png" alt="ZAARD Welcome" class="splash-img">
+            <h1>ZARD INNOVATION</h1>
+            <div class="splash-subtitle">Renacimiento Cibernético & Inteligencia Artificial</div>
+            <button class="splash-enter-btn" onclick="enterEcosystem()">🚀 Ingresar al Nexus</button>
         </div>
     </div>
 
