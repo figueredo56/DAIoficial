@@ -2,1401 +2,383 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title id="page-title">ZAARD Finance | Ecosistema Descentralizado</title>
+    
+    <!-- Etiquetas Open Graph para Redes Sociales -->
     <meta property="og:url" content="https://figueredo56.github.io/zaard-wallet/wallet.html">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://raw.githubusercontent.com/figueredo56/DAIoficial/refs/heads/main/CC_20260925_200839.png">    
-    <title>ZAARD WEB - Ecosistema Oficial Web3</title>
+    <meta property="og:title" content="ZAARD FINANCE - Ecosistema Oficial Web3">
+    <meta property="og:description" content="Creación de monedas digitales y gestión financiera descentralizada bajo la jurisdicción de PANGA y la contribución de ZAARD INNOVATION.">
+    <meta property="og:image" content="https://raw.githubusercontent.com/figueredo56/DAIoficial/refs/heads/main/CC_20260925_200839.png">
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     
-    <!-- Configuración de Tarjetas para Redes Sociales (WhatsApp, Telegram, Facebook, etc.) -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://figueredo56.github.io/DAIoficial/">
-    <meta property="og:title" content="ZAARD WEB">
-    <meta property="og:description" content="Ecosistema oficial ZARD. Smart contract verificado, DApps y comunidad descentralizada.">
-    <meta property="og:image" content="https://raw.githubusercontent.com/figueredo56/DAIoficial/60f49a4d1ff8ea9c1a30708069fb2e90a2338b18/CC_20260925_200839.png">
-    <meta property="og:image:width" content="800">
-    <meta property="og:image:height" content="800">
-
-    <!-- Twitter / X Cards -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="ZAARD WEB">
-    <meta name="twitter:description" content="Ecosistema oficial ZARD. Smart contract verificado, DApps y comunidad descentralizada.">
-    <meta name="twitter:image" content="https://raw.githubusercontent.com/figueredo56/DAIoficial/60f49a4d1ff8ea9c1a30708069fb2e90a2338b18/CC_20260925_200839.png">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-</head>
     <style>
-        :root {
-            --neon-blue: #00f2fe;
-            --neon-purple: #b084cc;
-            --text-purple: #d8b4fe;
-            --neon-gold: #d4af37;
-            --neon-green: #00ff66;
-            --bg-image: url('https://photos.pinksale.finance/file/pinksale-logo-upload/1790375348672-4de629a77b910ca4b3f245dda1b233f0.png');
-        }
-
-        body {
-            margin: 0;
-            padding: 0;
-            color: #eee;
-            font-family: 'Inter', 'Segoe UI', Roboto, Arial, sans-serif;
-            text-align: center;
-            background-color: #030308;
-            background-image: linear-gradient(rgba(3, 3, 8, 0.60), rgba(3, 3, 8, 0.75)), var(--bg-image);
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            overflow-x: hidden;
-        }
-
-        /* --- PANTALLA DE BIENVENIDA (INTRO SPLASH) --- */
-        #splash-screen {
+        /* ESTILOS PARA EL MODAL DE BIENVENIDA */
+        .welcome-modal-overlay {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
-            height: 100vh;
-            background-color: #030308;
-            background-image: linear-gradient(rgba(3, 3, 8, 0.85), rgba(3, 3, 8, 0.92)), url('https://photos.pinksale.finance/file/pinksale-logo-upload/1790375348672-4de629a77b910ca4b3f245dda1b233f0.png');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            z-index: 9999;
-            transition: opacity 0.8s ease, visibility 0.8s ease;
-        }
-
-        .splash-logo {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid var(--neon-blue);
-            box-shadow: 0 0 35px var(--neon-blue), 0 0 70px var(--neon-purple);
-            animation: splashPulse 2s infinite alternate ease-in-out;
-            margin-bottom: 25px;
-        }
-
-        @keyframes splashPulse {
-            0% { transform: scale(0.95); box-shadow: 0 0 25px var(--neon-blue), 0 0 50px var(--neon-purple); }
-            100% { transform: scale(1.05); box-shadow: 0 0 50px var(--neon-blue), 0 0 90px var(--neon-purple), inset 0 0 20px var(--neon-gold); }
-        }
-
-        .splash-title {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 2.2rem;
-            font-weight: 900;
-            color: #fff;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            text-shadow: 0 0 15px var(--neon-blue), 0 0 30px var(--neon-purple);
-            margin: 0 20px 10px 20px;
-            animation: fadeInText 1.5s ease-in-out;
-        }
-
-        .splash-subtitle {
-            font-family: 'Inter', sans-serif;
-            font-size: 1.1rem;
-            color: var(--neon-gold);
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            margin: 0;
-            opacity: 0.95;
-            text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
-        }
-
-        @keyframes fadeInText {
-            from { opacity: 0; transform: translateY(15px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* --- CONTENIDO PRINCIPAL --- */
-        .main-content {
-            opacity: 0;
-            transition: opacity 1s ease;
-        }
-
-        .container {
-            padding: 30px 15px;
-            max-width: 900px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 2;
-        }
-
-        @keyframes floatLogo {
-            0% { transform: translateY(0px) scale(1); filter: drop-shadow(0 0 25px rgba(0, 242, 254, 0.6)); }
-            50% { transform: translateY(-12px) scale(1.02); filter: drop-shadow(0 0 45px rgba(155, 81, 229, 0.9)) drop-shadow(0 0 20px rgba(212, 175, 55, 0.7)); }
-            100% { transform: translateY(0px) scale(1); filter: drop-shadow(0 0 25px rgba(0, 242, 254, 0.6)); }
-        }
-
-        .hero-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-bottom: 35px;
-            padding-top: 15px;
-        }
-
-        /* Logo superior ampliado */
-        .sonic-floating-logo img {
-            max-width: 270px;
-            width: 100%;
-            border-radius: 50%;
-            animation: floatLogo 4.5s ease-in-out infinite;
-        }
-
-        .neon-title {
-            color: var(--neon-blue);
-            text-transform: uppercase;
-            letter-spacing: 4px;
-            font-family: 'Orbitron', sans-serif;
-            text-shadow: 0 0 10px var(--neon-blue), 0 0 20px var(--neon-blue), 0 0 40px var(--neon-blue);
-            font-size: 2.8em;
-            margin: 15px 0 5px 0;
-        }
-
-        .gold {
-            color: var(--neon-gold);
-            font-family: 'Orbitron', sans-serif;
-            text-shadow: 0 0 12px rgba(212, 175, 55, 0.6);
-        }
-
-        .section {
-            border: 1px solid rgba(176, 132, 204, 0.35);
-            padding: 30px 20px;
-            border-radius: 24px;
-            margin: 30px 0;
-            background: rgba(10, 6, 20, 0.65);
-            backdrop-filter: blur(14px);
-            box-shadow: 0 0 30px rgba(139, 92, 246, 0.15);
-        }
-
-        .token-explanation {
-            font-size: 0.95rem;
-            line-height: 1.7;
-            color: var(--text-purple);
-            text-align: justify;
-            max-width: 750px;
-            margin: 0 auto;
-        }
-
-        .token-explanation strong, .highlight-zard {
-            color: var(--neon-blue);
-            text-shadow: 0 0 8px rgba(0, 242, 254, 0.5);
-        }
-
-        .btn-epic-buy {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-            background: linear-gradient(135deg, #00f2fe, #9b51e5);
-            color: #030308;
-            font-family: 'Orbitron', sans-serif;
-            font-weight: 900;
-            font-size: 1.15em;
-            padding: 16px 35px;
-            border-radius: 50px;
-            text-decoration: none;
-            box-shadow: 0 0 30px rgba(0, 242, 254, 0.5);
-            transition: all 0.3s ease;
-            margin: 20px 0;
-            border: 2px solid #fff;
-        }
-
-        .btn-epic-buy:hover {
-            transform: scale(1.05) translateY(-3px);
-            box-shadow: 0 0 50px var(--neon-blue), 0 0 30px var(--neon-purple);
-            background: linear-gradient(135deg, #fff, #00f2fe);
-        }
-
-        /* --- ENLACE DE DEXSCREENER (AMPLIADO) --- */
-        .direct-links-grid {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-            margin: 25px 0;
-        }
-
-        .direct-link-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-decoration: none;
-            transition: transform 0.3s ease;
-        }
-
-        .direct-link-item:hover {
-            transform: scale(1.1);
-        }
-
-        .direct-link-item img {
-            width: 130px;
-            height: 130px;
-            object-fit: contain;
-            border-radius: 50%;
-            margin-bottom: 12px;
-            background: rgba(255, 255, 255, 0.05);
-            padding: 8px;
-            box-shadow: 0 0 25px rgba(0, 242, 254, 0.6);
-            border: 3px solid rgba(0, 242, 254, 0.7);
-        }
-
-        .direct-link-item span {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 1rem;
-            color: var(--neon-green);
-            text-shadow: 0 0 8px rgba(0, 255, 102, 0.6);
-            font-weight: bold;
-            letter-spacing: 1px;
-        }
-
-        /* --- MARCO DE VIDEO --- */
-        .video-box {
-            width: 100%;
-            max-width: 650px;
-            aspect-ratio: 16 / 9;
-            border: 2px solid var(--neon-blue);
-            border-radius: 20px;
-            overflow: hidden;
-            margin: 25px auto;
-            box-shadow: 0 0 30px rgba(0, 242, 254, 0.4);
-            background: #000;
-        }
-
-        .video-box iframe {
-            width: 100%;
             height: 100%;
-            border: none;
-            display: block;
-        }
-
-        .zaard-master-card {
-            background: linear-gradient(145deg, rgba(11, 7, 22, 0.75), rgba(4, 3, 12, 0.85));
-            border: 1px solid rgba(168, 85, 247, 0.35);
-            box-shadow: 0 0 35px rgba(168, 85, 247, 0.2);
-            backdrop-filter: blur(14px);
-            border-radius: 24px;
-            color: #ffffff;
-            padding: 28px;
-            max-width: 650px;
-            width: 100%;
-            margin: 30px auto;
-        }
-
-        .zaard-banner-img {
-            width: 100%;
-            max-height: 310px;
-            object-fit: cover;
-            border-radius: 16px;
-            transition: transform 0.4s ease;
-            box-shadow: 0 0 25px rgba(0, 242, 254, 0.4);
-            display: block;
-        }
-
-        .zaard-banner-img:hover {
-            transform: scale(1.02);
-            box-shadow: 0 0 40px var(--neon-blue), 0 0 25px var(--neon-purple);
-        }
-
-        .zaard-social-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 15px;
-            margin-top: 20px;
-        }
-
-        .zaard-social-btn {
+            background: rgba(5, 5, 15, 0.85);
+            backdrop-filter: blur(8px);
             display: flex;
+            justify-content: center;
             align-items: center;
-            gap: 15px;
-            padding: 14px 18px;
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(0, 242, 254, 0.2);
-            border-radius: 14px;
-            text-decoration: none;
-            color: #fff;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            text-align: left;
+            z-index: 9999;
+            animation: fadeIn 0.4s ease-out;
         }
 
-        .zaard-social-btn:hover {
-            background: rgba(155, 81, 229, 0.2);
-            border-color: var(--neon-blue);
-            transform: translateY(-3px);
-            box-shadow: 0 5px 25px rgba(0, 242, 254, 0.3);
-        }
-
-        .zaard-social-icon {
-            width: 26px;
-            height: 26px;
-            flex-shrink: 0;
-            fill: var(--neon-blue);
-        }
-
-        .zaard-social-info h4 {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 0.85rem;
-            font-weight: 700;
-            color: #fff;
-            margin: 0;
-        }
-
-        .zaard-social-info span {
-            font-size: 0.7rem;
-            color: #b084cc;
-        }
-
-        /* --- SECCIÓN DE VELAS EN VIVO CON MARCA DE AGUA --- */
-        .market-section {
-            background: linear-gradient(135deg, rgba(8, 3, 18, 0.78), rgba(15, 8, 30, 0.85));
-            border-radius: 24px;
-            padding: 30px;
+        .welcome-modal-card {
+            background: linear-gradient(135deg, #121225 0%, #1a1a3a 100%);
+            border: 1px solid rgba(0, 255, 204, 0.3);
+            box-shadow: 0 10px 35px rgba(0, 255, 204, 0.2);
+            border-radius: 20px;
+            width: 90%;
+            max-width: 450px;
+            padding: 25px;
             text-align: center;
             color: #ffffff;
-            box-shadow: 0 0 40px rgba(147, 51, 234, 0.25);
-            border: 2px solid rgba(176, 132, 204, 0.4);
-            max-width: 850px;
-            margin: 35px auto;
+            font-family: 'Poppins', sans-serif;
             position: relative;
-            overflow: hidden;
-            backdrop-filter: blur(14px);
+            animation: scaleUp 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
 
-        .market-section::before {
-            content: "";
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 380px;
-            height: 380px;
-            background-image: url('https://photos.pinksale.finance/file/pinksale-logo-upload/1790265552390-0f039d18ee1d653bf30587b1e0baca3a.png');
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: contain;
-            opacity: 0.07;
-            pointer-events: none;
-            z-index: 0;
-        }
-
-        .chart-container {
+        .welcome-modal-img {
             width: 100%;
-            height: 480px;
-            border-radius: 16px;
-            overflow: hidden;
-            border: 1px solid rgba(0, 242, 254, 0.35);
-            background: rgba(3, 1, 8, 0.6);
-            margin: 20px 0;
-            position: relative;
-            z-index: 1;
+            max-height: 200px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        .chart-container iframe {
-            width: 100%;
-            height: 100%;
+        .welcome-modal-card h2 {
+            font-size: 22px;
+            color: #00ffcc;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .welcome-modal-card p {
+            font-size: 14px;
+            color: #b0b0d0;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .welcome-jurisdiction-tag {
+            background: rgba(0, 255, 204, 0.1);
+            color: #00ffcc;
+            font-size: 12px;
+            padding: 6px 12px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 20px;
+            font-weight: 600;
+            border: 1px solid rgba(0, 255, 204, 0.2);
+        }
+
+        .welcome-close-btn {
+            background: linear-gradient(135deg, #00ffcc 0%, #00b386);
+            color: #0b0b16;
             border: none;
+            padding: 12px 30px;
+            font-size: 15px;
+            font-weight: 700;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 255, 204, 0.4);
+            width: 100%;
         }
 
-        .footer {
-            padding: 30px;
-            color: #888;
-            font-size: 0.85em;
-            letter-spacing: 1px;
+        .welcome-close-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 255, 204, 0.6);
         }
 
-        hr {
-            border: 0;
-            height: 2px;
-            background: linear-gradient(to right, transparent, var(--neon-purple), transparent);
-            margin: 45px auto;
-            width: 85%;
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
-   </style>
+
+        @keyframes scaleUp {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+    </style>
 </head>
 <body>
 
-    <!-- PANTALLA DE BIENVENIDA (INTRO SPLASH) -->
-    <div id="splash-screen">
-        <img src="https://photos.pinksale.finance/file/pinksale-logo-upload/1790285851823-4955b8f5511ea8235af22dfb82371c91.png" alt="ZARD Logo Splash" class="splash-logo">
-        <h1 class="splash-title">¡Bienvenidos a la nueva era digital!</h1>
-        <p class="splash-subtitle">ZAARD INNOVATION PROTOCOL</p>
+    <!-- MODAL DE BIENVENIDA AUTOMÁTICO -->
+    <div id="welcomeModal" class="welcome-modal-overlay">
+        <div class="welcome-modal-card">
+            <img src="https://raw.githubusercontent.com/figueredo56/DAIoficial/refs/heads/main/CC_20260925_200839.png" alt="ZAARD Finance Ecosistema" class="welcome-modal-img">
+            <h2>¡Bienvenido a ZAARD FINANCE!</h2>
+            <div class="welcome-jurisdiction-tag">PANGA &bull; ZAARD INNOVATION</div>
+            <p>Te damos la más cordial bienvenida al núcleo de creación de monedas digitales y contratos inteligentes descentralizados, operando bajo la jurisdicción de <strong>PANGA</strong> y gracias a la sólida contribución tecnológica de <strong>ZAARD INNOVATION</strong>.</p>
+            <button class="welcome-close-btn" onclick="closeWelcomeModal()">Comenzar Experiencia</button>
+        </div>
     </div>
 
-    <!-- CONTENIDO PRINCIPAL DE LA PÁGINA -->
-    <div class="main-content" id="main-content">
-        <div class="container">
-            <!-- Cabecera y Logo Animado -->
-            <div class="hero-container">
-                <div class="sonic-floating-logo">
-                    <img src="https://gateway.pinata.cloud/ipfs/bafybeicfmcwvoukadvqjdb4kqpa6mxi3guogqxhefskntussd5gpmopar4" alt="ZARD Token Logo">
-                </div>
-
-                <h1 class="neon-title">ZARD TOKEN</h1>
-                <p style="font-style: italic; color: var(--text-purple); letter-spacing: 3px; text-transform: uppercase; font-size: 0.95em; margin-top: 5px;">
-                    The Ultimate Web3 Asset & Smart Economy
-                </p>
-
-                <!-- Botón de Compra Directa (Actualizado con tu link web3 exacto) -->
-                <a href="https://app.binance.com/uni-qr/web3-token-details?utm_medium=share&tokenCA=0x472d59538effe1c85382e3e62e1b2ec995d382ef&binanceChainId=56&chain=bsc" target="_blank" class="btn-epic-buy">
-                    🚀 COMPRAR EN BINANCE WEB3
-                </a>
+    <div class="main-wrapper">
+        <!-- BARRA DE NAVEGACIÓN SUPERIOR -->
+        <header>
+            <div class="logo-container">
+                <img src="https://raw.githubusercontent.com/figueredo56/zaard-innovation-dapp/refs/heads/main/CC_20260527_151822.png" alt="ZAARD Finance" class="nav-logo">
+                <span class="brand-name">ZAARD<span class="lite">FINANCE</span></span>
             </div>
 
-             <style>
-  .crypto-ave-section {
-    background: #0f051d;
-    border-radius: 20px;
-    padding: 30px;
-    text-align: center;
-    color: #ffffff;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    box-shadow: 0 0 25px rgba(147, 51, 234, 0.3);
-  }
+            <div class="header-right">
+                <select id="languageSelect" onchange="changeLanguage(this.value)" class="lang-selector">
+                    <option value="es">🇪🇸 ES</option>
+                    <option value="en">🇬🇧 EN</option>
+                    <option value="zh">🇨🇳 中文</option>
+                </select>
 
-  .crypto-ave-description {
-    font-size: 0.95rem;
-    line-height: 1.6;
-    color: #cbd5e1;
-    max-width: 700px;
-    margin: 0 auto 25px auto;
-    text-align: justify;
-  }
+                <button id="connectWalletBtn" class="btn-connect" data-i18n="btn-connect">Conectar Billetera</button>
+            </div>
+        </header>
 
-  .crypto-ave-description strong {
-    color: #c084fc;
-  }
+        <!-- CONTENEDOR DE PESTAÑAS -->
+        <main class="content-container">
 
-  /* Contenedor flexible para poner las tarjetas una al lado de la otra */
-  .crypto-cards-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-  }
+            <!-- VISTA 1: HOME / BIENVENIDA -->
+            <section id="tab-home" class="view-section active">
+                <div class="welcome-hero">
+                    <img src="https://raw.githubusercontent.com/figueredo56/zaard-innovation-dapp/refs/heads/main/215%20sin%20t%C3%ADtulo_20260802191040.png" alt="ZARD Finance Banner" class="hero-banner">
+                    <h1 data-i18n="hero-title">Bienvenido al Núcleo de ZARD Finance</h1>
+                    <p data-i18n="hero-subtitle">Selecciona una opción del ecosistema para comenzar la innovación financiera</p>
+                </div>
 
-  /* Marco con parpadeo/animación en tonos morado y azul */
-  .card-link {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: #1a103c;
-    border-radius: 14px;
-    padding: 15px;
-    width: 160px;
-    text-decoration: none;
-    color: #ffffff;
-    font-weight: 600;
-    font-size: 0.9rem;
-    border: 2px solid #8b5cf6;
-    box-shadow: 0 0 10px #8b5cf6, inset 0 0 5px #3b82f6;
-    animation: neonPulse 2.5s infinite alternate;
-    transition: transform 0.3s ease;
-  }
+                <div class="hub-cards-grid">
+                    <!-- TARJETA 1: ZARD WALLET -->
+                    <div class="hub-card" onclick="window.open('https://figueredo56.github.io/zaard-wallet/wallet.html', '_blank')">
+                        <div class="card-img-banner">
+                            <img src="https://raw.githubusercontent.com/figueredo56/zaard-innovation-dapp/refs/heads/main/215%20sin%20t%C3%ADtulo_20260802201954.png" alt="ZARD Wallet" class="card-custom-img">
+                        </div>
+                        <h3 data-i18n="card1-title">ZARD Wallet</h3>
+                        <p data-i18n="card1-desc">Gestiona tus activos y tokens de forma segura dentro de la red.</p>
+                        <span class="card-link-text" data-i18n="card1-link">Abrir Billetera &rarr;</span>
+                    </div>
 
-  .card-link:hover {
-    transform: translateY(-5px);
-    border-color: #3b82f6;
-    box-shadow: 0 0 20px #3b82f6, 0 0 30px #8b5cf6;
-  }
+                    <!-- TARJETA 2: CREAR TOKEN & LIQUIDEZ -->
+                    <div class="hub-card" onclick="switchTab('creator')">
+                        <div class="card-img-banner">
+                            <img src="https://raw.githubusercontent.com/figueredo56/zaard-innovation-dapp/refs/heads/main/215%20sin%20t%C3%ADtulo_20260802191040.png" alt="Crear Token & Liquidez" class="card-custom-img">
+                        </div>
+                        <h3 data-i18n="card2-title">Crear Token & Liquidez</h3>
+                        <p data-i18n="card2-desc">Despliega tu propia moneda emparejada directamente con ZARD.</p>
+                        <span class="card-link-text" data-i18n="card2-link">Iniciar Creación &rarr;</span>
+                    </div>
 
-  .card-link img {
-    width: 65px;
-    height: 65px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 10px;
-    border: 2px solid #c084fc;
-  }
+                    <!-- TARJETA 3: ZARD ECOSISTEMA -->
+                    <div class="hub-card" onclick="window.open('https://figueredo56.github.io/DAIoficial/', '_blank')">
+                        <div class="card-img-banner">
+                            <img src="https://raw.githubusercontent.com/figueredo56/zaard-innovation-dapp/refs/heads/main/215%20sin%20t%C3%ADtulo_20260802202340.png" alt="ZARD Ecosistema" class="card-custom-img">
+                        </div>
+                        <h3 data-i18n="card3-title">ZARD Ecosistema</h3>
+                        <p data-i18n="card3-desc">Explora las alertas, proyectos oficiales y plataformas globales.</p>
+                        <span class="card-link-text" data-i18n="card3-link">Explorar Web &rarr;</span>
+                    </div>
+                </div>
 
-  .card-link p {
-    margin: 0;
-    letter-spacing: 0.5px;
-  }
+                <!-- ENLACES RÁPIDOS INFERIORES -->
+                <div class="ecosystem-footer-links">
+                    <h4 data-i18n="eco-links-title">🔗 Enlaces Rápidos del Ecosistema</h4>
+                    <div class="footer-links-grid">
+                        <a href="https://figueredo56.github.io/DAIoficial/" target="_blank" class="eco-link-btn" data-i18n="nav-web">🌐 Web Oficial</a>
+                        <a href="https://figueredo56.github.io/zaard-wallet/wallet.html" target="_blank" class="eco-link-btn" data-i18n="nav-wallet">👛 ZARD Wallet</a>
+                        <a href="https://figueredo56.github.io/DAIoficial/" target="_blank" class="eco-link-btn" data-i18n="nav-eco">🚀 Ecosistema Global</a>
+                    </div>
+                </div>
+            </section>
 
-  /* Animación de palpitación de luces moradas y azules */
-  @keyframes neonPulse {
-    0% {
-      border-color: #8b5cf6;
-      box-shadow: 0 0 8px #8b5cf6, inset 0 0 4px #3b82f6;
-    }
-    50% {
-      border-color: #3b82f6;
-      box-shadow: 0 0 18px #3b82f6, inset 0 0 8px #8b5cf6;
-    }
-    100% {
-      border-color: #c084fc;
-      box-shadow: 0 0 8px #c084fc, inset 0 0 4px #3b82f6;
-    }
-  }
-<style>
-  .crypto-ave-section {
-    position: relative;
-    overflow: hidden;
-    border: 2px solid #00ffcc;
-    box-shadow: 0 0 30px rgba(0, 255, 204, 0.25);
-    background: linear-gradient(135deg, rgba(15,15,15,0.95), rgba(10,25,35,0.9));
-    padding: 30px;
-    border-radius: 16px;
-    margin-bottom: 40px;
-    text-align: center;
-  }
-</style>
+            <!-- VISTA 2: CREADOR DE TOKENS -->
+            <section id="tab-creator" class="view-section">
+                <div class="creator-header-banner">
+                    <img src="https://raw.githubusercontent.com/figueredo56/zaard-innovation-dapp/refs/heads/main/215%20sin%20t%C3%ADtulo_20260802191040.png" alt="Creator Banner" class="top-creator-img">
+                    <h2 data-i18n="creator-title">Centro de Creación ZARD Finance</h2>
+                    <p data-i18n="creator-subtitle">Diseña tu token con par directo en ZARD y despliegue automatizado</p>
+                </div>
 
-<div class="crypto-ave-section">
-    <!-- Encabezado del Bloque -->
-    <h2 style="font-family: 'Orbitron', sans-serif; color: #00ffcc; font-size: 1.7em; margin-bottom: 8px; text-shadow: 0 0 10px rgba(0,255,204,0.5);">
-        🛡️ VERIFICACIÓN OFICIAL EN AVE.AI
-    </h2>
-    <p style="color: #94a3b8; font-size: 0.95em; max-width: 600px; margin: 0 auto 20px auto; line-height: 1.5;">
-        El ecosistema <span class="gold" style="color: var(--gold);">ZARD</span> cuenta con auditoría de perfil y transparencia verídica indexada en plataformas globales de seguimiento cripto.
-    </p>
+                <div class="liquidity-card glass-effect">
+                    <div class="input-group">
+                        <label data-i18n="label-name">Nombre y Símbolo del Token</label>
+                        <div class="dual-inputs">
+                            <input type="text" id="tokenName" placeholder="Ej: Zard Finance Coin" class="text-input">
+                            <input type="text" id="tokenSymbol" placeholder="Ej: ZFC" class="text-input short">
+                        </div>
+                    </div>
 
-    <div class="crypto-ave-description" style="margin-bottom: 25px;">
-        <p style="color: #eaecef; font-size: 0.95em; max-width: 650px; margin: 0 auto; line-height: 1.6;">
-            Las plataformas de indexación y analítica descentralizada como <strong>Ave.ai</strong> actúan como pasarelas de alta precisión para el rastreo en tiempo real de activos digitales en la blockchain. A través de estos agregadores de liquidez, los usuarios y traders pueden consultar métricas on-chain avanzadas, volúmenes de transacciones y cotizaciones exactas.
-        </p>
-    </div>
+                    <div class="input-group">
+                        <label data-i18n="label-logo">URL del Logo (Imagen del Token)</label>
+                        <input type="text" id="tokenLogoUrl" placeholder="https://gateway.pinata.cloud/ipfs/tu_hash" class="text-input">
+                        <div class="tip-box-green" data-i18n="tip-logo">
+                            💡 <strong>Consejo Pro:</strong> Sube tu logo a <a href="https://www.pinata.cloud" target="_blank">Pinata.cloud</a> y pega aquí el enlace directo IPFS.
+                        </div>
+                    </div>
 
-    <!-- Contenedor de la Insignia Interactiva (Apunta al link solicitado) -->
-    <div style="margin-bottom: 25px;">
-        <a href="https://avebusiness.xyz/?id=6abf23d0c6de80cee5cc8f4c" target="_blank" style="display: inline-block; transition: transform 0.3s ease, filter 0.3s ease;">
-            <img src="https://photos.pinksale.finance/file/pinksale-logo-upload/1790708912813-f9d61e545f00182762adc9b8a99455da.png" 
-                 alt="ZARD Ave.ai Verified Badge" 
-                 style="max-width: 180px; width: 100%; height: auto; border-radius: 12px; border: 2px solid rgba(0, 255, 204, 0.5); box-shadow: 0 0 20px rgba(0,255,204,0.3); filter: drop-shadow(0 0 8px rgba(0,255,204,0.4));"
-                 onmouseover="this.style.transform='scale(1.05)'; this.style.filter='drop-shadow(0 0 12px rgba(0,255,204,0.8))';" 
-                 onmouseout="this.style.transform='scale(1)'; this.style.filter='drop-shadow(0 0 8px rgba(0,255,204,0.4))';">
-        </a>
-    </div>
+                    <div class="input-group">
+                        <label data-i18n="label-social">Información / Redes (Web, X, Discord)</label>
+                        <input type="text" id="projectInfoUrl" placeholder="https://tupaginaweb.com | @TuX" class="text-input">
+                    </div>
 
-    <!-- Texto descriptivo y llamada a la acción -->
-    <p style="font-family: 'Orbitron', sans-serif; font-size: 0.95em; line-height: 1.6; max-width: 650px; margin: 20px auto; padding: 0 15px;">
-        <span style="color: #60a5fa; text-shadow: 0 0 8px rgba(96,165,250,0.4);">
-            Te invitamos a conocer la nueva era de la Web3: un ecosistema descentralizado impulsado por contratos inteligentes auditados, liquidez transparente y experiencias arcade interactivas.
-        </span>
-        <br><br>
-        <strong style="color: #00ffcc; text-shadow: 0 0 10px rgba(0,255,204,0.5);">
-            Cada enlace te llevará directamente a la verificación oficial
-        </strong>
-    </p>
+                    <div class="input-group">
+                        <label data-i18n="label-supply">Suministro Total (Supply)</label>
+                        <div class="supply-buttons">
+                            <button type="button" class="supply-btn" onclick="setSupply(1000)">1K</button>
+                            <button type="button" class="supply-btn" onclick="setSupply(1000000)">1M</button>
+                            <button type="button" class="supply-btn active" onclick="setSupply(1000000000)">1B</button>
+                        </div>
+                        <input type="number" id="tokenSupply" value="1000000000" class="text-input center">
+                    </div>
 
-    <!-- Botón de Enlace Directo -->
-    <div style="margin-top: 15px;">
-        <a href="https://avebusiness.xyz/?id=6abf23d0c6de80cee5cc8f4c" 
-           target="_blank" 
-           class="card-link"
-           style="display: inline-block; padding: 12px 30px; background: linear-gradient(135deg, rgba(0,255,204,0.2), rgba(212,175,55,0.2)); border: 2px solid #00ffcc; border-radius: 10px; color: #00ffcc; font-family: 'Orbitron', sans-serif; font-size: 0.9em; font-weight: bold; text-decoration: none; box-shadow: 0 0 15px rgba(0,255,204,0.2); transition: all 0.3s ease;">
-            🔍 CONSULTAR PERFIL EN AVE.AI ↗
-        </a>
-    </div>
-</div>
-  <!-- ======================================================= -->
-<!-- BLOQUE: EL PODER DEL FÉNIX - XENOCRYPT                  -->
-<!-- ======================================================= -->
-<style>
-  @keyframes fenixBlink {
-    0%, 45% {
-      opacity: 1;
-      transform: scale(1);
-      filter: drop-shadow(0 0 15px rgba(0, 255, 204, 0.6));
-    }
-    50%, 95% {
-      opacity: 0;
-      transform: scale(0.97);
-      filter: drop-shadow(0 0 5px rgba(212, 175, 55, 0.2));
-    }
-    100% {
-      opacity: 1;
-      transform: scale(1);
-      filter: drop-shadow(0 0 15px rgba(0, 255, 204, 0.6));
-    }
-  }
+                    <hr class="section-divider">
 
-  @keyframes fenixBlinkAlt {
-    0%, 45% {
-      opacity: 0;
-      transform: scale(0.97);
-      filter: drop-shadow(0 0 5px rgba(0, 255, 204, 0.2));
-    }
-    50%, 95% {
-      opacity: 1;
-      transform: scale(1);
-      filter: drop-shadow(0 0 18px rgba(212, 175, 55, 0.7));
-    }
-    100% {
-      opacity: 0;
-      transform: scale(0.97);
-      filter: drop-shadow(0 0 5px rgba(0, 255, 204, 0.2));
-    }
-  }
+                    <div class="card-header-sub">
+                        <h3 data-i18n="lp-title">Aporte de Liquidez Base ZARD</h3>
+                        <p data-i18n="lp-subtitle">Requiere tener ZARD en tu billetera Binance Web3 / MetaMask</p>
+                    </div>
 
-  .fenix-container {
-    position: relative;
-    width: 200px;
-    height: 200px;
-    margin: 0 auto 20px auto;
-  }
+                    <div class="input-group">
+                        <div class="token-selector selected">
+                            <img src="https://raw.githubusercontent.com/figueredo56/zaard-innovation-dapp/refs/heads/main/CC_20260527_151822.png" alt="ZARD Logo">
+                            <input type="number" id="zardLiquidityAmount" placeholder="0.0">
+                            <span class="token-symbol">ZARD</span>
+                        </div>
+                        <small class="balance-text"><span data-i18n="balance-label">Balance ZARD disponible:</span> <span id="zardBalance">0.00</span></small>
+                    </div>
 
-  .fenix-img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    border-radius: 16px;
-    border: 2px solid rgba(0, 255, 204, 0.5);
-    background: rgba(10, 15, 25, 0.8);
-    transition: all 0.5s ease;
-  }
-
-  .fenix-img-1 {
-    animation: fenixBlink 4s infinite ease-in-out;
-  }
-
-  .fenix-img-2 {
-    animation: fenixBlinkAlt 4s infinite ease-in-out;
-    border-color: rgba(212, 175, 55, 0.6);
-  }
-</style>
-
-<div class="zaard-master-card" style="border: 2px solid #00ffcc; box-shadow: 0 0 35px rgba(0, 255, 204, 0.3); background: linear-gradient(135deg, rgba(10,15,25,0.95), rgba(25,10,35,0.9)); padding: 35px 20px; border-radius: 18px; margin-bottom: 40px; text-align: center;">
-    
-    <!-- Encabezado Temático -->
-    <h2 style="font-family: 'Orbitron', sans-serif; color: #00ffcc; font-size: 1.6em; margin-bottom: 8px; text-shadow: 0 0 12px rgba(0,255,204,0.6);">
-        🔥 EL PODER DEL FÉNIX 🔥
-    </h2>
-    <p style="color: #d4af37; font-family: 'Orbitron', sans-serif; font-size: 0.95em; letter-spacing: 2px; margin-bottom: 25px; text-shadow: 0 0 10px rgba(212,175,55,0.4);">
-        XENOCRYPT ECOSYSTEM
-    </p>
-
-    <!-- Contenedor Animado de las Imágenes (Titileo Deslumbrante) -->
-    <div class="fenix-container">
-        <!-- Imagen 1 (SVG) -->
-        <img src="https://raw.githubusercontent.com/figueredo56/ZARD.token/ab5ba9b45b8275e1547c026be754e77828a073a0/228-sin-t%C3%ADtulo_20260824215207%20(1).svg" 
-             alt="Fénix Art 1" 
-             class="fenix-img fenix-img-1">
-        
-        <!-- Imagen 2 (Pinksale Logo) -->
-        <img src="https://camo.githubusercontent.com/dd3bba77e7ccb603f1062699b8b63a321aecd91ef3f0c3a498313bd5dbc1c336/68747470733a2f2f70686f746f732e70696e6b73616c652e66696e616e63652f66696c652f70696e6b73616c652d6c6f676f2d75706c6f61642f313739303633323730333536372d32623061316564653734646430313931343961393366643638356139336333362e706e67" 
-             alt="Fénix Art 2" 
-             class="fenix-img fenix-img-2">
-    </div>
-
-    <!-- Descripción Estilizada -->
-    <p style="color: #94a3b8; font-size: 0.95em; max-width: 600px; margin: 0 auto; line-height: 1.6;">
-        Renaciendo con fuerza inquebrantable. La evolución tecnológica y gráfica de <strong style="color: #00ffcc;">XENOCRYPT</strong> fusiona innovación descentralizada y diseño de alta gama en la blockchain.
-    </p>
-</div>
-
-<hr>          
-
-  <!-- Bloque Comunidad y Redes Oficiales -->
-            <div class="zaard-master-card">
-                <div style="text-align: center; margin-bottom: 20px;">
-                    <h3 class="gold" style="font-family: 'Orbitron', sans-serif; font-size: 1.4rem; margin-bottom: 8px;">COMUNIDAD GLOBAL <span class="highlight-zard">ZARD</span></h3>
-                    <p style="color: var(--text-purple); font-size: 0.9em; margin-bottom: 20px;">
-                        Únete al canal oficial de Telegram para enterarte de los próximos lanzamientos, whitepapers y eventos.
-                    </p>
+                    <div class="action-buttons">
+                        <button id="backHomeBtn" class="btn-action secondary" onclick="switchTab('home')" data-i18n="btn-back">⬅ Volver</button>
+                        <button id="deployAndSupplyBtn" class="btn-action supply" data-i18n="btn-deploy">🚀 Desplegar y Crear Liquidez</button>
+                    </div>
                     
-                    <a href="https://t.me/+Cjo5z_yXcdwzYjM5" target="_blank" rel="noopener noreferrer">
-                        <img src="https://photos.pinksale.finance/file/pinksale-logo-upload/1790820736441-e30533ed2fe1c336c100c321c277c1d5.png" alt="Comunidad ZARD Telegram" class="zaard-banner-img" style="max-width: 100%; height: auto; border-radius: 12px; border: 1px solid rgba(0,255,204,0.3); box-shadow: 0 0 15px rgba(0,255,204,0.2);">
-                    </a>
-                </div>
-
-                <div style="padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.08);">
-                    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 15px;">
-                        <h4 style="font-family: 'Orbitron', sans-serif; font-size: 0.85rem; font-weight: bold; color: var(--neon-blue); margin: 0;">ACCESOS DIRECTOS & DAPP</h4>
-                        <span style="font-size: 11px; background: rgba(0,242,254,0.1); color: var(--neon-blue); border: 1px solid rgba(0,242,254,0.3); padding: 3px 10px; border-radius: 20px; font-family: monospace;">SECURE ECOSYSTEM</span>
-                    </div>
-
-                    <div class="zaard-social-grid">
-                        <!-- Creation FINANCE DApp -->
-                        <a href="https://figueredo56.github.io/zaard-innovation-dapp/" target="_blank" rel="noopener noreferrer" class="zaard-social-btn">
-                            <svg class="zaard-social-icon" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-                            <div class="zaard-social-info">
-                                <h4>Creation FINANCE</h4>
-                                <span>DApp Oficial</span>
-                            </div>
-                        </a>
-
-                        <!-- ZAARD Wallet -->
-                        <a href="https://figueredo56.github.io/zaard-wallet/wallet.html" target="_blank" rel="noopener noreferrer" class="zaard-social-btn">
-                            <svg class="zaard-social-icon" viewBox="0 0 24 24"><path d="M21 18v1a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v1h-9a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h9zm-9-2h10V8H12v8zm4-2.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>
-                            <div class="zaard-social-info">
-                                <h4><span class="highlight-zard">ZAARD</span> Wallet</h4>
-                                <span>Gestión Segura</span>
-                            </div>
-                        </a>
-
-                        <!-- Twitter / X -->
-                        <a href="https://x.com/ZAARD_ALX" target="_blank" rel="noopener noreferrer" class="zaard-social-btn">
-                            <svg class="zaard-social-icon" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-                            <div class="zaard-social-info">
-                                <h4>Twitter / X</h4>
-                                <span>@ZAARD_ALX</span>
-                            </div>
-                        </a>
-
-                        <!-- LinkedIn -->
-                        <a href="https://www.linkedin.com/in/zaard-inovation-45284a408?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" class="zaard-social-btn">
-                            <svg class="zaard-social-icon" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
-                            <div class="zaard-social-info">
-                                <h4>LinkedIn</h4>
-                                <span>Perfil Oficial</span>
-                            </div>
-                        </a>
-
-                        <!-- Reddit -->
-                        <a href="https://www.reddit.com/u/Old-Operation6245/s/bB5dWEDjO5" target="_blank" rel="noopener noreferrer" class="zaard-social-btn">
-                            <svg class="zaard-social-icon" viewBox="0 0 24 24"><path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.221.686-.356 1.096-.356.997 0 1.808.811 1.808 1.808 0 .684-.39 1.276-.957 1.579.034.227.054.457.054.69 0 3.51-4.032 6.357-9.013 6.357-4.981 0-9.013-2.847-9.013-6.357 0-.233.02-.463.054-.69a1.815 1.815 0 0 1-.957-1.579c0-.997.811-1.808 1.808-1.808.41 0 .788.135 1.096.356 1.194-.856 2.85-1.418 4.674-1.488l.758-3.556 2.946.621c.14-.383.513-.66 0.957-.66zm-7.51 7.152c-.89 0-1.611.721-1.611 1.611 0 .89.721 1.611 1.611 1.611.89 0 1.611-.721 1.611-1.611 0-.89-.721-1.611-1.611-1.611zm6.98 0c-.89 0-1.611.721-1.611 1.611 0 .89.721 1.611 1.611 1.611.89 0 1.611-.721 1.611-1.611 0-.89-.721-1.611-1.611-1.611z"/></svg>
-                            <div class="zaard-social-info">
-                                <h4>Reddit</h4>
-                                <span>Comunidad</span>
-                            </div>
-                        </a>
-
-                        <!-- Discord -->
-                        <a href="https://discord.gg/GGbzY9FR2" target="_blank" rel="noopener noreferrer" class="zaard-social-btn">
-                            <svg class="zaard-social-icon" viewBox="0 0 24 24"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994.021-.041.001-.09-.041-.106a13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.011c3.927 1.793 8.18 1.793 12.061 0a.074.074 0 0 1 .078.01 c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.028zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
-                            <div class="zaard-social-info">
-                                <h4>Discord</h4>
-                                <span>Servidor Oficial</span>
-                            </div>
-                        </a>
+                    <div class="lp-info-box">
+                        <small><span data-i18n="status-label">Estado:</span> <span id="statusText" class="text-glow" data-i18n="status-ready">Listo para configurar...</span></small>
                     </div>
                 </div>
-            </div>
+            </section>
+        </main>
 
-            <hr>
-
-<!-- ======================================================= -->
-<!-- BLOQUE: GECKOTERMINAL LIVE ANALYTICS & POOL -->
-<!-- ======================================================= -->
-<div class="zaard-master-card" style="border: 2px solid rgba(168, 85, 247, 0.4); box-shadow: 0 0 25px rgba(168, 85, 247, 0.2); background: linear-gradient(135deg, rgba(15,15,25,0.95), rgba(20,10,35,0.9)); padding: 30px; border-radius: 16px; margin-bottom: 40px; text-align: center;">
-    
-    <!-- Encabezado del Bloque -->
-    <div style="margin-bottom: 20px;">
-        <h3 class="gold" style="font-family: 'Orbitron', sans-serif; font-size: 1.3rem; margin-bottom: 8px; color: #a855f7; text-shadow: 0 0 10px rgba(168,85,247,0.4);">
-            📊 GECKOTERMINAL ANALYTICS
-        </h3>
-        <p style="color: #94a3b8; font-size: 0.9em; max-width: 600px; margin: 0 auto 20px auto; line-height: 1.5;">
-            Monitoreo en tiempo real de la liquidez, métricas de mercado y transacciones del pool oficial en la BNB Smart Chain.
-        </p>
-        
-        <!-- Imagen / Banner del Pool con enlace directo actualizado -->
-        <a href="https://www.geckoterminal.com/bsc/pools/0xf74575b2f43ff408dfe439fd9dff50ccc271419d" target="_blank" rel="noopener noreferrer" style="display: inline-block; transition: transform 0.3s ease;">
-            <img src="https://photos.pinksale.finance/file/pinksale-logo-upload/1790820923576-86a56a32fefea1a72dca5bfdf3596775.png" 
-                 alt="GeckoTerminal Pool ZARD" 
-                 class="zaard-banner-img" 
-                 style="max-width: 100%; width: 220px; height: auto; border-radius: 12px; border: 2px solid rgba(168, 85, 247, 0.5); box-shadow: 0 0 20px rgba(168,85,247,0.3);"
-                 onmouseover="this.style.transform='scale(1.04)';" 
-                 onmouseout="this.style.transform='scale(1)';">
-        </a>
+        <footer>
+            <p data-i18n="footer-text">© 2026 ZARD Finance Ecosystem. Jurisdicción PANGA &bull; ZAARD Innovation.</p>
+        </footer>
     </div>
 
-    <!-- Botón de Acceso Técnico actualizado -->
-    <div style="padding-top: 15px; border-top: 1px solid rgba(255,255,255,0.08);">
-        <a href="https://www.geckoterminal.com/bsc/pools/0xf74575b2f43ff408dfe439fd9dff50ccc271419d" 
-           target="_blank" 
-           rel="noopener noreferrer"
-           style="display: inline-block; padding: 12px 25px; background: linear-gradient(135deg, rgba(168,85,247,0.2), rgba(0,255,204,0.2)); border: 1px solid #a855f7; border-radius: 10px; color: #c084fc; font-family: 'Orbitron', sans-serif; font-size: 0.85em; font-weight: bold; text-decoration: none; transition: all 0.3s ease; box-shadow: 0 0 10px rgba(168,85,247,0.2);"
-           onmouseover="this.style.background='rgba(168,85,247,0.4)'; this.style.color='#fff';"
-           onmouseout="this.style.background='linear-gradient(135deg, rgba(168,85,247,0.2), rgba(0,255,204,0.2))'; this.style.color='#c084fc';">
-            📈 VER POOL EN GECKOTERMINAL ↗
-        </a>
-    </div>
-</div>
-
-<hr>
-
-<!-- ======================================================= -->
-<!-- BLOQUE 2: MONITOREO EN DIRECTO - DEXVIEW                -->
-<!-- ======================================================= -->
-<div class="section" style="position: relative; overflow: hidden; border: 2px solid #3b82f6; box-shadow: 0 0 30px rgba(59, 130, 246, 0.25); background: linear-gradient(135deg, rgba(15,15,15,0.95), rgba(10,20,35,0.9)); padding: 30px; border-radius: 16px; margin-bottom: 40px; text-align: center;">
-    
-    <!-- Encabezado del Bloque -->
-    <h2 style="font-family: 'Orbitron', sans-serif; color: #60a5fa; font-size: 1.7em; margin-bottom: 8px; text-shadow: 0 0 10px rgba(96,165,250,0.5);">
-        📊 GRÁFICO Y MERCADO EN DEXVIEW
-    </h2>
-    <p style="color: #94a3b8; font-size: 0.95em; max-width: 600px; margin: 0 auto 25px auto; line-height: 1.5;">
-        Sigue la cotización en tiempo real, el volumen de operaciones y la liquidez oficial del token en <span style="color: #60a5fa; font-weight: bold;">DexView</span>.
-    </p>
-
-    <!-- Contenedor de la Insignia Interactiva (Actualizado) -->
-    <div style="margin-bottom: 25px;">
-        <a href="https://www.dexview.com/bsc/0x472d59538efFE1C85382e3E62E1B2ec995d382eF" target="_blank" style="display: inline-block; transition: transform 0.3s ease, filter 0.3s ease;">
-            <img src="https://photos.pinksale.finance/file/pinksale-logo-upload/1790708912813-f9d61e545f00182762adc9b8a99455da.png" 
-                 alt="ZARD DexView Analytics" 
-                 style="max-width: 180px; width: 100%; height: auto; border-radius: 12px; border: 2px solid rgba(59, 130, 246, 0.5); box-shadow: 0 0 20px rgba(59,130,246,0.3); filter: drop-shadow(0 0 8px rgba(59,130,246,0.4));"
-                 onmouseover="this.style.transform='scale(1.05)'; this.style.filter='drop-shadow(0 0 12px rgba(59,130,246,0.8))';" 
-                 onmouseout="this.style.transform='scale(1)'; this.style.filter='drop-shadow(0 0 8px rgba(59,130,246,0.4))';">
-        </a>
-    </div>
-
-    <!-- Botón de Enlace Directo (Actualizado) -->
-    <div>
-        <a href="https://www.dexview.com/bsc/0x472d59538efFE1C85382e3E62E1B2ec995d382eF" 
-           target="_blank" 
-           class="card-link"
-           style="display: inline-block; padding: 12px 30px; background: linear-gradient(135deg, rgba(59,130,246,0.2), rgba(0,255,204,0.1)); border: 2px solid #3b82f6; border-radius: 10px; color: #60a5fa; font-family: 'Orbitron', sans-serif; font-size: 0.9em; font-weight: bold; text-decoration: none; box-shadow: 0 0 15px rgba(59,130,246,0.2); transition: all 0.3s ease;">
-            📈 VER MERCADO EN DEXVIEW ↗
-        </a>
-    </div>
-
-</div>
-
-            <!-- ========================================== -->
-            <!-- SECCIÓN DE SEGURIDAD EN VIVO - GOPLUS      -->
-            <!-- ========================================== -->
-            <div class="section" style="border: 1px solid rgba(212, 175, 55, 0.3); padding: 20px; border-radius: 15px; margin: 25px auto; max-width: 650px; background: rgba(0, 0, 0, 0.5); text-align: left;">
-                <h3 style="color: #d4af37; text-align: center; margin-bottom: 10px; font-family: 'Orbitron', sans-serif;">🛡️ Estado de Seguridad del Contrato</h3>
-                <p style="font-size: 0.8em; text-align: center; color: #bbb; margin-bottom: 15px; word-break: break-all;">
-                    Contrato: <code style="color: #00f2fe;">0xade78fba566c2d8cfd9537ddb1129d65347744d6</code>
-                </p>
-                
-                <div id="zaard-security-box" style="background: rgba(0, 0, 0, 0.6); border: 1px solid rgba(0, 242, 254, 0.3); padding: 15px; border-radius: 10px; text-align: center;">
-                    <p style="color: #fff; font-size: 0.9em;">🔄 Verificando contrato en tiempo real...</p>
-                </div>
-            </div>
-
-       <!-- ENLACE DE DEXSCREENER -->
-    <div class="direct-links-grid">
-        <a href="https://dexscreener.com/bsc/0x472d59538effe1c85382e3e62e1b2ec995d382ef" target="_blank" rel="noopener noreferrer" class="direct-link-item">
-            <img src="https://photos.pinksale.finance/file/pinksale-logo-upload/1790290122445-0077664fb41e21b3aec6f1685fd6ec56.png" alt="DexScreener">
-            <span>DEXSCREENER</span>
-        </a>
-    </div> 
-
-            <!-- Video Destacado -->
-            <div class="video-box">
-                <iframe src="https://www.youtube.com/embed/3ZLhfmZWLXk" title="ZARD Showcase Video" allowfullscreen></iframe>
-            </div>
-
-            <hr>
-
-
-
-      <!-- ======================================================= -->
-<!-- BLOQUE: VERIFICACIÓN TOKEN SNIFFER (TITILEO FÉNIX)      -->
-<!-- ======================================================= -->
-<style>
-  @keyframes snifferBlink {
-    0%, 45% {
-      opacity: 1;
-      transform: scale(1);
-      filter: drop-shadow(0 0 15px rgba(16, 185, 129, 0.7));
-    }
-    50%, 95% {
-      opacity: 0;
-      transform: scale(0.97);
-      filter: drop-shadow(0 0 5px rgba(16, 185, 129, 0.2));
-    }
-    100% {
-      opacity: 1;
-      transform: scale(1);
-      filter: drop-shadow(0 0 15px rgba(16, 185, 129, 0.7));
-    }
-  }
-
-  @keyframes snifferBlinkAlt {
-    0%, 45% {
-      opacity: 0;
-      transform: scale(0.97);
-      filter: drop-shadow(0 0 5px rgba(16, 185, 129, 0.2));
-    }
-    50%, 95% {
-      opacity: 1;
-      transform: scale(1);
-      filter: drop-shadow(0 0 20px rgba(52, 211, 153, 0.8));
-    }
-    100% {
-      opacity: 0;
-      transform: scale(0.97);
-      filter: drop-shadow(0 0 5px rgba(16, 185, 129, 0.2));
-    }
-  }
-
-  .sniffer-container {
-    position: relative;
-    width: 200px;
-    height: 200px;
-    margin: 0 auto 20px auto;
-  }
-
-  .sniffer-img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    border-radius: 12px;
-    border: 2px solid rgba(16, 185, 129, 0.6);
-    background: rgba(10, 25, 20, 0.85);
-    transition: all 0.5s ease;
-  }
-
-  .sniffer-img-1 {
-    animation: snifferBlink 4s infinite ease-in-out;
-  }
-
-  .sniffer-img-2 {
-    animation: snifferBlinkAlt 4s infinite ease-in-out;
-    border-color: rgba(52, 211, 153, 0.8);
-  }
-</style>
-
-<div class="section" style="position: relative; overflow: hidden; border: 2px solid #10b981; box-shadow: 0 0 35px rgba(16, 185, 129, 0.35); background: linear-gradient(135deg, rgba(15,15,15,0.95), rgba(10,30,20,0.9)); padding: 30px; border-radius: 16px; margin-bottom: 40px; text-align: center;">
-    
-    <!-- Encabezado Temático -->
-    <h2 style="font-family: 'Orbitron', sans-serif; color: #34d399; font-size: 1.7em; margin-bottom: 8px; text-shadow: 0 0 12px rgba(52,211,153,0.6);">
-        🛡️ VERIFICACIÓN OFICIAL TOKEN SNIFFER
-    </h2>
-    <p style="color: #94a3b8; font-size: 0.95em; max-width: 600px; margin: 0 auto 25px auto; line-height: 1.5;">
-        Seguridad de contratos inteligentes, análisis de liquidez y auditoría en tiempo real en <span style="color: #34d399; font-weight: bold;">TokenSniffer</span>.
-    </p>
-
-    <!-- Contenedor Animado con las dos imágenes y enlace directo -->
-    <div style="margin-bottom: 25px;">
-        <a href="https://tokensniffer.com/token/bsc/0x472d59538effe1c85382e3e62e1b2ec995d382ef" target="_blank" style="display: inline-block;">
-            <div class="sniffer-container">
-                <!-- Imagen 1 -->
-                <img src="https://photos.pinksale.finance/file/pinksale-logo-upload/1790961761966-a98f21106efdb0bc0f0e5dac491d4f14.png" 
-                     alt="TokenSniffer Badge 1" 
-                     class="sniffer-img sniffer-img-1">
-                
-                <!-- Imagen 2 -->
-                <img src="https://photos.pinksale.finance/file/pinksale-logo-upload/1790962130606-0251206d791fbb39393740e4dcfad7f6.png" 
-                     alt="TokenSniffer Badge 2" 
-                     class="sniffer-img sniffer-img-2">
-            </div>
-        </a>
-    </div>
-
-    <!-- Botón de Enlace Directo -->
-    <div>
-        <a href="https://tokensniffer.com/token/bsc/0x472d59538effe1c85382e3e62e1b2ec995d382ef" 
-           target="_blank" 
-           class="card-link"
-           style="display: inline-block; padding: 12px 30px; background: linear-gradient(135deg, rgba(16,185,129,0.2), rgba(0,255,204,0.1)); border: 2px solid #10b981; border-radius: 10px; color: #34d399; font-family: 'Orbitron', sans-serif; font-size: 0.9em; font-weight: bold; text-decoration: none; box-shadow: 0 0 20px rgba(16,185,129,0.25); transition: all 0.3s ease;">
-            🔍 CONSULTAR EN TOKEN SNIFFER ↗
-        </a>
-    </div>
-
-</div>      
-            
-<!-- ======================================================= -->
-            <!-- BLOQUE MAESTRO: DEXTOOLS + EVOLUCIÓN TÉCNICA Y ECOSYSTEM -->
-            <!-- ======================================================= -->
-            <div class="section" style="position: relative; overflow: hidden; border: 2px solid var(--gold); box-shadow: 0 0 35px rgba(212, 175, 55, 0.35); background: linear-gradient(135deg, rgba(15,15,15,0.95), rgba(26,26,46,0.9)); padding: 25px; border-radius: 16px; margin-bottom: 40px;">
-                
-                <!-- PARTE 1: GRÁFICO Y MERCADO EN VIVO (DEXTOOLS) -->
-                <h2 class="gold" style="text-align: center; font-size: 1.8em; margin-bottom: 5px; text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);">
-                    📈 LIVE MARKET & CHART
-                </h2>
-                <p style="text-align: center; color: #00ffcc; font-size: 0.9em; letter-spacing: 2px; margin-bottom: 20px; text-transform: uppercase;">
-                    ZARD / BNB Real-Time Analytics & Orders
-                </p>
-
-                <!-- Widget Iframe DexTools actualizado -->
-                <div style="width: 100%; height: 600px; border-radius: 12px; overflow: hidden; border: 1px solid rgba(0, 255, 204, 0.4); background: rgba(0, 0, 0, 0.85); box-shadow: inset 0 0 20px rgba(0,0,0,0.8); margin-bottom: 25px;">
-                    <iframe src="https://www.dextools.io/widget-chart/es/bnb/pe-chart/0x472d59538effe1c85382e3e62e1b2ec995d382ef?theme=dark&chartType=1&chartResolution=5&drawingToolbars=false&roundedCorners=true&loadingscreen=true" 
-                            style="width: 100%; height: 100%; border: none;" 
-                            title="ZARD Live Chart & Order Book"
-                            allow="clipboard-write; fullscreen">
-                    </iframe>
-                </div>
-
-                <!-- Panel de Métricas Rápidas: Órdenes y Holders -->
-                
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 15px; margin-bottom: 25px;">
-                    
-                    <!-- Casilla de Últimas Órdenes -->
-                    <div style="background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px; padding: 18px;">
-                        <h4 style="font-family: 'Orbitron', sans-serif; color: #00f2fe; font-size: 0.95rem; margin-bottom: 10px;">
-                            🔄 Actividad Reciente (Swaps)
-                        </h4>
-                        <p style="color: #94a3b8; font-size: 0.8em; margin-bottom: 12px;">Seguimiento en tiempo real de entradas y salidas de capital.</p>
-                        <a href="https://www.dextools.io/app/en/bnb/pair-explorer/0x472d59538effe1c85382e3e62e1b2ec995d382ef" target="_blank" style="display: block; width: 100%; text-align: center; background: rgba(0, 242, 254, 0.1); border: 1px solid rgba(0, 242, 254, 0.3); color: #00f2fe; padding: 10px; border-radius: 8px; text-decoration: none; font-size: 0.85em; font-weight: 600;">
-                            Ver Historial de Órdenes ↗
-                        </a>
-                    </div>
-
-                    <!-- Casilla de Holders y BscScan -->
-                    <div style="background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px; padding: 18px;">
-                        <h4 style="font-family: 'Orbitron', sans-serif; color: #f3ba2f; font-size: 0.95rem; margin-bottom: 10px;">
-                            👥 Distribución & Holders
-                        </h4>
-                        <p style="color: #94a3b8; font-size: 0.8em; margin-bottom: 12px;">Consulta la cantidad de billeteras poseedoras del token.</p>
-                        <a href="https://bscscan.com/token/0x472d59538effe1c85382e3e62e1b2ec995d382ef#balances" target="_blank" style="display: block; width: 100%; text-align: center; background: rgba(243, 186, 47, 0.1); border: 1px solid rgba(243, 186, 47, 0.3); color: #f3ba2f; padding: 10px; border-radius: 8px; text-decoration: none; font-size: 0.85em; font-weight: 600;">
-                            Ver Holders en BscScan ↗
-                        </a>
-                    </div>
-
-                </div>
-
-                <!-- Botones de Acción y Enlaces Web3 (Binance Web3 + DexTools) -->
-                <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px;">
-                    
-                    <!-- Acceso Directo: Binance Web3 Token Details -->
-                    <a href="https://app.binance.com/uni-qr/web3-token-details?utm_medium=share&tokenCA=0x472d59538effe1c85382e3e62e1b2ec995d382ef&binanceChainId=56&chain=bsc" 
-                       target="_blank" 
-                       class="card-link"
-                       style="display: inline-block; width: 100%; max-width: 320px; padding: 15px 25px; background: linear-gradient(135deg, rgba(0,255,204,0.25), rgba(176,0,255,0.2)); border: 2px solid #00ffcc; border-radius: 12px; box-shadow: 0 0 20px rgba(0,255,204,0.3); text-decoration: none; transition: all 0.3s ease; text-align: center;">
-                        <span style="display: block; color: #00ffcc; font-size: 1.1em; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; text-shadow: 0 0 8px rgba(0,255,204,0.6);">
-                            🌐 VER EN BINANCE WEB3
-                        </span>
-                        
-                        <span style="display: block; color: #fff; font-size: 0.8em; margin-top: 4px; opacity: 0.9; word-break: break-all;">
-                            CA: 0x472d...82ef
-                        </span>
-                    </a>
-
-                    <!-- Acceso Directo a DexTools Pair Explorer -->
-                    <a href="https://www.dextools.io/app/en/bnb/pair-explorer/0x472d59538effe1c85382e3e62e1b2ec995d382ef" 
-                       target="_blank" 
-                       class="card-link"
-                       style="display: inline-block; width: 100%; max-width: 320px; padding: 15px 25px; background: linear-gradient(135deg, rgba(212,175,55,0.2), rgba(0,255,204,0.2)); border: 2px solid var(--gold); border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.5); text-decoration: none; transition: all 0.3s ease; text-align: center;">
-                        <span style="display: block; color: var(--gold); font-size: 1.1em; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; text-shadow: 0 0 8px rgba(212,175,55,0.6);">
-                            🚀 DEXTOOLS EXPLORER
-                        </span>
-                        
-                        <span style="display: block; color: #fff; font-size: 0.8em; margin-top: 4px; opacity: 0.9;">
-                            Analizar swaps y liquidez
-                        </span>
-                    </a>
-
-                </div>
-
-            </div>
-
-    <!-- SCRIPT DE TRANSICIÓN Y VERIFICACIÓN DE SEGURIDAD AUTOMÁTICA -->
     <script>
-    window.addEventListener('DOMContentLoaded', () => {
-        setTimeout(() => {
-            const splash = document.getElementById('splash-screen');
-            const mainContent = document.getElementById('main-content');
-            
-            if (splash) {
-                splash.style.opacity = '0';
-                splash.style.visibility = 'hidden';
-            }
-            if (mainContent) {
-                mainContent.style.opacity = '1';
-            }
-        }, 4000);
-    });
+        // Dirección oficial actualizada del contrato ZARD para PancakeSwap y creación de pares
+        const ZARD_TOKEN_ADDRESS = "0x472d59538effe1c85382e3e62e1b2ec995d382ef";
 
-    async function verificarSeguridadContrato() {
-        const contrato = "0xade78fba566c2d8cfd9537ddb1129d65347744d6";
-        const chainId = "56"; // BSC
-        const contenedor = document.getElementById("zaard-security-box");
-
-        if (!contenedor) return;
-
-        try {
-            const respuesta = await fetch(`https://api.gopluslabs.io/api/v1/token_security/${chainId}?contract_addresses=${contrato}`);
-            const datos = await respuesta.json();
-            
-            if (datos.result && datos.result[contrato.toLowerCase()]) {
-                const info = datos.result[contrato.toLowerCase()];
-                const esHoneypot = info.is_honeypot === "1" ? "⚠️ Alerta" : "✅ Seguro (No Honeypot)";
-                const buyTax = info.buy_tax ? (parseFloat(info.buy_tax) * 100) + "%" : "0%";
-                const sellTax = info.sell_tax ? (parseFloat(info.sell_tax) * 100) + "%" : "0%";
-                const isOpenSource = info.is_open_source === "1" ? "✅ Verificado" : "⚠️ No Verificado";
-
-                contenedor.innerHTML = `
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; font-size: 0.85em; text-align: left;">
-                        <div><strong>Código:</strong><br><span style="color: #4ade80;">${isOpenSource}</span></div>
-                        <div><strong>Estado:</strong><br><span style="color: #4ade80;">${esHoneypot}</span></div>
-                        <div><strong>Imp. Compra:</strong><br><span style="color: #38bdf8;">${buyTax}</span></div>
-                        <div><strong>Imp. Venta:</strong><br><span style="color: #38bdf8;">${sellTax}</span></div>
-                    </div>
-                    <p style="margin-top: 10px; font-size: 0.7em; color: #10b981; margin-bottom: 0;">🟢 Monitoreado por GoPlus Security.</p>
-                `;
-            } else {
-                contenedor.innerHTML = `<p style="color: #facc15; font-size: 0.9em; margin: 0;">ℹ Contrato registrado en la red correctamente.</p>`;
-            }
-        } catch (error) {
-            contenedor.innerHTML = `<p style="color: #ef4444; font-size: 0.9em; margin: 0;">❌ Error al consultar el estado del contrato.</p>`;
+        // Función para cerrar el modal de bienvenida
+        function closeWelcomeModal() {
+            const modal = document.getElementById('welcomeModal');
+            modal.style.opacity = '0';
+            modal.style.transition = 'opacity 0.3s ease';
+            setTimeout(() => {
+                modal.style.display = 'none';
+            }, 300);
         }
-}
-</script>
 
-<!-- ======================================================= -->
-<!-- BLOQUE: ECOSISTEMA DE APLICACIONES ZAARD (WALLET & FINANCE) -->
-<!-- ======================================================= -->
-<div class="section" style="position: relative; overflow: hidden; border: 2px solid #00ffcc; box-shadow: 0 0 30px rgba(0, 255, 204, 0.25); background: linear-gradient(135deg, rgba(15,15,15,0.95), rgba(10,25,35,0.9)); padding: 30px; border-radius: 16px; margin-bottom: 40px; text-align: center;">
-    
-    <!-- Encabezado del Bloque -->
-    <h2 style="font-family: 'Orbitron', sans-serif; color: #00ffcc; font-size: 1.7em; margin-bottom: 8px; text-shadow: 0 0 10px rgba(0,255,204,0.5);">
-        ⚡ APLICACIONES PRINCIPALES DEL ECOSISTEMA
-    </h2>
-    <p style="color: #94a3b8; font-size: 0.95em; max-width: 650px; margin: 0 auto 30px auto; line-height: 1.5;">
-        Explora las herramientas descentralizadas de <span class="gold" style="color: var(--gold);">ZAARD INNOVATION</span> diseñadas para la gestión de activos y la creación inteligente de liquidez.
-    </p>
+        const translations = {
+            es: {
+                "nav-web": "🌐 Web Oficial", "nav-wallet": "👛 ZARD Wallet", "nav-eco": "🚀 Ecosistema Global",
+                "btn-connect": "Conectar Billetera",
+                "hero-title": "Bienvenido al Núcleo de ZARD Finance",
+                "hero-subtitle": "Selecciona una opción del ecosistema para comenzar la innovación financiera",
+                "card1-title": "ZARD Wallet", "card1-desc": "Gestiona tus activos y tokens de forma segura dentro de la red.", "card1-link": "Abrir Billetera →",
+                "card2-title": "Crear Token & Liquidez", "card2-desc": "Despliega tu propia moneda emparejada directamente con ZARD.", "card2-link": "Iniciar Creación →",
+                "card3-title": "ZARD Ecosistema", "card3-desc": "Explora las alertas, proyectos oficiales y plataformas globales.", "card3-link": "Explorar Web →",
+                "eco-links-title": "🔗 Enlaces Rápidos del Ecosistema",
+                "creator-title": "Centro de Creación ZARD Finance", "creator-subtitle": "Diseña tu token con par directo en ZARD y despliegue automatizado",
+                "label-name": "Nombre y Símbolo del Token", "label-logo": "URL del Logo (Imagen del Token)",
+                "tip-logo": "💡 <strong>Consejo Pro:</strong> Sube tu logo a <a href='https://www.pinata.cloud' target='_blank'>Pinata.cloud</a> y pega aquí el enlace directo IPFS.",
+                "label-social": "Información / Redes (Web, X, Discord)", "label-supply": "Suministro Total (Supply)",
+                "lp-title": "Aporte de Liquidez Base ZARD", "lp-subtitle": "Requiere tener ZARD en tu billetera Binance Web3 / MetaMask",
+                "balance-label": "Balance ZARD disponible:", "btn-back": "⬅ Volver", "btn-deploy": "🚀 Desplegar y Crear Liquidez",
+                "status-label": "Estado:", "status-ready": "Listo para configurar...",
+                "footer-text": "© 2026 ZARD Finance Ecosystem. Jurisdicción PANGA • ZAARD Innovation."
+            },
+            en: {
+                "nav-web": "🌐 Official Web", "nav-wallet": "👛 ZARD Wallet", "nav-eco": "🚀 Global Ecosystem",
+                "btn-connect": "Connect Wallet",
+                "hero-title": "Welcome to ZARD Finance Core",
+                "hero-subtitle": "Select an ecosystem option to start financial innovation",
+                "card1-title": "ZARD Wallet", "card1-desc": "Manage your assets and tokens securely within the network.", "card1-link": "Open Wallet →",
+                "card2-title": "Create Token & Liquidity", "card2-desc": "Deploy your own coin paired directly with ZARD.", "card2-link": "Start Creation →",
+                "card3-title": "ZARD Ecosystem", "card3-desc": "Explore alerts, official projects, and global platforms.", "card3-link": "Explore Web →",
+                "eco-links-title": "🔗 Ecosystem Quick Links",
+                "creator-title": "ZARD Finance Creation Center", "creator-subtitle": "Design your token with direct ZARD pair and automated deployment",
+                "label-name": "Token Name & Symbol", "label-logo": "Logo URL (Token Image)",
+                "tip-logo": "💡 <strong>Pro Tip:</strong> Upload your logo to <a href='https://www.pinata.cloud' target='_blank'>Pinata.cloud</a> and paste the direct IPFS link here.",
+                "label-social": "Info / Socials (Web, X, Discord)", "label-supply": "Total Supply",
+                "lp-title": "Base ZARD Liquidity Contribution", "lp-subtitle": "Requires holding ZARD in your Binance Web3 / MetaMask wallet",
+                "balance-label": "Available ZARD Balance:", "btn-back": "⬅ Back", "btn-deploy": "🚀 Deploy & Create Liquidity",
+                "status-label": "Status:", "status-ready": "Ready to configure...",
+                "footer-text": "© 2026 ZARD Finance Ecosystem. PANGA Jurisdiction • ZAARD Innovation."
+            },
+            zh: {
+                "nav-web": "🌐 官方网站", "nav-wallet": "👛 ZARD 钱包", "nav-eco": "🚀 全球生态系统",
+                "btn-connect": "连接钱包",
+                "hero-title": "欢迎来到 ZARD Finance 核心",
+                "hero-subtitle": "选择生态系统选项以开启金融创新",
+                "card1-title": "ZARD 钱包", "card1-desc": "在网络中安全地管理您的资产和代币。", "card1-link": "打开钱包 →",
+                "card2-title": "创建代币与流动性", "card2-desc": "部署您自己的直接与 ZARD 配对的代币。", "card2-link": "开始创建 →",
+                "card3-title": "ZARD 生态系统", "card3-desc": "探索警报、官方项目和全球平台。", "card3-link": "探索网页 →",
+                "eco-links-title": "🔗 生态系统快速链接",
+                "creator-title": "ZARD Finance 创建中心", "creator-subtitle": "设计带有 ZARD 直接交易对和自动部署功能的代币",
+                "label-name": "代币名称与符号", "label-logo": "Logo 网址 (代币图片)",
+                "tip-logo": "💡 <strong>专业提示：</strong> 将您的 logo 上传到 <a href='https://www.pinata.cloud' target='_blank'>Pinata.cloud</a> 并在此处粘贴直接 IPFS 链接。",
+                "label-social": "信息 / 社交媒体", "label-supply": "总供应量",
+                "lp-title": "基础 ZARD 流动性贡献", "lp-subtitle": "需要在您的钱包中持有 ZARD",
+                "balance-label": "可用 ZARD 余额:", "btn-back": "⬅ 返回", "btn-deploy": "🚀 部署并创建流动性",
+                "status-label": "状态:", "status-ready": "准备配置...",
+                "footer-text": "© 2026 ZARD Finance Ecosystem. PANGA 司法管辖区 • ZAARD Innovation."
+            }
+        };
 
-    <!-- Contenedor en Grid para las 2 Apps -->
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; align-items: stretch;">
-        
-        <!-- Tarjeta 1: ZARD Wallet -->
-        <div class="fin-card" style="background: rgba(12,6,26,0.8); border: 1px solid var(--border-glow); border-radius: 14px; padding: 25px; display: flex; flex-direction: column; justify-content: space-between; text-align: center;">
-            <div>
-                <div style="margin-bottom: 15px;">
-                    <a href="https://figueredo56.github.io/zaard-wallet/wallet.html" target="_blank" style="display: inline-block; transition: transform 0.3s ease;">
-                        <img src="https://photos.pinksale.finance/file/pinksale-logo-upload/1790817037242-10b712b064b3dca0c1a6417000db08e3.png" 
-                             alt="ZARD Wallet" 
-                             style="max-width: 120px; width: 100%; height: auto; border-radius: 10px; border: 2px solid rgba(0, 255, 204, 0.4); box-shadow: 0 0 15px rgba(0,255,204,0.3);"
-                             onmouseover="this.style.transform='scale(1.05)';" 
-                             onmouseout="this.style.transform='scale(1)';">
-                    </a>
-                </div>
-                <h3 style="font-family: 'Orbitron', sans-serif; color: #00ffcc; font-size: 1.2rem; margin-bottom: 10px;">
-                    ZARD Wallet
-                </h3>
-                <p style="color: #94a3b8; font-size: 0.88rem; line-height: 1.5; margin-bottom: 20px;">
-                    Aplicación Web3 nativa para la gestión segura de activos, visualización de balances en tiempo real e interacción directa con los contratos del ecosistema.
-                </p>
-            </div>
-            <div>
-                <a href="https://figueredo56.github.io/zaard-wallet/wallet.html" 
-                   target="_blank" 
-                   class="card-link"
-                   style="display: inline-block; padding: 10px 20px; background: linear-gradient(135deg, rgba(0,255,204,0.2), rgba(59,130,246,0.2)); border: 1px solid #00ffcc; border-radius: 8px; color: #00ffcc; font-family: 'Orbitron', sans-serif; font-size: 0.82em; font-weight: bold; text-decoration: none; transition: all 0.3s ease;">
-                    🔗 ABRIR ZARD WALLET ↗
-                </a>
-            </div>
-        </div>
-
-        <!-- Tarjeta 2: ZAARD Finance -->
-        <div class="fin-card" style="background: rgba(12,6,26,0.8); border: 1px solid var(--border-glow); border-radius: 14px; padding: 25px; display: flex; flex-direction: column; justify-content: space-between; text-align: center;">
-            <div>
-                <div style="margin-bottom: 15px;">
-                    <a href="https://figueredo56.github.io/zaard-innovation-dapp/" target="_blank" style="display: inline-block; transition: transform 0.3s ease;">
-                        <img src="https://photos.pinksale.finance/file/pinksale-logo-upload/1790817451489-015175f1d6de0d2af4093c0e175f274d.png" 
-                             alt="ZAARD Finance" 
-                             style="max-width: 120px; width: 100%; height: auto; border-radius: 10px; border: 2px solid rgba(59, 130, 246, 0.4); box-shadow: 0 0 15px rgba(59,130,246,0.3);"
-                             onmouseover="this.style.transform='scale(1.05)';" 
-                             onmouseout="this.style.transform='scale(1)';">
-                    </a>
-                </div>
-                <h3 style="font-family: 'Orbitron', sans-serif; color: #60a5fa; font-size: 1.2rem; margin-bottom: 10px;">
-                    ZAARD Finance
-                </h3>
-                <p style="color: #94a3b8; font-size: 0.88rem; line-height: 1.5; margin-bottom: 20px;">
-                    Plataforma descentralizada avanzada para la creación automatizada de tokens y el despliegue dinámico de liquidez respaldada a través del token nativo ZARD.
-                </p>
-            </div>
-            <div>
-                <a href="https://figueredo56.github.io/zaard-innovation-dapp/" 
-                   target="_blank" 
-                   class="card-link"
-                   style="display: inline-block; padding: 10px 20px; background: linear-gradient(135deg, rgba(59,130,246,0.2), rgba(0,255,204,0.2)); border: 1px solid #3b82f6; border-radius: 8px; color: #60a5fa; font-family: 'Orbitron', sans-serif; font-size: 0.82em; font-weight: bold; text-decoration: none; transition: all 0.3s ease;">
-                    🚀 LANZAR ZAARD FINANCE ↗
-                </a>
-            </div>
-        </div>
-
-    </div>
-</div>
-
- <!-- INICIO DE LA SECCIÓN TÉCNICA Y CIERRE ÉPICO DE CONVERSIÓN (XENOCRYPT ELITE EDITION) -->
-        <div style="margin-top: 50px; background: linear-gradient(135deg, rgba(12, 6, 22, 0.98), rgba(3, 1, 8, 0.99)); border: 2px solid #00f2fe; border-radius: 24px; padding: 45px 30px; box-shadow: 0 0 60px rgba(0, 242, 254, 0.35), inset 0 0 30px rgba(155, 81, 229, 0.15); text-align: left; position: relative; overflow: hidden;">
-            
-            <!-- Destellos decorativos cibernéticos avanzados con animación sutil -->
-            <div style="position: absolute; top: -80px; right: -80px; width: 220px; height: 220px; background: rgba(155, 81, 229, 0.3); border-radius: 50%; filter: blur(60px); pointer-events: none;"></div>
-            <div style="position: absolute; bottom: -80px; left: -80px; width: 220px; height: 220px; background: rgba(0, 242, 254, 0.2); border-radius: 50%; filter: blur(60px); pointer-events: none;"></div>
-
-            <!-- CUADRO TÉCNICO: XENOCRYPT AUDITOR (ESTÉTICA NEÓN AZUL Y MORADO CON PULSO) -->
-            <style>
-                @keyframes neonPulseElite {
-                    0% { border-color: #00f2fe; box-shadow: 0 0 20px rgba(0, 242, 254, 0.5), inset 0 0 15px rgba(155, 81, 229, 0.3); }
-                    50% { border-color: #9b51e5; box-shadow: 0 0 45px rgba(155, 81, 229, 0.8), inset 0 0 25px rgba(0, 242, 254, 0.6); }
-                    100% { border-color: #00f2fe; box-shadow: 0 0 20px rgba(0, 242, 254, 0.5), inset 0 0 15px rgba(155, 81, 229, 0.3); }
+        function changeLanguage(lang) {
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (translations[lang] && translations[lang][key]) {
+                    if(element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                        element.placeholder = translations[lang][key];
+                    } else {
+                        element.innerHTML = translations[lang][key];
+                    }
                 }
-                .xenocrypt-box-elite {
-                    border: 2px solid #00f2fe;
-                    border-radius: 18px;
-                    padding: 35px;
-                    background: linear-gradient(135deg, rgba(8, 4, 16, 0.95), rgba(15, 8, 28, 0.9));
-                    margin-bottom: 40px;
-                    animation: neonPulseElite 4s infinite ease-in-out;
-                    position: relative;
-                }
-                .elite-link-card {
-                    text-decoration: none;
-                    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-                    display: inline-block;
-                }
-                .elite-link-card:hover {
-                    transform: translateY(-6px) scale(1.03);
-                }
-            </style>
+            });
+            localStorage.setItem('zard_lang', lang);
+        }
 
-            <div class="xenocrypt-box-elite">
-                <div style="text-align: center; margin-bottom: 30px;">
-                    <span style="background: rgba(0, 242, 254, 0.18); color: #00f2fe; padding: 8px 18px; border-radius: 20px; font-size: 0.85em; font-weight: bold; text-transform: uppercase; letter-spacing: 2.5px; border: 1px solid rgba(0, 242, 254, 0.5); box-shadow: 0 0 15px rgba(0,242,254,0.2);">
-                        🛡️ ZARD Security & Architecture Core // Contract: 0x472d...82ef
-                    </span>
-                    
-                    <h2 style="color: #fff; font-size: 2em; margin-top: 18px; text-transform: uppercase; letter-spacing: 2.5px; text-shadow: 0 0 15px #00f2fe; font-family: 'Orbitron', sans-serif;">
-                        Definición de Rango: Xenocrypt Auditor
-                    </h2>
-                    <p style="color: #e2e8f0; font-size: 1.02em; line-height: 1.8; margin-top: 18px; text-align: justify; max-width: 950px; margin-left: auto; margin-right: auto;">
-                        En la cúspide de este ecosistema descentralizado, el sello <strong>Xenocrypt</strong> define la arquitectura criptográfica absoluta de nuestros contratos inteligentes y sistemas de alta disponibilidad: un blindaje lógico inquebrantable optimizado a nivel de bytecode y verificado quirúrgicamente contra cualquier vector de ataque en la red EVM. Como <em>Audit Label</em> de referencia, la misión suprema es transformar lógica matemática críptica en despliegues inmutables, transparentes y de rendimiento supremo bajo el contrato oficial <code>0x472d59538effe1c85382e3e62e1b2ec995d382ef</code>.
-                    </p>
-                </div>
+        window.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('zard_lang') || 'es';
+            document.getElementById('languageSelect').value = savedLang;
+            changeLanguage(savedLang);
+        });
 
-                <h3 style="color: #c084fc; font-size: 1.25em; text-transform: uppercase; letter-spacing: 1.5px; border-bottom: 2px solid rgba(155, 81, 229, 0.4); padding-bottom: 10px; margin-top: 35px; font-family: 'Orbitron', sans-serif;">
-                    🛠️ Stack Técnico, Módulos y Especialidades
-                </h3>
-                <ul style="list-style-type: none; padding-left: 0; font-size: 0.98em; line-height: 1.9; color: #cbd5e1;">
-                    <li style="margin-bottom: 14px; background: rgba(0,0,0,0.3); padding: 10px 15px; border-radius: 8px; border-left: 3px solid #00f2fe;">🔹 <b>Xenocrypt Analysis:</b> Resolución avanzada de lógica estática/dinámica, simulación de estados y mitigación total de vectores (reentrancy, front-running, desbordamiento).</li>
-                    <li style="margin-bottom: 14px; background: rgba(0,0,0,0.3); padding: 10px 15px; border-radius: 8px; border-left: 3px solid #9b51e5;">🔹 <b>Deployment Engine:</b> Orquestación, despliegue verificado y gestión multi-contrato de alta precisión sobre Binance Smart Chain (BSC).</li>
-                    <li style="margin-bottom: 14px; background: rgba(0,0,0,0.3); padding: 10px 15px; border-radius: 8px; border-left: 3px solid #00f2fe;">🔹 <b>Audit Label:</b> Certificación integral del código fuente activo en BscScan, optimización extrema de gas y máxima transparencia institucional.</li>
-                    <li style="margin-bottom: 14px; background: rgba(0,0,0,0.3); padding: 10px 15px; border-radius: 8px; border-left: 3px solid #9b51e5;">🔹 <b>Phoenix Protocol:</b> Refactorización profunda de arquitecturas y resurgimiento de pools de liquidez con candados temporales institucionales.</li>
-                </ul>
+        function switchTab(tabName) {
+            document.querySelectorAll('.view-section').forEach(el => el.classList.remove('active'));
+            if(tabName === 'home') {
+                document.getElementById('tab-home').classList.add('active');
+            } else if(tabName === 'creator') {
+                document.getElementById('tab-creator').classList.add('active');
+            }
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
 
-                <h3 style="color: #c084fc; font-size: 1.25em; text-transform: uppercase; letter-spacing: 1.5px; border-bottom: 2px solid rgba(155, 81, 229, 0.4); padding-bottom: 10px; margin-top: 35px; font-family: 'Orbitron', sans-serif;">
-                    🚀 Protocolo de Trabajo en Cadena (Pipeline)
-                </h3>
-                <p style="color: #cbd5e1; font-size: 0.98em; line-height: 1.8; text-align: justify; margin-top: 12px;">
-                    1. <strong>Análisis e Ingeniería Inversa (Decipher):</strong> Desglose algorítmico y matemático de la máquina de estados del contrato <code>0x472d...82ef</code>.<br>
-                    2. <strong>Validación y Sello (Label):</strong> Aplicación estricta de pruebas de estrés, auditoría de código abierto y emisión de certificación.<br>
-                    3. <strong>Ejecución y Despliegue (Deploy):</strong> Lanzamiento definitivo en mainnet bajo controles de inmutabilidad y seguridad absoluta.
-                </p>
-
-                <!-- Bloque técnico extra de confianza -->
-                <div style="background: rgba(0, 242, 254, 0.08); border: 1px dashed #00f2fe; padding: 18px; border-radius: 12px; margin-top: 30px; text-align: center; box-shadow: 0 0 20px rgba(0,242,254,0.15);">
-                    <p style="color: #00f2fe; font-size: 0.95em; margin: 0; font-family: 'Courier New', monospace; font-weight: bold; letter-spacing: 1px;">
-                        [✓] CERTIFICACIÓN ACTIVA: ZAARD_ALX — Contrato Oficial 0x472d59538effe1c85382e3e62e1b2ec995d382ef Blindado en BSC.
-                    </p>
-                </div>
-            </div>
-
-            <!-- SECCIÓN AMPLIADA DE ESPECIFICACIONES DE INFRAESTRUCTURA -->
-            <div style="background: rgba(18, 10, 35, 0.85); border: 1px solid rgba(155, 81, 229, 0.5); border-radius: 16px; padding: 30px; margin-bottom: 40px; box-shadow: 0 0 30px rgba(155,81,229,0.2);">
-                <h3 style="color: #e0aaff; font-size: 1.3em; text-transform: uppercase; letter-spacing: 1.5px; margin-top: 0; text-align: center; font-family: 'Orbitron', sans-serif;">
-                    🌐 Radiografía del Ecosistema ZAARD INNOVATION
-                </h3>
-                <p style="color: #cbd5e1; font-size: 0.98em; line-height: 1.7; text-align: center; margin-bottom: 25px;">
-                    Infraestructura descentralizada de alto rendimiento operando con contratos inteligentes validados.
-                </p>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px;">
-                    <div style="background: rgba(0,0,0,0.5); padding: 18px; border-radius: 12px; border-left: 4px solid #00f2fe; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
-                        <strong style="color: #00f2fe; display: block; margin-bottom: 8px; font-size: 1.05em;">🎮 ZAARD Arcade</strong>
-                        <span style="color: #94a3b8; font-size: 0.9em; line-height: 1.5;">Mini-juegos Web3 interactivos con contratos de apuestas y recompensas instantáneas vinculadas al nuevo contrato.</span>
-                    </div>
-                    <div style="background: rgba(0,0,0,0.5); padding: 18px; border-radius: 12px; border-left: 4px solid #f39c12; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
-                        <strong style="color: #f39c12; display: block; margin-bottom: 8px; font-size: 1.05em;">⚡ PANGA Project</strong>
-                        <span style="color: #94a3b8; font-size: 0.9em; line-height: 1.5;">Desarrollo de tokens con mecánicas de gobernanza, alta tracción y paridad simbiótica perfecta.</span>
-                    </div>
-                    <div style="background: rgba(0,0,0,0.5); padding: 18px; border-radius: 12px; border-left: 4px solid #9b51e5; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
-                        <strong style="color: #9b51e5; display: block; margin-bottom: 8px; font-size: 1.05em;">🛡️ Security Vault</strong>
-                        <span style="color: #94a3b8; font-size: 0.9em; line-height: 1.5;">Repositorio centralizado de auditorías terminadas, reportes de liquidez y contratos principales verificados.</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- GALERÍA DE ACCESOS DIRECTOS CON IMÁGENES OFICIALES (PANCAKESWAP & TELEGRAM EXCLUSIVO) -->
-            <div style="text-align: center; margin-bottom: 40px;">
-                <h3 style="color: #f39c12; font-size: 1.4em; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 15px; font-family: 'Orbitron', sans-serif;">
-                    ⚡ Accesos Directos Operativos y Canales Oficiales
-                </h3>
-                <p style="color: #94a3b8; font-size: 0.98em; margin-bottom: 30px; max-width: 750px; margin-left: auto; margin-right: auto; line-height: 1.6;">
-                    Interactúa de forma directa con el par de liquidez oficial del nuevo contrato en PancakeSwap y accede al canal de soporte privado cifrado.
-                </p>
-
-                <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 45px; align-items: center;">
-                    <!-- Enlace 1: PancakeSwap Trade Actualizado al Nuevo Contrato -->
-                    <a href="https://pancakeswap.finance/swap?outputCurrency=0x472d59538effe1c85382e3e62e1b2ec995d382ef" target="_blank" class="elite-link-card">
-                        <img src="https://photos.pinksale.finance/file/pinksale-logo-upload/1790287451706-4593a246bbbf27b508770c328ab883c0.png" alt="Trade PancakeSwap ZARD" style="width: 150px; height: 150px; border-radius: 50%; border: 3px solid #00f2fe; box-shadow: 0 0 30px rgba(0, 242, 254, 0.8); object-fit: cover;">
-                        <span style="display: block; color: #00f2fe; font-weight: bold; margin-top: 12px; font-size: 1em; text-transform: uppercase; letter-spacing: 1.5px; font-family: 'Orbitron', sans-serif;">Trade PancakeSwap</span>
-                    </a>
-
-                    <!-- Enlace 2: Telegram Exclusivo -->
-                    <a href="https://t.me/+Cjo5z_yXcdwzYjM5" target="_blank" class="elite-link-card">
-                        <img src="https://photos.pinksale.finance/file/pinksale-logo-upload/1790292969136-01bee0f6ff1ce50a2cc21e0d00d5c426.png" alt="Telegram Privado VIP" style="width: 150px; height: 150px; border-radius: 50%; border: 3px solid #9b51e5; box-shadow: 0 0 30px rgba(155, 81, 229, 0.8); object-fit: cover;">
-                        <span style="display: block; color: #e0aaff; font-weight: bold; margin-top: 12px; font-size: 1em; text-transform: uppercase; letter-spacing: 1.5px; font-family: 'Orbitron', sans-serif;">Telegram VIP</span>
-                    </a>
-                </div>
-            </div>
-
-            <!-- SIMBIOSIS PANGA ↔️ ZAARD & FÓRMULAS DE GESTIÓN -->
-            <div style="border-top: 2px solid rgba(255,255,255,0.12); padding-top: 35px;">
-                <div style="text-align: center; margin-bottom: 30px;">
-                    <span style="background: rgba(243, 156, 18, 0.2); color: #f39c12; padding: 8px 18px; border-radius: 20px; font-size: 0.85em; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; border: 1px solid rgba(243, 156, 18, 0.4); box-shadow: 0 0 15px rgba(243,156,18,0.2);">
-                        ⚙️ Arquitectura Financiera Dual Avanzada
-                    </span>
-                    
-                    <h2 style="color: #f39c12; font-size: 2em; margin-top: 18px; text-transform: uppercase; letter-spacing: 2px; text-shadow: 0 0 15px rgba(243, 156, 18, 0.6); font-family: 'Orbitron', sans-serif;">
-                        SIMBIOSIS ESTRATÉGICA: PANGA ↔️ ZAARD
-                    </h2>
-                    <p style="color: #cbd5e1; font-size: 1.02em; max-width: 850px; margin: 0 auto; line-height: 1.8;">
-                        El intercambio algorítmico entre activos implementa nuestro exclusivo <strong>9 Decimals Engine</strong> sobre el contrato <code>0x472d...82ef</code>, erradicando por completo los errores de redondeo de punto flotante. Mientras <strong>ZAARD</strong> se consolida como el activo de reserva inquebrantable (respaldado por un riguroso LP Lock institucional), <strong>PANGA</strong> actúa como el acelerador dinámico de tracción y liquidez comercial en los mercados descentralizados.
-                    </p>
-                </div>
-
-                <!-- Panel de Fórmulas -->
-                <div style="background: linear-gradient(135deg, rgba(12, 8, 20, 0.95), rgba(20, 12, 30, 0.9)); border: 1px solid rgba(243, 156, 18, 0.5); padding: 30px; border-radius: 16px; margin: 30px 0; box-shadow: inset 0 0 25px rgba(243, 156, 18, 0.15), 0 0 25px rgba(0,0,0,0.5);">
-                    <h3 style="color: #f39c12; margin-top: 0; font-size: 1.3em; text-align: center; text-transform: uppercase; letter-spacing: 1.5px; font-family: 'Orbitron', sans-serif;">
-                        📊 Matriz de Gestión de Capital y Asignación de Activos
-                    </h3>
-                    <p style="color: #94a3b8; font-size: 0.95em; text-align: center; margin-bottom: 20px;">
-                        Algoritmo matemático de distribución aplicado automáticamente en las operaciones del ecosistema:
-                    </p>
-                    <div style="margin: 18px 0; padding: 15px 20px; background: rgba(0,0,0,0.7); border-radius: 10px; border-left: 4px solid #f39c12; box-shadow: 0 4px 12px rgba(0,0,0,0.4);">
-                        <code style="display: block; color: #f1c40f; font-size: 1.05em; font-weight: bold; font-family: 'Courier New', monospace;">
-                            S = (Saldo PANGA x 0.80) → Consolidación Segura en ZAARD (Reserva Maestra 0x472d...82ef)
-                        </code>
-                    </div>
-                    <div style="margin: 18px 0; padding: 15px 20px; background: rgba(0,0,0,0.7); border-radius: 10px; border-left: 4px solid #00f2fe; box-shadow: 0 4px 12px rgba(0,0,0,0.4);">
-                        <code style="display: block; color: #00f2fe; font-size: 1.05em; font-weight: bold; font-family: 'Courier New', monospace;">
-                            P = (Saldo PANGA x 0.20) → Reserva Estratégica Táctica (Moon-Bag Operativa)
-                        </code>
-                    </div>
-                </div>
-            </div>
-
-        </div>           
-
-<!-- ======================================================= -->
-<!-- PIE DE PÁGINA OFICIAL: ZAARD & PANGA ECOSISTEMA WEB3 -->
-<!-- ======================================================= -->
-<footer style="position: relative; margin-top: 60px; padding: 40px 20px; background: linear-gradient(180deg, rgba(12,6,26,0.5), rgba(10,25,35,0.95)); border-top: 1px solid rgba(0, 255, 204, 0.3); text-align: center; font-family: 'Orbitron', sans-serif;">
-    <div style="max-width: 900px; margin: 0 auto;">
-        
-        <!-- Símbolo o Título del Footer -->
-        <div style="font-size: 1.2rem; color: #00ffcc; letter-spacing: 2px; margin-bottom: 12px; text-shadow: 0 0 10px rgba(0,255,204,0.4);">
-            ZAARD & PANGA <span style="color: #60a5fa;">// WEB3 INNOVATION</span>
-        </div>
-        
-        <!-- Descripción Técnica Formal -->
-        <p style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #94a3b8; font-size: 0.88rem; line-height: 1.6; max-width: 700px; margin: 0 auto 20px auto;">
-            Arquitectura descentralizada de alto rendimiento desarrollada bajo estándares avanzados de contratos inteligentes en la BNB Smart Chain. Impulsando la liquidez autónoma, la seguridad algorítmica y la próxima generación de aplicaciones financieras Web3.
-        </p>
-
-        <!-- Enlaces Rápidos de Referencia -->
-        <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-bottom: 25px; font-size: 0.8rem;">
-            <a href="https://bscscan.com/token/0xAdE78Fba566c2D8CFd9537dDb1129D65347744d6" target="_blank" style="color: #00ffcc; text-decoration: none; transition: opacity 0.3s;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">BscScan ZARD</a>
-            <span style="color: rgba(255,255,255,0.2);">|</span>
-            <a href="https://pancakeswap.finance/swap?outputCurrency=0xAdE78Fba566c2D8CFd9537dDb1129D65347744d6" target="_blank" style="color: #60a5fa; text-decoration: none; transition: opacity 0.3s;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">PancakeSwap DEX</a>
-            <span style="color: rgba(255,255,255,0.2);">|</span>
-            <a href="https://figueredo56.github.io/zaard-wallet/wallet.html" target="_blank" style="color: #a855f7; text-decoration: none; transition: opacity 0.3s;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">ZARD Wallet</a>
-        </div>
-
-        <!-- Copyright y Derechos Reservados -->
-        <div style="border-top: 1px dashed rgba(255,255,255,0.1); padding-top: 20px; font-size: 0.75rem; color: #64748b; letter-spacing: 1px;">
-            &copy; 2026 ZAARD INNOVATION & PANGA ECOSISTEMA. TODOS LOS DERECHOS RESERVADOS.
-        </div>
-        
-    </div>
-</footer>
-
+        function setSupply(val) {
+            document.querySelectorAll('.supply-btn').forEach(b => b.classList.remove('active'));
+            event.target.classList.add('active');
+            document.getElementById('tokenSupply').value = val;
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
-
