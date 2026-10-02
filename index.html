@@ -593,6 +593,106 @@
         </a>
     </div>
 </div>
+  <!-- ======================================================= -->
+<!-- BLOQUE: EL PODER DEL FÉNIX - XENOCRYPT                  -->
+<!-- ======================================================= -->
+<style>
+  @keyframes fenixBlink {
+    0%, 45% {
+      opacity: 1;
+      transform: scale(1);
+      filter: drop-shadow(0 0 15px rgba(0, 255, 204, 0.6));
+    }
+    50%, 95% {
+      opacity: 0;
+      transform: scale(0.97);
+      filter: drop-shadow(0 0 5px rgba(212, 175, 55, 0.2));
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+      filter: drop-shadow(0 0 15px rgba(0, 255, 204, 0.6));
+    }
+  }
+
+  @keyframes fenixBlinkAlt {
+    0%, 45% {
+      opacity: 0;
+      transform: scale(0.97);
+      filter: drop-shadow(0 0 5px rgba(0, 255, 204, 0.2));
+    }
+    50%, 95% {
+      opacity: 1;
+      transform: scale(1);
+      filter: drop-shadow(0 0 18px rgba(212, 175, 55, 0.7));
+    }
+    100% {
+      opacity: 0;
+      transform: scale(0.97);
+      filter: drop-shadow(0 0 5px rgba(0, 255, 204, 0.2));
+    }
+  }
+
+  .fenix-container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 20px auto;
+  }
+
+  .fenix-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 16px;
+    border: 2px solid rgba(0, 255, 204, 0.5);
+    background: rgba(10, 15, 25, 0.8);
+    transition: all 0.5s ease;
+  }
+
+  .fenix-img-1 {
+    animation: fenixBlink 4s infinite ease-in-out;
+  }
+
+  .fenix-img-2 {
+    animation: fenixBlinkAlt 4s infinite ease-in-out;
+    border-color: rgba(212, 175, 55, 0.6);
+  }
+</style>
+
+<div class="zaard-master-card" style="border: 2px solid #00ffcc; box-shadow: 0 0 35px rgba(0, 255, 204, 0.3); background: linear-gradient(135deg, rgba(10,15,25,0.95), rgba(25,10,35,0.9)); padding: 35px 20px; border-radius: 18px; margin-bottom: 40px; text-align: center;">
+    
+    <!-- Encabezado Temático -->
+    <h2 style="font-family: 'Orbitron', sans-serif; color: #00ffcc; font-size: 1.6em; margin-bottom: 8px; text-shadow: 0 0 12px rgba(0,255,204,0.6);">
+        🔥 EL PODER DEL FÉNIX 🔥
+    </h2>
+    <p style="color: #d4af37; font-family: 'Orbitron', sans-serif; font-size: 0.95em; letter-spacing: 2px; margin-bottom: 25px; text-shadow: 0 0 10px rgba(212,175,55,0.4);">
+        XENOCRYPT ECOSYSTEM
+    </p>
+
+    <!-- Contenedor Animado de las Imágenes (Titileo Deslumbrante) -->
+    <div class="fenix-container">
+        <!-- Imagen 1 (SVG) -->
+        <img src="https://raw.githubusercontent.com/figueredo56/ZARD.token/ab5ba9b45b8275e1547c026be754e77828a073a0/228-sin-t%C3%ADtulo_20260824215207%20(1).svg" 
+             alt="Fénix Art 1" 
+             class="fenix-img fenix-img-1">
+        
+        <!-- Imagen 2 (Pinksale Logo) -->
+        <img src="https://camo.githubusercontent.com/dd3bba77e7ccb603f1062699b8b63a321aecd91ef3f0c3a498313bd5dbc1c336/68747470733a2f2f70686f746f732e70696e6b73616c652e66696e616e63652f66696c652f70696e6b73616c652d6c6f676f2d75706c6f61642f313739303633323730333536372d32623061316564653734646430313931343961393366643638356139336333362e706e67" 
+             alt="Fénix Art 2" 
+             class="fenix-img fenix-img-2">
+    </div>
+
+    <!-- Descripción Estilizada -->
+    <p style="color: #94a3b8; font-size: 0.95em; max-width: 600px; margin: 0 auto; line-height: 1.6;">
+        Renaciendo con fuerza inquebrantable. La evolución tecnológica y gráfica de <strong style="color: #00ffcc;">XENOCRYPT</strong> fusiona innovación descentralizada y diseño de alta gama en la blockchain.
+    </p>
+</div>
+
+<hr>          
 
   <!-- Bloque Comunidad y Redes Oficiales -->
             <div class="zaard-master-card">
