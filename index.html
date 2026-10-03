@@ -397,8 +397,8 @@
             </div>
         </div>
 
-            <!-- ======================================================= -->
-<!-- BLOQUE: AUDITORÍA Y SEGURIDAD - TOKEN SNIFFER            -->
+     <!-- ======================================================= -->
+<!-- BLOQUE: AUDITORÍA Y SEGURIDAD - TOKEN SNIFFER           -->
 <!-- ======================================================= -->
 <div class="section" style="position: relative; overflow: hidden; border: 2px solid #10b981; box-shadow: 0 0 35px rgba(16, 185, 129, 0.35); background: linear-gradient(135deg, rgba(15,15,15,0.95), rgba(10,30,20,0.9)); padding: 30px; border-radius: 16px; margin-bottom: 40px; text-align: center;">
     
@@ -410,15 +410,19 @@
         Verificación de contrato inteligente, análisis de código y seguridad en tiempo real en <span style="color: #34d399; font-weight: bold;">TokenSniffer</span>.
     </p>
 
-    <!-- Contenedor de la Insignia Interactiva (Brillo Verde Neón) -->
-    <div style="margin-bottom: 25px;">
-        <a href="https://tokensniffer.com/token/bsc/0x472d59538effe1c85382e3e62e1b2ec995d382ef" target="_blank" style="display: inline-block; transition: transform 0.3s ease, filter 0.3s ease;">
-            <!-- Puedes alternar la URL de la imagen en 'src' usando cualquiera de tus 2 opciones -->
-            <img src="https://photos.pinksale.finance/file/pinksale-logo-upload/1790961761966-a98f21106efdb0bc0f0e5dac491d4f14.png" 
-                 alt="ZARD TokenSniffer Verification" 
-                 style="max-width: 180px; width: 100%; height: auto; border-radius: 12px; border: 2px solid rgba(16, 185, 129, 0.6); box-shadow: 0 0 25px rgba(16,185,129,0.4); filter: drop-shadow(0 0 10px rgba(16,185,129,0.5));"
-                 onmouseover="this.style.transform='scale(1.05)'; this.style.filter='drop-shadow(0 0 16px rgba(16,185,129,0.9))';" 
-                 onmouseout="this.style.transform='scale(1)'; this.style.filter='drop-shadow(0 0 10px rgba(16,185,129,0.5))';">
+    <!-- Contenedor con el Slider de las 2 Imágenes que cambian cada 2 segundos -->
+    <div style="margin-bottom: 25px; display: flex; justify-content: center;">
+        <a href="https://tokensniffer.com/token/bsc/0x472d59538effe1c85382e3e62e1b2ec995d382ef" target="_blank" style="display: inline-block;">
+            <div class="sniffer-slider-wrapper">
+                <!-- Imagen 1 (Activa por defecto) -->
+                <img src="https://photos.pinksale.finance/file/pinksale-logo-upload/1790961761966-a98f21106efdb0bc0f0e5dac491d4f14.png" 
+                     alt="ZARD TokenSniffer 1" 
+                     class="sniffer-img-slide active">
+                <!-- Imagen 2 -->
+                <img src="https://photos.pinksale.finance/file/pinksale-logo-upload/1790962130606-0251206d791fbb39393740e4dcfad7f6.png" 
+                     alt="ZARD TokenSniffer 2" 
+                     class="sniffer-img-slide">
+            </div>
         </a>
     </div>
 
@@ -433,6 +437,58 @@
     </div>
 
 </div>
+
+<!-- Estilos y Script específicos para el efecto visual de transición -->
+<style>
+    .sniffer-slider-wrapper {
+        position: relative;
+        width: 170px;
+        height: 170px;
+        margin: 0 auto;
+        border-radius: 16px;
+        overflow: hidden;
+        border: 2px solid rgba(16, 185, 129, 0.6);
+        box-shadow: 0 0 25px rgba(16,185,129,0.4);
+        background: rgba(0,0,0,0.3);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .sniffer-slider-wrapper:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 35px rgba(16,185,129,0.8);
+    }
+
+    .sniffer-img-slide {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0;
+        transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+    }
+
+    .sniffer-img-slide.active {
+        opacity: 1;
+        transform: scale(1.02);
+    }
+</style>
+
+<script>
+    // Rotación automática de las dos imágenes de Token Sniffer exactamente cada 2 segundos
+    document.addEventListener("DOMContentLoaded", function() {
+        const snifferImages = document.querySelectorAll('.sniffer-img-slide');
+        if(snifferImages.length >= 2) {
+            let activeIdx = 0;
+            setInterval(() => {
+                snifferImages[activeIdx].classList.remove('active');
+                activeIdx = (activeIdx + 1) % snifferImages.length;
+                snifferImages[activeIdx].classList.add('active');
+            }, 2000); // 2000 ms = 2 segundos
+        }
+    });
+</script>       
 
        <!-- SECCIÓN: FUNDAMENTO Y ARQUITECTURA TÉCNICA DEL ECOSISTEMA -->
 <div class="section">
