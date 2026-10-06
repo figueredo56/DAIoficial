@@ -264,7 +264,7 @@
 </head>
 <body>
 
-<!-- PANTALLA DE BIENVENIDA ÉPICA -->
+<!-- PANTALLA DE BIENVENIDA -->
 <div id="splashScreen">
     <style>
     #splashScreen {
@@ -360,6 +360,28 @@
     }
     </style>
 
+    <div class="splash-stage">
+        <button class="splash-skip-btn" onclick="enterEcosystem()">Saltar ➔</button>
+        <img src="https://photos.pinksale.finance/file/pinksale-logo-upload/1790285851823-4955b8f5511ea8235af22dfb82371c91.png" alt="ZAARD Logo" class="splash-floating-logo">
+        <h1>ZAARD INNOVATION</h1>
+        <p>Bienvenido al ecosistema descentralizado, donde te tecnología y el poder del fénix se unen para crear la evolución de la Web3.</p>
+    </div>
+
+    <script>
+    function enterEcosystem() {
+        const splash = document.getElementById('splashScreen');
+        if (splash) {
+            splash.style.opacity = '0';
+            splash.style.visibility = 'hidden';
+            setTimeout(() => splash.remove(), 800);
+        }
+    }
+
+    setTimeout(function() {
+        enterEcosystem();
+    }, 4000);
+    </script>
+</div>
     
         <!-- Contenedor del choque de los dos logos -->
         <div class="colliding-container">
