@@ -264,16 +264,36 @@
 </head>
 <body>
 
-    <!-- PANTALLA DE BIENVENIDA ÉPICA (Automática a los 3 segundos o con clic) -->
-    <div id="splashScreen">
-        <div class="splash-content">
-            <img src="https://photos.pinksale.finance/file/pinksale-logo-upload/1790285851823-4955b8f5511ea8235af22dfb82371c91.png" alt="ZARD Welcome" class="splash-img">
-            <h1>ZAARD INNOVATION</h1>
-            <div class="splash-badge">ECOSISTEMA WEB3 & DEFI</div>
-            <p>Bienvenido al portal oficial. Accede a las herramientas descentralizadas, contratos inteligentes verificados y gestión de activos respaldados por <strong>ZAARD INNOVATION</strong>.</p>
-            <button class="splash-enter-btn" onclick="enterEcosystem()">Entrar al Ecosistema</button>
+  <!-- PANTALLA DE BIENVENIDA ÉPICA -->
+<div id="splashScreen">
+    <div class="splash-overlay"></div>
+
+    <button class="splash-skip-btn" onclick="enterEcosystem()">Saltar ➔</button>
+
+    <div class="splash-stage">
+        <!-- Contenedor del choque de los dos logos -->
+        <div class="colliding-container">
+            <img id="logo-left" class="collide-img" src="https://photos.pinksale.finance/file/pinksale-logo-upload/1790290143709-10b712b064b3dca0c1a6417000db08e3.png" alt="Logo Izquierda">
+            <img id="logo-right" class="collide-img" src="https://photos.pinksale.finance/file/pinksale-logo-upload/1790962130606-0251206d791fbb39393740e4dcfad7f6.png" alt="Logo Derecha">
+            
+            <!-- Logotipo final que explota tras el choque -->
+            <div class="final-logo-wrapper">
+                <img class="final-logo" src="https://photos.pinksale.finance/file/pinksale-logo-upload/1790285851823-4955b8f5511ea8235af22dfb82371c91.png" alt="ZAARD Neon Logo">
+            </div>
+        </div>
+
+        <!-- Títulos del ecosistema -->
+        <div class="splash-text-container">
+            <h1>ZARD LA INNOVACIÓN DE LA WEB3</h1>
+            <p class="splash-subtitle">Bienvenidos al ecosistema ZAARD INNOVATION</p>
+        </div>
+
+        <!-- Barra de carga automática -->
+        <div class="splash-progress-container">
+            <div class="splash-progress-bar"></div>
         </div>
     </div>
+</div>  
 
     <div class="container">
         <!-- CABECERA Y LOGO -->
