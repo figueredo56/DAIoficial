@@ -264,13 +264,125 @@
 </head>
 <body>
 
-  <!-- PANTALLA DE BIENVENIDA ÉPICA -->
+<!-- PANTALLA DE BIENVENIDA ÉPICA -->
 <div id="splashScreen">
-    <div class="splash-overlay"></div>
+    <style>
+    #splashScreen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: linear-gradient(rgba(5, 7, 15, 0.85), rgba(5, 7, 15, 0.85)), url('https://photos.pinksale.finance/file/pinksale-logo-upload/1790375348672-4de629a77b910ca4b3f245dda1b233f0.png') no-repeat center center;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 99999;
+        transition: opacity 0.8s ease, visibility 0.8s ease;
+    }
 
-    <button class="splash-skip-btn" onclick="enterEcosystem()">Saltar ➔</button>
+    .splash-stage {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+        max-width: 600px;
+        position: relative;
+    }
+
+    .splash-floating-logo {
+        width: 150px;
+        height: 150px;
+        object-fit: contain;
+        margin-bottom: 25px;
+        filter: drop-shadow(0 0 20px #00f2fe) drop-shadow(0 0 40px #9b51e5);
+        animation: floatGlowAndBlink 3s ease-in-out infinite;
+    }
+
+    @keyframes floatGlowAndBlink {
+        0% {
+            transform: translateY(0px) scale(1);
+            filter: drop-shadow(0 0 15px #00f2fe) drop-shadow(0 0 30px #9b51e5);
+            opacity: 0.85;
+        }
+        50% {
+            transform: translateY(-12px) scale(1.05);
+            filter: drop-shadow(0 0 35px #00f2fe) drop-shadow(0 0 65px #9b51e5);
+            opacity: 1;
+        }
+        100% {
+            transform: translateY(0px) scale(1);
+            filter: drop-shadow(0 0 15px #00f2fe) drop-shadow(0 0 30px #9b51e5);
+            opacity: 0.85;
+        }
+    }
+
+    .splash-stage h1 {
+        font-family: 'Orbitron', sans-serif;
+        font-size: 1.8rem;
+        font-weight: 800;
+        color: #ffffff;
+        margin-bottom: 12px;
+        text-shadow: 0 0 20px rgba(0, 242, 254, 0.6);
+        letter-spacing: 1px;
+    }
+
+    .splash-stage p {
+        font-family: 'Poppins', sans-serif;
+        font-size: 1rem;
+        color: #cbd5e1;
+        line-height: 1.5;
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    }
+
+    .splash-skip-btn {
+        position: absolute;
+        top: -40px;
+        right: -20px;
+        background: rgba(15, 20, 40, 0.8);
+        border: 1px solid rgba(0, 255, 255, 0.5);
+        color: #00ffff;
+        padding: 8px 16px;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        cursor: pointer;
+        backdrop-filter: blur(6px);
+        transition: all 0.3s ease;
+    }
+
+    .splash-skip-btn:hover {
+        background: rgba(0, 255, 255, 0.25);
+        box-shadow: 0 0 15px rgba(0, 255, 255, 0.7);
+        color: #ffffff;
+    }
+    </style>
 
     <div class="splash-stage">
+        <button class="splash-skip-btn" onclick="enterEcosystem()">Saltar ➔</button>
+        <img src="https://photos.pinksale.finance/file/pinksale-logo-upload/1790285851823-4955b8f5511ea8235af22dfb82371c91.png" alt="ZAARD Logo" class="splash-floating-logo">
+        <h1>ZAARD INNOVATION</h1>
+        <p>Bienvenido al ecosistema descentralizado, la evolución de la Web3.</p>
+    </div>
+
+    <script>
+    function enterEcosystem() {
+        const splash = document.getElementById('splashScreen');
+        if (splash) {
+            splash.style.opacity = '0';
+            splash.style.visibility = 'hidden';
+            setTimeout(() => splash.remove(), 800);
+        }
+    }
+
+    setTimeout(function() {
+        enterEcosystem();
+    }, 4000);
+    </script>
+</div>
+    
         <!-- Contenedor del choque de los dos logos -->
         <div class="colliding-container">
             <img id="logo-left" class="collide-img" src="https://photos.pinksale.finance/file/pinksale-logo-upload/1790290143709-10b712b064b3dca0c1a6417000db08e3.png" alt="Logo Izquierda">
