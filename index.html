@@ -525,7 +525,98 @@
     </div>
     </div>
 
+  <!-- ======================================================= -->
+<!-- BLOQUE: AUDITORÍA Y SEGURIDAD - TOKEN SNIFFER (PANGA)    -->
+<!-- ======================================================= -->
+<div class="section" style="position: relative; overflow: hidden; border: 2px solid #10b981; box-shadow: 0 0 35px rgba(16, 185, 129, 0.35); background: linear-gradient(135deg, rgba(15,15,15,0.95), rgba(10,30,20,0.9)); padding: 30px; border-radius: 16px; margin-bottom: 40px; text-align: center;">
     
+    <!-- Encabezado del Bloque -->
+    <h2 style="font-family: 'Orbitron', sans-serif; color: #34d399; font-size: 1.7em; margin-bottom: 8px; text-shadow: 0 0 12px rgba(52,211,153,0.6);">
+        🛡️ AUDITORÍA DE SEGURIDAD TOKEN SNIFFER (PANGA)
+    </h2>
+    <p style="color: #94a3b8; font-size: 0.95em; max-width: 600px; margin: 0 auto 25px auto; line-height: 1.5;">
+        Verificación de contrato inteligente, análisis de código y seguridad en tiempo real para <span style="color: #34d399; font-weight: bold;">PANGA</span> en <span style="color: #34d399; font-weight: bold;">TokenSniffer</span>.
+    </p>
+
+    <!-- Contenedor con el Slider de las 2 Imágenes de PANGA -->
+    <div style="margin-bottom: 25px; display: flex; justify-content: center;">
+        <a href="https://tokensniffer.com/token/bsc/0x94466cd118b04f6f454fc47e988df375560187a3" target="_blank" style="display: inline-block;">
+            <div class="panga-sniffer-slider-wrapper">
+                <!-- Imagen 1 PANGA (Activa por defecto) -->
+                <img src="https://photos.pinksale.finance/file/pinksale-logo-upload/1792092181956-370bc19583b97585a7e9cffa48b116cf.png" 
+                     alt="PANGA TokenSniffer 1" 
+                     class="panga-sniffer-img-slide active">
+                <!-- Imagen 2 PANGA -->
+                <img src="https://photos.pinksale.finance/file/pinksale-logo-upload/1792092202625-a5dfca3efb2efbba7a1d1f11d29c7d36.png" 
+                     alt="PANGA TokenSniffer 2" 
+                     class="panga-sniffer-img-slide">
+            </div>
+        </a>
+    </div>
+
+    <!-- Botón de Enlace Directo a PANGA -->
+    <div>
+        <a href="https://tokensniffer.com/token/bsc/0x94466cd118b04f6f454fc47e988df375560187a3" 
+           target="_blank" 
+           class="card-link"
+           style="display: inline-block; padding: 12px 30px; background: linear-gradient(135deg, rgba(16,185,129,0.2), rgba(0,255,204,0.1)); border: 2px solid #10b981; border-radius: 10px; color: #34d399; font-family: 'Orbitron', sans-serif; font-size: 0.9em; font-weight: bold; text-decoration: none; box-shadow: 0 0 20px rgba(16,185,129,0.25); transition: all 0.3s ease;">
+            🔍 VERIFICAR PANGA EN TOKEN SNIFFER ↗
+        </a>
+    </div>
+
+</div>
+
+<!-- Estilos y Script para la transición de imágenes de PANGA -->
+<style>
+    .panga-sniffer-slider-wrapper {
+        position: relative;
+        width: 170px;
+        height: 170px;
+        margin: 0 auto;
+        border-radius: 16px;
+        overflow: hidden;
+        border: 2px solid rgba(16, 185, 129, 0.6);
+        box-shadow: 0 0 25px rgba(16,185,129,0.4);
+        background: rgba(0,0,0,0.3);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .panga-sniffer-slider-wrapper:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 35px rgba(16,185,129,0.8);
+    }
+
+    .panga-sniffer-img-slide {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0;
+        transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+    }
+
+    .panga-sniffer-img-slide.active {
+        opacity: 1;
+        transform: scale(1.02);
+    }
+</style>
+
+<script>
+    // Script de alternancia de imágenes de PANGA cada 2.5 segundos
+    (function() {
+        const pangaSlides = document.querySelectorAll('.panga-sniffer-img-slide');
+        if (pangaSlides.length > 1) {
+            let currentIndex = 0;
+            setInterval(() => {
+                pangaSlides[currentIndex].classList.remove('active');
+                currentIndex = (currentIndex + 1) % pangaSlides.length;
+                pangaSlides[currentIndex].classList.add('active');
+            }, 2500);
+        }
+    })();
+</script>  
 
    <!-- ======================================================= -->
 <!-- BLOQUE: AUDITORÍA Y SEGURIDAD - TOKEN SNIFFER           -->
