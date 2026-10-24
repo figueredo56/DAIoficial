@@ -1478,41 +1478,30 @@
 </style>
 
 
-    <!-- ACCESOS DIRECTOS OFICIALES -->
+<!-- ACCESOS DIRECTOS OFICIALES -->
 <div class="section">
     <h2>🚀 Accesos Directos al Ecosistema</h2>
     <p>Explora cada uno de los componentes principales haciendo clic en las tarjetas de acceso rápido:</p>
     
-    <!-- PORTADA ROTATIVA (SLIDER DE 5 IMÁGENES CADA 3 SEGUNDOS) -->
+    <!-- PORTADA ROTATIVA (SLIDER DE 2 IMÁGENES CADA 3 SEGUNDOS) -->
     <div class="hero-slider" id="heroSlider">
         <div class="slide-item active">
-            <img src="https://photos.pinksale.finance/file/pinksale-logo-upload/1791237266938-b0be482314969ac93740fee157e3f8b2.png" alt="Ecosistema ZARD 1">
+            <img src="https://photos.pinksale.finance/file/pinksale-logo-upload/1792865596414-22890f0deb10ff50d0525508a0eea986.png" alt="Portada Ecosistema 1">
         </div>
         <div class="slide-item">
-            <img src="https://photos.pinksale.finance/file/pinksale-logo-upload/1791237242242-9f4719a87dbefc924e4ebb18f94dd41d.png" alt="Ecosistema ZARD 2">
-        </div>
-        <div class="slide-item">
-            <img src="https://photos.pinksale.finance/file/pinksale-logo-upload/1791237230240-420b57bc5d77e38996d507c8523df2cb.png" alt="Ecosistema ZARD 3">
-        </div>
-        <div class="slide-item">
-            <img src="https://photos.pinksale.finance/file/pinksale-logo-upload/1791237216250-0a393b4d5862804ec10c66d5403aad75.png" alt="Ecosistema ZARD 4">
-        </div>
-        <div class="slide-item">
-            <img src="https://photos.pinksale.finance/file/pinksale-logo-upload/1791228314127-a4d6873c2eb5099c9cbcde2494426878.png" alt="Ecosistema ZARD 5">
+            <img src="https://photos.pinksale.finance/file/pinksale-logo-upload/1792865614833-8488df8d521646af074edc4b677b89e6.png" alt="Portada Ecosistema 2">
         </div>
     </div>
 
     <!-- TARJETAS DE ACCESO RÁPIDO -->
     <div class="grid-links">
-        <!-- Binance Web3 -->
+        <!-- Binance Web3 (1) -->
         <a href="https://app.binance.com/uni-qr/web3-token-details?utm_medium=share&tokenCA=0x973ba2c1dccd0820f1e026d6b1f01c55c4085d38&binanceChainId=56&chain=bsc" target="_blank" class="card-link">
             <img src="https://photos.pinksale.finance/file/pinksale-logo-upload/1790290122445-0077664fb41e21b3aec6f1685fd6ec56.png" alt="Binance Web3">
             <span>Binance Web3</span>
         </a>
 
-      <!-- TARJETAS DE ACCESO RÁPIDO -->
-    <div class="grid-links">
-        <!-- Binance Web3 -->
+        <!-- Binance Web3 (2) -->
         <a href="https://app.binance.com/uni-qr/web3-token-details?utm_medium=share&tokenCA=0x6a7cc7d5749e028c8f78f29c1d6ac8eda0eefad2&binanceChainId=56&chain=bsc" target="_blank" class="card-link">
             <img src="https://photos.pinksale.finance/file/pinksale-logo-upload/1790290122445-0077664fb41e21b3aec6f1685fd6ec56.png" alt="Binance Web3">
             <span>Binance Web3</span>
@@ -1524,16 +1513,16 @@
             <span>Creation Finance</span>
         </a>
 
-        <!-- ZARD Wallet -->
+        <!-- ZAARD Wallet -->
         <a href="https://figueredo56.github.io/zaard-wallet/wallet.html" target="_blank" class="card-link">
             <img src="https://raw.githubusercontent.com/figueredo56/zaard-innovation-dapp/refs/heads/main/215%20sin%20t%C3%ADtulo_20260802201954.png" alt="ZAARD Wallet">
             <span>ZAARD Wallet</span>
         </a>
 
-        <!-- Telegram Oficial -->
-        <a href="https://t.me/+Cjo5z_yXcdwzYjM5" target="_blank" class="card-link">
+        <!-- Telegram VIP (Más grande y destacado ocupando todo el ancho) -->
+        <a href="https://t.me/+Cjo5z_yXcdwzYjM5" target="_blank" class="card-link card-telegram">
             <img src="https://photos.pinksale.finance/file/pinksale-logo-upload/1790292969136-01bee0f6ff1ce50a2cc21e0d00d5c426.png" alt="Telegram VIP">
-            <span>Telegram VIP</span>
+            <span>💬 Únete a nuestro Telegram VIP Oficial</span>
         </a>
     </div>
 </div>
@@ -1547,7 +1536,7 @@
         overflow: hidden;
         margin-bottom: 25px;
         border: 2px solid rgba(0, 255, 204, 0.3);
-        background: #0b0f19; /* Fondo oscuro armónico */
+        background: #0b0f19;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -1569,7 +1558,7 @@
     .slide-item img {
         max-width: 100%;
         max-height: 100%;
-        object-fit: contain; /* Mantiene la proporción completa de la imagen sin recortarla */
+        object-fit: contain;
     }
     .grid-links {
         display: grid;
@@ -1592,7 +1581,28 @@
         width: 36px; height: 36px; border-radius: 50%; object-fit: cover; border: 1px solid var(--primary-color, #00ffcc); flex-shrink: 0;
     }
     .card-link span { font-size: 0.9rem; font-weight: 600; text-align: left; }
-    @media (max-width: 480px) { .grid-links { grid-template-columns: 1fr; } }
+
+    /* ESTILO ESPECIAL PARA TELEGRAM VIP (MÁS GRANDE) */
+    .card-telegram {
+        grid-column: span 2;
+        background: linear-gradient(135deg, rgba(0, 255, 204, 0.15), rgba(0, 136, 204, 0.15));
+        border: 2px solid var(--primary-color, #00ffcc);
+        padding: 16px;
+        justify-content: center;
+    }
+    .card-telegram img {
+        width: 50px; 
+        height: 50px; 
+    }
+    .card-telegram span {
+        font-size: 1.05rem;
+        font-weight: 700;
+    }
+
+    @media (max-width: 480px) { 
+        .grid-links { grid-template-columns: 1fr; } 
+        .card-telegram { grid-column: span 1; }
+    }
 </style>
 
 <script>
