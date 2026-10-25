@@ -890,6 +890,224 @@
 
 </div>
 
+<!-- ========================================== -->
+<!-- SECCIÓN NFT ZAARD - EFECTO WOW & SLIDER   -->
+<!-- ========================================== -->
+<div class="zaard-nft-card-container">
+  
+  <!-- Encabezado y Explicación -->
+  <div class="zaard-nft-header">
+    <span class="zaard-nft-badge">✨ COLECCIÓN OFICIAL DE NFTs</span>
+    <h2 class="zaard-nft-title">ZAARD NFT COLLECTION</h2>
+    <p class="zaard-nft-description">
+      Descubre y adquiere los NFTs exclusivos de <strong>ZAARD</strong>. Obtén beneficios únicos dentro del ecosistema, acceso VIP y recompensas staking en la red BSC.
+    </p>
+  </div>
+
+  <!-- Contenedor del Slider con Efecto Neón Glare -->
+  <div class="zaard-nft-slider-wrapper">
+    <a href="https://element.market/collections/0xb6a648842c13c1e3fc6c1c94f9f90ced2c5d19f0" target="_blank" class="zaard-nft-image-link" title="Ver en Element">
+      <div class="zaard-nft-slider">
+        <!-- Imagen 1 -->
+        <img src="https://photos.pinksale.finance/file/pinksale-logo-upload/1792961706993-46914a4f7391f9daa3b781160c1d0146.png" 
+             alt="ZAARD NFT 1" class="zaard-nft-slide active">
+        <!-- Imagen 2 -->
+        <img src="https://photos.pinksale.finance/file/pinksale-logo-upload/1792961690220-245e64608af4027d5d980f1c0f536e6b.png" 
+             alt="ZAARD NFT 2" class="zaard-nft-slide">
+        <!-- Imagen 3 -->
+        <img src="https://photos.pinksale.finance/file/pinksale-logo-upload/1792961728115-cf2324a490e2deac09122a70e654635c.png" 
+             alt="ZAARD NFT 3" class="zaard-nft-slide">
+      </div>
+    </a>
+  </div>
+
+  <!-- Botones de Acción / Enlaces -->
+  <div class="zaard-nft-actions">
+    <!-- Botón hacia Element Market -->
+    <a href="https://element.market/collections/0xb6a648842c13c1e3fc6c1c94f9f90ced2c5d19f0" target="_blank" class="zaard-btn zaard-btn-element">
+      🚀 COMPRAR EN ELEMENT
+    </a>
+
+    <!-- Botón Verificación BscScan -->
+    <a href="https://bscscan.com/address/0xb6a648842c13c1e3fc6c1c94f9f90ced2c5d19f0" target="_blank" class="zaard-btn zaard-btn-bsc">
+      🔍 CONTRATO EN BSCSCAN
+    </a>
+  </div>
+
+</div>
+
+<!-- ========================================== -->
+<!-- ESTILOS CSS - EFECTOS VISUALES WOW        -->
+<!-- ========================================== -->
+<style>
+  .zaard-nft-card-container {
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(2, 6, 23, 0.98));
+    border: 2px solid rgba(59, 130, 246, 0.4);
+    border-radius: 24px;
+    padding: 35px 25px;
+    max-width: 650px;
+    margin: 30px auto;
+    text-align: center;
+    box-shadow: 0 0 35px rgba(59, 130, 246, 0.25), inset 0 0 15px rgba(59, 130, 246, 0.1);
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+  }
+
+  .zaard-nft-card-container:hover {
+    border-color: rgba(96, 165, 250, 0.8);
+    box-shadow: 0 0 50px rgba(59, 130, 246, 0.45), inset 0 0 25px rgba(59, 130, 246, 0.2);
+    transform: translateY(-4px);
+  }
+
+  .zaard-nft-badge {
+    display: inline-block;
+    background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    padding: 5px 15px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    box-shadow: 0 0 15px rgba(139, 92, 246, 0.5);
+  }
+
+  .zaard-nft-title {
+    font-family: 'Orbitron', sans-serif, system-ui;
+    color: #60a5fa;
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+    text-shadow: 0 0 15px rgba(96, 165, 250, 0.6);
+  }
+
+  .zaard-nft-description {
+    color: #94a3b8;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0 auto 25px auto;
+    max-width: 520px;
+  }
+
+  /* Slider Frame */
+  .zaard-nft-slider-wrapper {
+    position: relative;
+    width: 210px;
+    height: 210px;
+    margin: 0 auto 25px auto;
+  }
+
+  .zaard-nft-image-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    text-decoration: none;
+  }
+
+  .zaard-nft-slider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 2px solid rgba(96, 165, 250, 0.7);
+    box-shadow: 0 0 25px rgba(59, 130, 246, 0.5);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  }
+
+  .zaard-nft-slider-wrapper:hover .zaard-nft-slider {
+    transform: scale(1.06) rotate(1deg);
+    box-shadow: 0 0 40px rgba(139, 92, 246, 0.8);
+    border-color: rgba(167, 139, 250, 0.9);
+  }
+
+  /* Slide Transitions */
+  .zaard-nft-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transform: scale(1.15);
+    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+  }
+
+  .zaard-nft-slide.active {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  /* Buttons Styling */
+  .zaard-nft-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .zaard-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 0.88rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+  }
+
+  .zaard-btn-element {
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+    color: #ffffff !important;
+    box-shadow: 0 0 20px rgba(37, 99, 235, 0.4);
+  }
+
+  .zaard-btn-element:hover {
+    background: linear-gradient(135deg, #1d4ed8, #6d28d9);
+    box-shadow: 0 0 30px rgba(124, 58, 237, 0.7);
+    transform: translateY(-2px);
+  }
+
+  .zaard-btn-bsc {
+    background: rgba(30, 41, 59, 0.8);
+    color: #f1f5f9 !important;
+    border: 1px solid rgba(148, 163, 184, 0.3);
+  }
+
+  .zaard-btn-bsc:hover {
+    background: rgba(51, 65, 85, 0.9);
+    border-color: rgba(96, 165, 250, 0.6);
+    color: #60a5fa !important;
+    transform: translateY(-2px);
+  }
+</style>
+
+<!-- ========================================== -->
+<!-- SCRIPT JS - ROTACIÓN CADA 3 SEGUNDOS      -->
+<!-- ========================================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const nftSlides = document.querySelectorAll('.zaard-nft-slide');
+    if (nftSlides.length > 0) {
+      let currentIndex = 0;
+      setInterval(() => {
+        nftSlides[currentIndex].classList.remove('active');
+        currentIndex = (currentIndex + 1) % nftSlides.length;
+        nftSlides[currentIndex].classList.add('active');
+      }, 3000); // Cambio exacto cada 3000 ms (3 segundos)
+    }
+  });
+</script>
+
 <!-- ======================================================== -->
 <!-- ESTILOS Y SCRIPT DE ANIMACIÓN Y AUTOMATIZACIÓN           -->
 <!-- ======================================================== -->
