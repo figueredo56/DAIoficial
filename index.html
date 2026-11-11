@@ -1235,7 +1235,64 @@
         box-shadow: 0 0 40px rgba(128,0,128,0.6), inset 0 0 20px rgba(0,0,0,0.9);
     }
 }
-</style>      
+</style>     
+
+    <!-- BLOQUE ZARED / PROTOCOLO PANGA & ZAARD INNOVATION -->
+<div class="fin-card" style="background: linear-gradient(135deg, rgba(18, 10, 35, 0.95), rgba(12, 6, 26, 0.98)); border: 2px solid rgba(168, 85, 247, 0.6); border-radius: 20px; padding: 25px; box-shadow: 0 0 35px rgba(168, 85, 247, 0.25); margin-bottom: 25px;">
+    
+    <!-- Título y Etiqueta Interactiva hacia Gecko -->
+    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; margin-bottom: 15px;">
+        <h3 style="font-family: 'Orbitron', sans-serif; font-size: 1.2rem; color: #00ffcc; margin: 0; display: flex; align-items: center; gap: 10px;">
+            <i class="fa-solid fa-gem" style="color: #a855f7;"></i> ZARED Token
+        </h3>
+        <a href="https://www.geckoterminal.com/bsc/pools/0x6a8a2ce4246261bfa69a74330ba809b4a3e93078" target="_blank" style="text-decoration: none;">
+            <span style="background: rgba(0, 255, 204, 0.15); border: 1px solid #00ffcc; color: #00ffcc; padding: 5px 12px; border-radius: 20px; font-size: 0.8rem; font-family: 'Orbitron', sans-serif; font-weight: bold; box-shadow: 0 0 12px rgba(0,255,204,0.3); transition: 0.3s; display: inline-block; cursor: pointer;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                <i class="fa-solid fa-chart-line"></i> GeckoTerminal ↗
+            </span>
+        </a>
+    </div>
+
+    <!-- Descripción Breve -->
+    <p style="color: #9ca3af; font-size: 0.95rem; line-height: 1.5; margin-bottom: 20px;">
+        <strong>ZARED</strong> es un token de alto rendimiento impulsado por el 
+        <span style="color: #00ffcc; font-weight: 600;">protocolo PANGA</span> y desplegado bajo los rigurosos estándares de seguridad y auditoría de 
+        <span style="color: #a855f7; font-weight: 600;">ZAARD INNOVATION</span>.
+    </p>
+
+    <!-- Contenedor Visual con Efecto de Titileo (Fade Loop) para Imágenes Rectangulares -->
+    <a href="https://www.geckoterminal.com/bsc/pools/0x6a8a2ce4246261bfa69a74330ba809b4a3e93078" target="_blank" style="display: block; width: 100%; border-radius: 14px; overflow: hidden; background: #030107; border: 1px solid rgba(168, 85, 247, 0.4); box-shadow: inset 0 0 20px rgba(0,0,0,0.8); cursor: pointer; position: relative;">
+        <div style="width: 100%; height: 220px; position: relative; display: flex; justify-content: center; align-items: center; padding: 10px;">
+            <img id="zaredBanner1" src="https://photos.pinksale.finance/file/pinksale-logo-upload/1794426002780-ee02519c3d90e683adf63201170b186e.png" alt="ZARED Banner 1" style="max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; position: absolute; transition: opacity 1s ease-in-out; opacity: 1;">
+            <img id="zaredBanner2" src="https://photos.pinksale.finance/file/pinksale-logo-upload/1794425984968-496c8799f0bc75a2b401ded7d573f314.png" alt="ZARED Banner 2" style="max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; position: absolute; transition: opacity 1s ease-in-out; opacity: 0;">
+        </div>
+    </a>
+    
+    <div style="text-align: center; margin-top: 10px;">
+        <span style="font-size: 0.75rem; color: #a855f7; font-family: 'Orbitron', sans-serif; letter-spacing: 1px;">⚡ Toca la imagen o etiqueta para ver en Gecko</span>
+    </div>
+
+</div>
+
+<!-- Script del Efecto Titileo (Fade Loop) -->
+<script>
+    (function() {
+        let img1 = document.getElementById('zaredBanner1');
+        let img2 = document.getElementById('zaredBanner2');
+        if (!img1 || !img2) return;
+        
+        let showingFirst = true;
+        setInterval(() => {
+            if (showingFirst) {
+                img1.style.opacity = '0';
+                img2.style.opacity = '1';
+            } else {
+                img1.style.opacity = '1';
+                img2.style.opacity = '0';
+            }
+            showingFirst = !showingFirst;
+        }, 3500); // Cambia cada 3.5 segundos con transición suave
+    })();
+</script>
 
     <!-- ======================================================= -->
 <!-- BLOQUE 2: MONITOREO EN DIRECTO - DEXVIEW                -->
