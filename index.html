@@ -795,6 +795,220 @@
   </div>
 </section>
 
+    <!-- BLOQUE DE VERIFICACIÓN ZARED - ZAARD INNOVATION -->
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Rajdhani:wght@500;600;700&display=swap');
+
+  .zared-verify-section {
+    max-width: 780px;
+    margin: 40px auto;
+    padding: 35px 25px;
+    background: linear-gradient(145deg, #0a0414 0%, #100721 50%, #070314 100%);
+    border-radius: 20px;
+    border: 2px solid #b800ff;
+    box-shadow: 0 0 25px rgba(184, 0, 255, 0.35), inset 0 0 20px rgba(0, 140, 255, 0.15);
+    text-align: center;
+    font-family: 'Rajdhani', sans-serif;
+    color: #f0e6ff;
+    position: relative;
+    overflow: hidden;
+    animation: zaredNeonPulse 2.8s infinite alternate ease-in-out;
+  }
+
+  /* Animación de titileo/resplandor neón morado-azul */
+  @keyframes zaredNeonPulse {
+    0% {
+      border-color: #b800ff;
+      box-shadow: 0 0 18px rgba(184, 0, 255, 0.4), 0 0 35px rgba(0, 140, 255, 0.15);
+    }
+    50% {
+      border-color: #d148ff;
+      box-shadow: 0 0 28px rgba(209, 72, 255, 0.65), 0 0 50px rgba(0, 180, 255, 0.35);
+    }
+    100% {
+      border-color: #0088ff;
+      box-shadow: 0 0 22px rgba(0, 136, 255, 0.5), 0 0 40px rgba(184, 0, 255, 0.3);
+    }
+  }
+
+  @keyframes zaredBadgeBlink {
+    0%, 100% { opacity: 1; text-shadow: 0 0 10px #b800ff; }
+    50% { opacity: 0.65; text-shadow: 0 0 2px #00a2ff; }
+  }
+
+  .zared-badge {
+    display: inline-block;
+    padding: 6px 16px;
+    margin-bottom: 14px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #ffffff;
+    background: linear-gradient(90deg, #b800ff, #00b4ff);
+    border-radius: 50px;
+    box-shadow: 0 0 15px rgba(184, 0, 255, 0.6);
+    animation: zaredBadgeBlink 1.8s infinite ease-in-out;
+  }
+
+  .zared-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.75rem;
+    font-weight: 800;
+    margin: 0 0 18px 0;
+    background: linear-gradient(90deg, #d148ff, #00d4ff, #d148ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+  }
+
+  /* Contenedor de imagen: cuadrada un poco más alta que ancha (aspect-ratio) */
+  .zared-image-frame {
+    width: 280px;
+    height: 335px;
+    margin: 0 auto 22px auto;
+    padding: 4px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #b800ff, #0088ff, #e148ff);
+    box-shadow: 0 0 22px rgba(184, 0, 255, 0.45), 0 0 30px rgba(0, 150, 255, 0.35);
+    animation: zaredNeonPulse 2.2s infinite alternate;
+  }
+
+  .zared-image-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 13px;
+    display: block;
+    background-color: #0b0614;
+  }
+
+  .zared-description {
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+    font-size: 1.08rem;
+    line-height: 1.6;
+    color: #e2c7f5;
+  }
+
+  .zared-description strong {
+    color: #d148ff;
+  }
+
+  /* Contenedor de las 2 tarjetas inferiores */
+  .zared-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 18px;
+    margin-top: 10px;
+  }
+
+  .zared-verify-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    border-radius: 14px;
+    text-decoration: none;
+    background: linear-gradient(160deg, rgba(184, 0, 255, 0.08) 0%, rgba(0, 140, 255, 0.12) 100%);
+    border: 1.5px solid rgba(184, 0, 255, 0.55);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    animation: zaredNeonPulse 3s infinite alternate;
+  }
+
+  .zared-verify-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    background: linear-gradient(160deg, rgba(184, 0, 255, 0.2) 0%, rgba(0, 140, 255, 0.24) 100%);
+    border-color: #b800ff;
+    box-shadow: 0 0 25px rgba(184, 0, 255, 0.65), 0 0 35px rgba(0, 180, 255, 0.45);
+  }
+
+  .zared-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 8px;
+  }
+
+  .zared-status-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #b800ff;
+    box-shadow: 0 0 10px #b800ff, 0 0 18px #00b4ff;
+    animation: zaredBadgeBlink 1.2s infinite;
+  }
+
+  .zared-card-sub {
+    font-size: 0.95rem;
+    color: #d8a8ea;
+    margin-bottom: 16px;
+  }
+
+  .zared-card-btn {
+    display: inline-block;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #ffffff;
+    background: linear-gradient(90deg, #b800ff, #00b4ff);
+    box-shadow: 0 0 12px rgba(184, 0, 255, 0.5);
+    text-transform: uppercase;
+  }
+</style>
+
+<section class="zared-verify-section">
+  <div class="zared-badge">● AUDITORÍA Y VERIFICACIÓN OFICIAL ●</div>
+  <h2 class="zared-title">Zared Asset ($ZARED) Verificado</h2>
+
+  <!-- Imagen cargada directamente desde PinkSale -->
+  <div class="zared-image-frame">
+    <img src="https://photos.pinksale.finance/file/pinksale-logo-upload/1794507960931-37db4ffc6f40134919bfa89fec1739a0.png" alt="Verificación Oficial ZARED Asset - ZAARD INNOVATION">
+  </div>
+
+  <p class="zared-description">
+    El activo secundario y estabilizador <strong>ZARED</strong> opera bajo los estándares del ecosistema <strong>ZAARD INNOVATION</strong>. Consulta los respaldos de liquidez y el análisis de seguridad del contrato on-chain:
+  </p>
+
+  <div class="zared-cards-grid">
+    <!-- Tarjeta 1: AVE -->
+    <a href="https://avebusiness.xyz/?id=6af5ef1aa6a414cf968edc9c" target="_blank" rel="noopener noreferrer" class="zared-verify-card">
+      <div>
+        <div class="zared-card-header">
+          <span class="zared-status-dot"></span>
+          <span>AVE.AI VERIFIED</span>
+        </div>
+        <p class="zared-card-sub">Inspecciona el perfil oficial verificado y el registro de liquidez del activo en AVE.</p>
+      </div>
+      <span class="zared-card-btn">Ver Verificación en AVE ↗</span>
+    </a>
+
+    <!-- Tarjeta 2: Token Sniffer -->
+    <a href="https://tokensniffer.com/token/bsc/0x073c12c7072676c9a1afd83c07e470aa7d81aeb3" target="_blank" rel="noopener noreferrer" class="zared-verify-card">
+      <div>
+        <div class="zared-card-header">
+          <span class="zared-status-dot"></span>
+          <span>TOKEN SNIFFER</span>
+        </div>
+        <p class="zared-card-sub">Auditoría automática de seguridad del contrato inteligente (0x073c...1aeb3) en BSC.</p>
+      </div>
+      <span class="zared-card-btn">Ver Auditoría en Sniffer ↗</span>
+    </a>
+  </div>
+</section>
+
   <!-- ======================================================= -->
 <!-- BLOQUE: AUDITORÍA Y SEGURIDAD - TOKEN SNIFFER (PANGA)    -->
 <!-- ======================================================= -->
