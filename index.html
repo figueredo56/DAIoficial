@@ -1102,6 +1102,146 @@
     })();
 </script>  
 
+   <!-- BLOQUE AUDITORÍA DE SEGURIDAD TOKEN SNIFFER (ZYM) - ZAARD INNOVATION -->
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Rajdhani:wght@500;600;700&display=swap');
+
+  .zym-sniffer-box {
+    max-width: 780px;
+    margin: 30px auto;
+    padding: 32px 24px;
+    background: linear-gradient(145deg, #05110d 0%, #071915 55%, #040d14 100%);
+    border-radius: 18px;
+    border: 2px solid #00ffa3;
+    box-shadow: 0 0 22px rgba(0, 255, 163, 0.25), inset 0 0 18px rgba(0, 212, 255, 0.12);
+    text-align: center;
+    font-family: 'Rajdhani', sans-serif;
+    color: #e6fff5;
+    position: relative;
+  }
+
+  .zym-sniffer-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: #54f5b8;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    margin: 0 0 12px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-shadow: 0 0 10px rgba(0, 255, 163, 0.35);
+  }
+
+  .zym-sniffer-desc {
+    max-width: 560px;
+    margin: 0 auto 24px auto;
+    font-size: 1.02rem;
+    line-height: 1.5;
+    color: #b8d8ce;
+  }
+
+  .zym-sniffer-desc strong {
+    color: #54f5b8;
+  }
+
+  /* Contenedor cuadrado con animación alternada de las 2 imágenes */
+  .zym-sniffer-img-wrapper {
+    position: relative;
+    width: 195px;
+    height: 195px;
+    margin: 0 auto 24px auto;
+    border-radius: 16px;
+    border: 2px solid #00ffa3;
+    box-shadow: 0 0 20px rgba(0, 255, 163, 0.4), 0 0 30px rgba(0, 180, 255, 0.25);
+    overflow: hidden;
+    background-color: #061411;
+  }
+
+  .zym-sniffer-img-wrapper img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 14px;
+  }
+
+  /* Imagen 1 visible primero, luego se desvanece */
+  .zym-img-one {
+    animation: zymCrossfadeOne 6s infinite ease-in-out;
+  }
+
+  /* Imagen 2 oculta primero, luego aparece */
+  .zym-img-two {
+    animation: zymCrossfadeTwo 6s infinite ease-in-out;
+  }
+
+  @keyframes zymCrossfadeOne {
+    0%, 42% { opacity: 1; transform: scale(1); }
+    50%, 92% { opacity: 0; transform: scale(1.04); }
+    100% { opacity: 1; transform: scale(1); }
+  }
+
+  @keyframes zymCrossfadeTwo {
+    0%, 42% { opacity: 0; transform: scale(1.04); }
+    50%, 92% { opacity: 1; transform: scale(1); }
+    100% { opacity: 0; transform: scale(1.04); }
+  }
+
+  /* Botón estilo cápsula igual al de PANGA y ZAARD */
+  .zym-sniffer-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 26px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #54f5b8;
+    background: linear-gradient(180deg, rgba(16, 38, 35, 0.9) 0%, rgba(10, 22, 26, 0.95) 100%);
+    border: 1.5px solid rgba(110, 86, 207, 0.65);
+    box-shadow: 0 0 15px rgba(0, 255, 163, 0.2), inset 0 0 10px rgba(110, 86, 207, 0.25);
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+  }
+
+  .zym-sniffer-btn:hover {
+    transform: translateY(-2px);
+    border-color: #00ffa3;
+    color: #ffffff;
+    box-shadow: 0 0 22px rgba(0, 255, 163, 0.55), 0 0 30px rgba(0, 212, 255, 0.35);
+  }
+</style>
+
+<section class="zym-sniffer-box">
+  <h3 class="zym-sniffer-title">
+    <span>🛡️</span> AUDITORÍA DE SEGURIDAD TOKEN SNIFFER (ZYM)
+  </h3>
+
+  <p class="zym-sniffer-desc">
+    Verificación de contrato inteligente, análisis de código y seguridad en tiempo real para <strong>ZYM</strong> en <strong>TokenSniffer</strong>.
+  </p>
+
+  <!-- Marco con transición alternada entre tus 2 imágenes -->
+  <div class="zym-sniffer-img-wrapper">
+    <img class="zym-img-one" src="https://photos.pinksale.finance/file/pinksale-logo-upload/1794513698585-12009ca6a10ac83b8e9cf65975eb08fd.png" alt="ZYM Token Sniffer Badge 1">
+    <img class="zym-img-two" src="https://photos.pinksale.finance/file/pinksale-logo-upload/1794514393178-86d893431fec1d0c78b35cd1e7758020.png" alt="ZYM Token Sniffer Badge 2">
+  </div>
+
+  <!-- Enlace directo al contrato de ZYM en Token Sniffer (BSC) -->
+  <a href="https://tokensniffer.com/token/bsc/0x5a1de9974c1279fbe989ce32899a1f4ece3fc53d" target="_blank" rel="noopener noreferrer" class="zym-sniffer-btn">
+    <span>🔍</span> VERIFICAR ZYM EN TOKEN SNIFFER ↗
+  </a>
+</section> 
+
    <!-- ======================================================= -->
 <!-- BLOQUE: AUDITORÍA Y SEGURIDAD - TOKEN SNIFFER           -->
 <!-- ======================================================= -->
