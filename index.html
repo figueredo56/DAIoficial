@@ -2890,6 +2890,205 @@
     });
 </script>
 
+<!-- BLOQUE WEB DE VERIFICACIÓN ZYM - ZAARD INNOVATION -->
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Rajdhani:wght@500;600;700&display=swap');
+
+  .zym-wow-section {
+    max-width: 780px;
+    margin: 40px auto;
+    padding: 38px 25px;
+    background: linear-gradient(145deg, #020810 0%, #05131e 50%, #020d0b 100%);
+    border-radius: 22px;
+    border: 2px solid #00ff88;
+    box-shadow: 0 0 30px rgba(0, 255, 136, 0.35), inset 0 0 25px rgba(0, 212, 255, 0.15);
+    text-align: center;
+    font-family: 'Rajdhani', sans-serif;
+    color: #e6f7ff;
+    position: relative;
+    overflow: hidden;
+    animation: wowContainerGlow 3s infinite alternate ease-in-out;
+  }
+
+  @keyframes wowContainerGlow {
+    0% {
+      border-color: #00ff88;
+      box-shadow: 0 0 20px rgba(0, 255, 136, 0.4), inset 0 0 15px rgba(0, 212, 255, 0.1);
+    }
+    50% {
+      border-color: #00f0ff;
+      box-shadow: 0 0 35px rgba(0, 240, 255, 0.65), inset 0 0 25px rgba(0, 255, 136, 0.25);
+    }
+    100% {
+      border-color: #a855f7;
+      box-shadow: 0 0 25px rgba(168, 85, 247, 0.5), inset 0 0 15px rgba(0, 240, 255, 0.15);
+    }
+  }
+
+  .zym-wow-badge {
+    display: inline-block;
+    padding: 6px 18px;
+    margin-bottom: 14px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #020d0b;
+    background: linear-gradient(90deg, #00ff88, #00f0ff);
+    border-radius: 50px;
+    box-shadow: 0 0 15px rgba(0, 255, 136, 0.6);
+  }
+
+  .zym-wow-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin: 0 0 12px 0;
+    background: linear-gradient(90deg, #00ff88, #00f0ff, #b873ef);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+  }
+
+  /* EFECTO WOW DE IMAGEN HOLOGRÁFICA */
+  .zym-wow-img-container {
+    position: relative;
+    width: 290px;
+    height: 290px;
+    margin: 20px auto 24px auto;
+    padding: 5px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #00ff88, #00f0ff, #b873ef);
+    box-shadow: 0 0 25px rgba(0, 255, 136, 0.5), 0 0 45px rgba(0, 240, 255, 0.3);
+    animation: wowContainerGlow 2.5s infinite alternate;
+    transition: transform 0.4s ease;
+  }
+
+  .zym-wow-img-container:hover {
+    transform: scale(1.04) rotate(1deg);
+  }
+
+  .zym-wow-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+    display: block;
+    background-color: #020810;
+  }
+
+  .zym-wow-desc {
+    max-width: 620px;
+    margin: 0 auto 26px auto;
+    font-size: 1.08rem;
+    line-height: 1.6;
+    color: #c7e9f5;
+  }
+
+  .zym-wow-desc strong {
+    color: #00ff88;
+  }
+
+  .zym-wow-desc span {
+    color: #b873ef;
+  }
+
+  /* GRID DE LAS 2 TARJETAS INFERIORES */
+  .zym-wow-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px;
+    margin-top: 10px;
+  }
+
+  .zym-wow-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 18px 20px;
+    border-radius: 14px;
+    text-decoration: none;
+    background: linear-gradient(160deg, rgba(0, 255, 136, 0.08) 0%, rgba(0, 240, 255, 0.12) 100%);
+    border: 1.5px solid rgba(0, 240, 255, 0.5);
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.15);
+  }
+
+  .zym-wow-card:hover {
+    transform: translateY(-4px);
+    background: linear-gradient(160deg, rgba(0, 255, 136, 0.2) 0%, rgba(0, 240, 255, 0.25) 100%);
+    border-color: #00ff88;
+    box-shadow: 0 0 25px rgba(0, 255, 136, 0.6), 0 0 35px rgba(0, 240, 255, 0.4);
+  }
+
+  .zym-wow-card-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 6px;
+    text-shadow: 0 0 8px rgba(0, 255, 136, 0.4);
+  }
+
+  .zym-wow-card-sub {
+    font-size: 0.9rem;
+    color: #a8d8ea;
+    margin-bottom: 14px;
+  }
+
+  .zym-wow-btn {
+    display: inline-block;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #020d0b;
+    background: linear-gradient(90deg, #00ff88, #00f0ff);
+    box-shadow: 0 0 12px rgba(0, 255, 136, 0.4);
+    text-transform: uppercase;
+  }
+</style>
+
+<div class="zym-wow-section">
+  <div class="zym-wow-badge">● INFRAESTRUCTURA DE ALTA FIDELIDAD ●</div>
+  <h2 class="zym-wow-title">Protocolo ZYM ($ZYM)</h2>
+
+  <!-- Imagen con efecto WOW holográfico -->
+  <div class="zym-wow-img-container">
+    <img src="https://photos.pinksale.finance/file/pinksale-logo-upload/1794575234555-4cd11fd98f2c4eb15224b46a86a44ec5.png" alt="ZYM Protocol - ZAARD INNOVATION">
+  </div>
+
+  <!-- Mensaje corto y súper técnico -->
+  <p class="zym-wow-desc">
+    Arquitectura criptográfica avanzada orientada a la estabilidad de suministro y valor a largo plazo dentro de <strong>ZAARD INNOVATION</strong>. Operado bajo la fuerza directriz de <strong>PANGA</strong> y bajo la custodia inmutable de <span>ZAARD XENOCRYPT</span>.
+  </p>
+
+  <!-- Dos tarjetas inferiores -->
+  <div class="zym-wow-grid">
+    <!-- Tarjeta 1: Quema de Token (Burn) -->
+    <a href="https://bscscan.com/tx/0x4be0a7b0e8780fb2d5be97acefc4eeb0ec30fa9198c38c6dcdf640307675c107" target="_blank" rel="noopener noreferrer" class="zym-wow-card">
+      <div>
+        <div class="zym-wow-card-title">🔥 Quema On-Chain (Burn)</div>
+        <p class="zym-wow-card-sub">Auditoría y registro criptográfico de reducción de suministro circulante en BscScan.</p>
+      </div>
+      <span class="zym-wow-btn">Ver Transacción Tx ↗</span>
+    </a>
+
+    <!-- Tarjeta 2: Contrato Oficial BSC -->
+    <a href="https://bscscan.com/address/0x5a1de9974c1279fbe989ce32899a1f4ece3fc53d" target="_blank" rel="noopener noreferrer" class="zym-wow-card">
+      <div>
+        <div class="zym-wow-card-title">🛡️ Contrato Inteligente</div>
+        <p class="zym-wow-card-sub">Inspecciona el código fuente verificado, holders y operaciones en BNB Smart Chain.</p>
+      </div>
+      <span class="zym-wow-btn">Ver Contrato BSC ↗</span>
+    </a>
+  </div>
+</div>
+
 <!-- ======================================================= -->
 <!-- BLOQUE: VERIFICACIÓN DE SEGURIDAD & RENUNCIAS - PANGA   -->
 <!-- ======================================================= -->
