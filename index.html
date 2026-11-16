@@ -5284,6 +5284,417 @@
         }
     }
 </style>
+
+ <!-- ======================================================= -->
+<!-- SEPARADOR FLOTANTE DE 3 ESFERAS CON RAYOS Y ELECTRICIDAD -->
+<!-- ======================================================= -->
+<div class="zaard-electric-3-divider">
+    <!-- Haz de energía principal -->
+    <div class="ze3-energy-beam"></div>
+
+    <!-- Rayos eléctricos SVG animando la conexión entre las 3 esferas -->
+    <svg class="ze3-lightning-svg" viewBox="0 0 800 160" preserveAspectRatio="none">
+        <defs>
+            <filter id="ze3-glow" x="-20%" y="-20%" width="140%" height="140%">
+                <feGaussianBlur stdDeviation="3.5" result="blur" />
+                <feMerge>
+                    <feMergeNode in="blur" />
+                    <feMergeNode in="SourceGraphic" />
+                </feMerge>
+            </filter>
+        </defs>
+        <!-- Rayo izquierdo (Morado -> Naranja) -->
+        <polyline class="ze3-bolt bolt-1" points="160,80 205,62 235,96 275,68 315,92 365,80" filter="url(#ze3-glow)" />
+        <polyline class="ze3-bolt bolt-2" points="160,80 198,94 242,64 282,95 322,66 365,80" filter="url(#ze3-glow)" />
+        <!-- Rayo derecho (Naranja -> Morado) -->
+        <polyline class="ze3-bolt bolt-3" points="435,80 480,64 518,95 558,66 600,92 640,80" filter="url(#ze3-glow)" />
+        <polyline class="ze3-bolt bolt-4" points="435,80 475,96 515,65 555,94 598,68 640,80" filter="url(#ze3-glow)" />
+    </svg>
+
+    <!-- Contenedor de las 3 esferas -->
+    <div class="ze3-nodes-track">
+        
+        <!-- 1. LADO IZQUIERDO (Mediana - Brillo Morado Eléctrico) -->
+        <div class="ze3-node ze3-side ze3-purple">
+            <div class="ze3-arc-sparks">
+                <span class="ze3-mini-spark ms1"></span>
+                <span class="ze3-mini-spark ms2"></span>
+                <span class="ze3-mini-spark ms3"></span>
+            </div>
+            <div class="ze3-ring"></div>
+            <div class="ze3-ring-outer"></div>
+            <img src="https://photos.pinksale.finance/file/pinksale-logo-upload/1790484633328-559fdd3c13098c92f8a665ac39a838c2.png" alt="Nodo Morado Izquierdo">
+        </div>
+
+        <!-- 2. CENTRO (Grande - Brillo Anaranjado Intenso + Chispas) -->
+        <div class="ze3-node ze3-center ze3-orange ze3-delay-1">
+            <div class="ze3-sparks">
+                <span class="ze3-spark sp1"></span>
+                <span class="ze3-spark sp2"></span>
+                <span class="ze3-spark sp3"></span>
+                <span class="ze3-spark sp4"></span>
+                <span class="ze3-spark sp5"></span>
+                <span class="ze3-spark sp6"></span>
+                <span class="ze3-spark sp7"></span>
+                <span class="ze3-spark sp8"></span>
+            </div>
+            <div class="ze3-ring"></div>
+            <div class="ze3-ring-outer"></div>
+            <!-- Reemplaza esta URL si quieres cambiar la imagen del centro -->
+            <img src="https://photos.pinksale.finance/file/pinksale-logo-upload/1791940828941-906fd2a3d85625f79d066e5b033f6011.png" alt="Núcleo Central Naranja">
+        </div>
+
+        <!-- 3. LADO DERECHO (Mediana - Brillo Morado Eléctrico) -->
+        <div class="ze3-node ze3-side ze3-purple ze3-delay-2">
+            <div class="ze3-arc-sparks">
+                <span class="ze3-mini-spark ms1"></span>
+                <span class="ze3-mini-spark ms2"></span>
+                <span class="ze3-mini-spark ms3"></span>
+            </div>
+            <div class="ze3-ring"></div>
+            <div class="ze3-ring-outer"></div>
+            <img src="https://photos.pinksale.finance/file/pinksale-logo-upload/1790288769685-7d9a89bc13043a812c4889cb55ac4a54.png" alt="Nodo Morado Derecho">
+        </div>
+
+    </div>
+</div>
+
+<style>
+    /* Contenedor completamente transparente en el aire */
+    .zaard-electric-3-divider {
+        position: relative;
+        width: 100%;
+        height: 165px;
+        margin: 30px 0;
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: visible;
+        pointer-events: none;
+    }
+
+    /* Haz horizontal de energía eléctrica */
+    .ze3-energy-beam {
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background: linear-gradient(90deg, 
+            transparent 0%, 
+            rgba(157, 78, 221, 0.25) 15%,
+            #9d4edd 32%, 
+            #ff6d00 50%, 
+            #9d4edd 68%, 
+            rgba(157, 78, 221, 0.25) 85%,
+            transparent 100%);
+        box-shadow: 
+            0 0 14px #9d4edd,
+            0 0 28px #ff6d00,
+            0 0 42px rgba(255, 255, 255, 0.75);
+        animation: ze3BeamSurge 1.8s infinite ease-in-out;
+        z-index: 1;
+    }
+
+    /* Capa SVG con rayos quebrados reales entre los nodos */
+    .ze3-lightning-svg {
+        position: absolute;
+        width: 100%;
+        max-width: 720px;
+        height: 150px;
+        z-index: 2;
+        overflow: visible;
+    }
+
+    .ze3-bolt {
+        fill: none;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+    }
+
+    .ze3-bolt.bolt-1 {
+        stroke: #e0aaff;
+        stroke-width: 2.4;
+        stroke-dasharray: 260;
+        stroke-dashoffset: 260;
+        animation: ze3Strike1 1.4s infinite linear;
+    }
+
+    .ze3-bolt.bolt-2 {
+        stroke: #ff9e00;
+        stroke-width: 1.8;
+        stroke-dasharray: 260;
+        stroke-dashoffset: 260;
+        animation: ze3Strike2 1.9s infinite linear 0.4s;
+    }
+
+    .ze3-bolt.bolt-3 {
+        stroke: #ff9e00;
+        stroke-width: 2.4;
+        stroke-dasharray: 260;
+        stroke-dashoffset: 260;
+        animation: ze3Strike1 1.6s infinite linear 0.2s;
+    }
+
+    .ze3-bolt.bolt-4 {
+        stroke: #e0aaff;
+        stroke-width: 1.8;
+        stroke-dasharray: 260;
+        stroke-dashoffset: 260;
+        animation: ze3Strike2 2.1s infinite linear 0.7s;
+    }
+
+    /* Distribución de las 3 esferas */
+    .ze3-nodes-track {
+        position: relative;
+        z-index: 4;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 65px;
+        width: 100%;
+        max-width: 680px;
+    }
+
+    /* Estilo base de esfera con efecto ola creciente */
+    .ze3-node {
+        position: relative;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        animation: ze3OceanSwell 3.4s infinite ease-in-out;
+    }
+
+    .ze3-node img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+        position: relative;
+        z-index: 3;
+    }
+
+    /* Tamaños */
+    .ze3-side {
+        width: 84px;
+        height: 84px;
+    }
+
+    .ze3-center {
+        width: 118px;
+        height: 118px;
+    }
+
+    /* Retardos para el movimiento en ola */
+    .ze3-delay-1 { animation-delay: 0.45s; }
+    .ze3-delay-2 { animation-delay: 0.90s; }
+
+    /* Anillos eléctricos giratorios */
+    .ze3-ring {
+        position: absolute;
+        inset: -6px;
+        border-radius: 50%;
+        animation: ze3SpinRight 3.5s linear infinite;
+        z-index: 2;
+    }
+
+    .ze3-ring-outer {
+        position: absolute;
+        inset: -13px;
+        border-radius: 50%;
+        animation: ze3SpinLeft 5s linear infinite;
+        z-index: 1;
+    }
+
+    /* Brillo Morado Eléctrico (Lados) */
+    .ze3-purple {
+        filter: drop-shadow(0 0 15px rgba(157, 78, 221, 0.95)) drop-shadow(0 0 28px rgba(199, 125, 255, 0.8));
+    }
+    .ze3-purple .ze3-ring {
+        border: 2.5px dashed #c77dff;
+        border-top-color: #ffffff;
+        border-bottom-color: #7b2cbf;
+        box-shadow: 0 0 16px #9d4edd;
+    }
+    .ze3-purple .ze3-ring-outer {
+        border: 1.5px dotted #e0aaff;
+        border-left-color: transparent;
+        border-right-color: transparent;
+    }
+
+    /* Brillo Anaranjado Eléctrico (Centro) */
+    .ze3-orange {
+        filter: drop-shadow(0 0 20px rgba(255, 109, 0, 1)) drop-shadow(0 0 38px rgba(255, 170, 0, 0.85));
+    }
+    .ze3-orange .ze3-ring {
+        inset: -8px;
+        border: 3px dashed #ff8500;
+        border-top-color: #ffffff;
+        border-bottom-color: #ffd000;
+        box-shadow: 0 0 22px #ff6d00;
+    }
+    .ze3-orange .ze3-ring-outer {
+        inset: -16px;
+        border: 2px dotted #ffd000;
+        border-left-color: #ff5400;
+        border-right-color: transparent;
+    }
+
+    /* Chispas del núcleo central */
+    .ze3-sparks {
+        position: absolute;
+        width: 240px;
+        height: 150px;
+        z-index: 5;
+    }
+
+    .ze3-spark {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        opacity: 0;
+    }
+
+    .ze3-spark.sp1 { animation: ze3Spark1 1.4s infinite ease-out; background: #ff8500; box-shadow: 0 0 10px #ff6d00; }
+    .ze3-spark.sp2 { animation: ze3Spark2 1.7s infinite ease-out 0.2s; background: #ffd000; box-shadow: 0 0 10px #ffd000; }
+    .ze3-spark.sp3 { animation: ze3Spark3 1.3s infinite ease-out 0.5s; background: #ffffff; box-shadow: 0 0 10px #ffffff; }
+    .ze3-spark.sp4 { animation: ze3Spark4 1.8s infinite ease-out 0.1s; background: #ff6d00; box-shadow: 0 0 10px #ff6d00; }
+    .ze3-spark.sp5 { animation: ze3Spark5 1.5s infinite ease-out 0.6s; background: #c77dff; box-shadow: 0 0 10px #9d4edd; }
+    .ze3-spark.sp6 { animation: ze3Spark6 1.4s infinite ease-out 0.3s; background: #c77dff; box-shadow: 0 0 10px #9d4edd; }
+    .ze3-spark.sp7 { animation: ze3Spark7 1.6s infinite ease-out 0.8s; background: #ffffff; box-shadow: 0 0 10px #ffaa00; }
+    .ze3-spark.sp8 { animation: ze3Spark8 1.5s infinite ease-out 0.4s; background: #ffaa00; box-shadow: 0 0 10px #ff6d00; }
+
+    /* Chispas moradas en las esferas laterales */
+    .ze3-arc-sparks {
+        position: absolute;
+        width: 140px;
+        height: 110px;
+        z-index: 5;
+    }
+    .ze3-mini-spark {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background: #e0aaff;
+        box-shadow: 0 0 8px #9d4edd, 0 0 12px #ffffff;
+        opacity: 0;
+    }
+    .ze3-mini-spark.ms1 { animation: ze3Mini1 1.5s infinite ease-out; }
+    .ze3-mini-spark.ms2 { animation: ze3Mini2 1.8s infinite ease-out 0.4s; }
+    .ze3-mini-spark.ms3 { animation: ze3Mini3 1.3s infinite ease-out 0.8s; }
+
+    /* Animaciones */
+    @keyframes ze3OceanSwell {
+        0%, 100% { transform: translateY(4px) scale(0.93); }
+        50% { transform: translateY(-7px) scale(1.13); }
+    }
+
+    @keyframes ze3SpinRight {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+
+    @keyframes ze3SpinLeft {
+        0% { transform: rotate(360deg); }
+        100% { transform: rotate(0deg); }
+    }
+
+    @keyframes ze3BeamSurge {
+        0%, 100% { opacity: 0.65; }
+        48% { opacity: 1; filter: brightness(1.5); }
+        50% { opacity: 0.3; }
+        52% { opacity: 1; filter: brightness(1.8); }
+    }
+
+    @keyframes ze3Strike1 {
+        0% { stroke-dashoffset: 260; opacity: 0; }
+        15% { opacity: 1; }
+        45% { stroke-dashoffset: 0; opacity: 1; }
+        60% { opacity: 0; }
+        100% { stroke-dashoffset: 0; opacity: 0; }
+    }
+
+    @keyframes ze3Strike2 {
+        0% { stroke-dashoffset: -260; opacity: 0; }
+        20% { opacity: 0.9; }
+        50% { stroke-dashoffset: 0; opacity: 1; }
+        65% { opacity: 0; }
+        100% { stroke-dashoffset: 0; opacity: 0; }
+    }
+
+    @keyframes ze3Spark1 {
+        0% { transform: translate(0, 0) scale(1); opacity: 1; }
+        100% { transform: translate(-90px, -48px) scale(0); opacity: 0; }
+    }
+    @keyframes ze3Spark2 {
+        0% { transform: translate(0, 0) scale(1); opacity: 1; }
+        100% { transform: translate(95px, -44px) scale(0); opacity: 0; }
+    }
+    @keyframes ze3Spark3 {
+        0% { transform: translate(0, 0) scale(1); opacity: 1; }
+        100% { transform: translate(-80px, 50px) scale(0); opacity: 0; }
+    }
+    @keyframes ze3Spark4 {
+        0% { transform: translate(0, 0) scale(1); opacity: 1; }
+        100% { transform: translate(85px, 46px) scale(0); opacity: 0; }
+    }
+    @keyframes ze3Spark5 {
+        0% { transform: translate(0, 0) scale(1.2); opacity: 1; }
+        100% { transform: translate(-115px, 8px) scale(0); opacity: 0; }
+    }
+    @keyframes ze3Spark6 {
+        0% { transform: translate(0, 0) scale(1.2); opacity: 1; }
+        100% { transform: translate(115px, -10px) scale(0); opacity: 0; }
+    }
+    @keyframes ze3Spark7 {
+        0% { transform: translate(0, 0) scale(1); opacity: 1; }
+        100% { transform: translate(-38px, -60px) scale(0); opacity: 0; }
+    }
+    @keyframes ze3Spark8 {
+        0% { transform: translate(0, 0) scale(1); opacity: 1; }
+        100% { transform: translate(42px, 58px) scale(0); opacity: 0; }
+    }
+
+    @keyframes ze3Mini1 {
+        0% { transform: translate(0, 0) scale(1); opacity: 1; }
+        100% { transform: translate(-52px, -32px) scale(0); opacity: 0; }
+    }
+    @keyframes ze3Mini2 {
+        0% { transform: translate(0, 0) scale(1); opacity: 1; }
+        100% { transform: translate(50px, 34px) scale(0); opacity: 0; }
+    }
+    @keyframes ze3Mini3 {
+        0% { transform: translate(0, 0) scale(1); opacity: 1; }
+        100% { transform: translate(-45px, 36px) scale(0); opacity: 0; }
+    }
+
+    /* Adaptación móvil */
+    @media (max-width: 768px) {
+        .zaard-electric-3-divider {
+            height: 130px;
+        }
+        .ze3-nodes-track {
+            gap: 28px;
+        }
+        .ze3-side {
+            width: 64px;
+            height: 64px;
+        }
+        .ze3-center {
+            width: 92px;
+            height: 92px;
+        }
+    }
+</style>       
         
 
      <!-- AUDITORÍA DE SEGURIDAD GOPLUS LABS -->
