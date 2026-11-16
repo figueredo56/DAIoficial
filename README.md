@@ -38,7 +38,7 @@ El motor financiero del ecosistema está impulsado por contratos inteligentes op
 
 | Token / Activo | Símbolo | Dirección de Contrato Inteligente (CA) en BSC | Enlace Directo |
 | :--- | :---: | :--- | :---: |
-| **ZARD Token** | `$ZARD` | `0x973ba2c1dccd0820f1e026d6b1f01c55c4085d38` | [Ver en BscScan](https://bscscan.com/address/0x973ba2c1dccd0820f1e026d6b1f01c55c4085d38) |
+| **ZARD Token (Nuevo)** | `$ZARD` | `0xE2879d1172215E728472D7827586bd2796aFA3fB` | [Ver en BscScan](https://bscscan.com/address/0xE2879d1172215E728472D7827586bd2796aFA3fB) |
 | **PANGA Token** | `$PANGA` | `0x4a6c3ea9e7132ad217c31f8252119f08c801366e` | [Ver en BscScan](https://bscscan.com/address/0x4a6c3ea9e7132ad217c31f8252119f08c801366e) |
 | **ZARED Token** | `$ZARED` | `0x073c12c7072676c9a1afd83c07e470aa7d81aeb3` | [Ver en BscScan](https://bscscan.com/address/0x073c12c7072676c9a1afd83c07e470aa7d81aeb3) |
 | **ZYM Protocol** | `$ZYM` | `0x5a1de9974c1279fbe989ce32899a1f4ece3fc53d` | [Ver en BscScan](https://bscscan.com/address/0x5a1de9974c1279fbe989ce32899a1f4ece3fc53d) |
@@ -53,7 +53,7 @@ El motor financiero del ecosistema está impulsado por contratos inteligentes op
 > *El renacimiento hecho token. Fuerza inagotable y resiliencia máxima guiando la expansión del ecosistema en BNB Smart Chain.*
 > 
 > <a href="https://app.binance.com/uni-qr/web3-token-details?utm_medium=share&tokenCA=0x4a6c3ea9e7132ad217c31f8252119f08c801366e&binanceChainId=56&chain=bsc">
->   <img src="https://img.shields.io/badge/OPERAR_PANGA_EN_BINANCE_WEB3-00D4FF?style=for-the-badge&logo=binance&logoColor=05070d" alt="Ver Token PANGA">
+>    <img src="https://img.shields.io/badge/OPERAR_PANGA_EN_BINANCE_WEB3-00D4FF?style=for-the-badge&logo=binance&logoColor=05070d" alt="Ver Token PANGA">
 > </a>
 
 <br>
@@ -62,7 +62,7 @@ El motor financiero del ecosistema está impulsado por contratos inteligentes op
 > *Diseñado para aportar equilibrio estructural y solidez financiera a toda la red descentralizada con precisión matemática.*
 > 
 > <a href="https://app.binance.com/uni-qr/web3-token-details?utm_medium=share&tokenCA=0x073c12c7072676c9a1afd83c07e470aa7d81aeb3&binanceChainId=56&chain=bsc">
->   <img src="https://img.shields.io/badge/OPERAR_ZARED_EN_BINANCE_WEB3-A855F7?style=for-the-badge&logo=binance&logoColor=fff" alt="Ver Token ZARED">
+>    <img src="https://img.shields.io/badge/OPERAR_ZARED_EN_BINANCE_WEB3-A855F7?style=for-the-badge&logo=binance&logoColor=fff" alt="Ver Token ZARED">
 > </a>
 
 <br>
@@ -71,7 +71,7 @@ El motor financiero del ecosistema está impulsado por contratos inteligentes op
 > *La representación definitiva del poder colectivo y la colaboración comunitaria de alto nivel ejecutada de manera impecable.*
 > 
 > <a href="https://app.binance.com/uni-qr/web3-token-details?utm_medium=share&tokenCA=0x5a1de9974c1279fbe989ce32899a1f4ece3fc53d&binanceChainId=56&chain=bsc">
->   <img src="https://img.shields.io/badge/OPERAR_ZYM_EN_BINANCE_WEB3-22C55E?style=for-the-badge&logo=binance&logoColor=05070d" alt="Ver Token ZYM">
+>    <img src="https://img.shields.io/badge/OPERAR_ZYM_EN_BINANCE_WEB3-22C55E?style=for-the-badge&logo=binance&logoColor=05070d" alt="Ver Token ZYM">
 > </a>
 
 </div>
@@ -88,8 +88,8 @@ El motor financiero del ecosistema está impulsado por contratos inteligentes op
 
 ## 🎬 Multimedia, Presentaciones y Bandas Sonoras
 
-* 🎥 **Presentación Oficial & Arquitectura:** [Ver Video Explicativo 1](https://www.youtube.com/embed/3ZLhfmZWLXk) | [Ver Video Explicativo 2](https://www.youtube.com/embed/daRUEariyUI)
-* 🎵 **Himnos & Bandas Sonoras Web3:** [Escuchar Pista 1](https://www.youtube.com/embed/pIJr9SdYPRA) | [Escuchar Pista 2](https://www.youtube.com/embed/Lsz7LTeyAdQ)
+- 🎥 **Presentación Oficial & Arquitectura:** [Ver Video Explicativo 1](https://www.youtube.com/embed/3ZLhfmZWLXk) | [Ver Video Explicativo 2](https://www.youtube.com/embed/daRUEariyUI)
+- 🎵 **Himnos & Bandas Sonoras Web3:** [Escuchar Pista 1](https://www.youtube.com/embed/pIJr9SdYPRA) | [Escuchar Pista 2](https://www.youtube.com/embed/Lsz7LTeyAdQ)
 
 ---
 
@@ -101,7 +101,7 @@ El motor financiero del ecosistema está impulsado por contratos inteligentes op
 </div>
 ---
 
-<img src="https://raw.githubusercontent.com/figueredo56/zaard-official/a281bdaff2bb860405fc9e32569bb7c59f9cd02d/284%20sin%20t%C3%ADtulo_20260922141126_1.png" width="100%" alt="ZAARD Banner Épico" style="border-radius: 15px; border: 1px solid rgba(168, 85, 247, 0.5);" />
+<img src="https://raw.githubusercontent.com/figueredo56/zaard-official/a281bdaff2bb860405fc9e32569bb7c59f9cd02d/284%20sin%20t%C3%ítulos_20260922141126_1.png" width="100%" alt="ZAARD Banner Épico" style="border-radius: 15px; border: 1px solid rgba(168, 85, 247, 0.5);" />
 
 </div>
 
@@ -132,16 +132,16 @@ Accede a todas las plataformas, herramientas y canales oficiales del proyecto de
 ## 🎨 Sección de NFTs y Activos Digitales (ZAARD Digital Art)
 El ecosistema de ZAARD integra coleccionables digitales únicos vinculados al lore de Panga e Inteligencia Artificial:
 
-* **Utilidad en el Ecosistema:** Los NFTs de ZAARD no son solo arte digital, actúan como llaves de acceso, multiplicadores de recompensas en las DApps y elementos de gobernanza.
-* **Pares de Liquidez Verificados:** Ecosistema totalmente verificado en Coingecko con pares de liquidez activos respaldando los activos digitales.
-* **Diseño Evolutivo:** Arte enfocado en temáticas cyberpunk, IA y mitología guerrera.
+- **Utilidad en el Ecosistema:** Los NFTs de ZAARD no son solo arte digital, actúan como llaves de acceso, multiplicadores de recompensas en las DApps y elementos de gobernanza.
+- **Pares de Liquidez Verificados:** Ecosistema totalmente verificado en Coingecko con pares de liquidez activos respaldando los activos digitales.
+- **Diseño Evolutivo:** Arte enfocado en temáticas cyberpunk, IA y mitología guerrera.
 
 ---
 
 ## 🛠️ Stack Tecnológico y Seguridad
-* **Frontend:** HTML5, CSS3, JavaScript avanzado con animaciones fluidas y diseño responsivo adaptado para dispositivos móviles y escritorio.
-* **Estética Visual:** Interfaz futurista basada en tonos oscuros, neón azul cian (`#00f2fe`) y morado vibrante (`#a855f7`).
-* **Seguridad Web3:** Protocolos rigurosos orientados a proteger a la comunidad frente a suplantaciones de identidad y estafas.
+- **Frontend:** HTML5, CSS3, JavaScript avanzado con animaciones fluidas y diseño responsivo adaptado para dispositivos móviles y escritorio.
+- **Estética Visual:** Interfaz futurista basada en tonos oscuros, neón azul cian (`#00f2fe`) y morado vibrante (`#a855f7`).
+- **Seguridad Web3:** Protocolos rigurosos orientados a proteger a la comunidad frente a suplantaciones de identidad y estafas.
 
 ---
 
@@ -159,9 +159,9 @@ El ecosistema de ZAARD integra coleccionables digitales únicos vinculados al lo
 
 Stay connected with the true source of ZAARD innovation.
 
-* **🏠 Official Website:** [https://figueredo56.github.io/zaard-official/](https://figueredo56.github.io/zaard-official/)
-* **🐦 Official X (Twitter):** [@ZAARD_666](https://x.com/ZAARD_666)
-* **💰 Binance User Profile (Founder/DAO):** [View on Binance](https://account.binance.com/register?ref=776427353&?registerChannel=user_center) (User ref: 776427353)
+- **🏠 Official Website:** [https://figueredo56.github.io/zaard-official/](https://figueredo56.github.io/zaard-official/)
+- **🐦 Official X (Twitter):** [@ZAARD_666](https://x.com/ZAARD_666)
+- **💰 Binance User Profile (Founder/DAO):** [View on Binance](https://account.binance.com/register?ref=776427353&?registerChannel=user_center) (User ref: 776427353)
 ## 👤 Founder & Lead Developer
 Desarrollado por **Aracelis (Panga)** - Founder de ZAARD INNOVATION.
 
@@ -174,9 +174,9 @@ Desarrollado por **Aracelis (Panga)** - Founder de ZAARD INNOVATION.
 > This repository is for code review and transparent verification. Interacting with smart contracts involves risk. Ensure you are using the officially verified website and channels. This code is not an invitation to invest.
 
 - **Red:** BNB Smart Chain (BSC)
-- **Contrato:** `0x973ba2c1dccd0820f1e026d6b1f01c55c4085d38`
-- **Contrato:** `0x4a6c3ea9e7132ad217c31f8252119f08c801366e`
-- **Contrato:** `0x073c12c7072676c9a1afd83c07e470aa7d81aeb3`
-- **Contrato:** `0x5a1de9974c1279fbe989ce32899a1f4ece3fc53d`
+- **Contrato ZARD (Nuevo):** `0xE2879d1172215E728472D7827586bd2796aFA3fB`
+- **Contrato PANGA:** `0x4a6c3ea9e7132ad217c31f8252119f08c801366e`
+- **Contrato ZARED:** `0x073c12c7072676c9a1afd83c07e470aa7d81aeb3`
+- **Contrato ZYM:** `0x5a1de9974c1279fbe989ce32899a1f4ece3fc53d`
 ---
 © 2026 **ZAARD INNOVATION** | **Lead Dev: Panga** | *Exponential Ascent & Verified Security*
