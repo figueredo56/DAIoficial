@@ -3741,7 +3741,238 @@
         box-shadow: 0 0 40px rgba(128,0,128,0.6), inset 0 0 20px rgba(0,0,0,0.9);
     }
 }
-</style>     
+</style>  
+
+   <!-- ======================================================= -->
+<!-- SEPARADOR FLOTANTE ROJO & MORADO (LISTO PARA PEGAR)     -->
+<!-- ======================================================= -->
+<div class="zaard-floating-divider-rm">
+    <div class="zfd-rm-energy-beam"></div>
+    <div class="zfd-rm-sparks-field">
+        <span class="zfd-rm-spark s1"></span>
+        <span class="zfd-rm-spark s2"></span>
+        <span class="zfd-rm-spark s3"></span>
+        <span class="zfd-rm-spark s4"></span>
+        <span class="zfd-rm-spark s5"></span>
+        <span class="zfd-rm-spark s6"></span>
+        <span class="zfd-rm-spark s7"></span>
+        <span class="zfd-rm-spark s8"></span>
+    </div>
+    <div class="zfd-rm-emblem-core">
+        <div class="zfd-rm-lightning-ring"></div>
+        <div class="zfd-rm-lightning-ring-outer"></div>
+        <img src="https://photos.pinksale.finance/file/pinksale-logo-upload/1794605349763-3b36fe22e2048e05bbf50f8bdf231392.png" alt="Separador Rojo y Morado">
+    </div>
+</div>
+
+<style>
+    /* Contenedor completamente transparente, flotando en el aire */
+    .zaard-floating-divider-rm {
+        position: relative;
+        width: 100%;
+        height: 130px;
+        margin: 25px 0;
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: visible;
+        pointer-events: none;
+    }
+
+    /* Haz de rayo horizontal rojo neón y morado */
+    .zfd-rm-energy-beam {
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background: linear-gradient(90deg, 
+            transparent 0%, 
+            rgba(255, 23, 68, 0.25) 12%,
+            #ff1744 28%, 
+            #ffffff 50%, 
+            #b5179e 72%, 
+            rgba(157, 78, 221, 0.25) 88%,
+            transparent 100%);
+        box-shadow: 
+            0 0 12px #ff1744,
+            0 0 25px #9d4edd,
+            0 0 40px rgba(255, 42, 109, 0.85);
+        animation: zfdRmLightningSurge 2.2s infinite ease-in-out;
+    }
+
+    /* Descarga eléctrica secundaria */
+    .zfd-rm-energy-beam::before {
+        content: "";
+        position: absolute;
+        top: -2px;
+        left: 10%;
+        width: 80%;
+        height: 7px;
+        background: repeating-linear-gradient(
+            90deg,
+            transparent,
+            transparent 16px,
+            rgba(255, 23, 68, 0.9) 18px,
+            rgba(181, 23, 158, 0.9) 20px
+        );
+        filter: blur(2px);
+        animation: zfdRmArcFlicker 0.16s infinite alternate;
+    }
+
+    /* Núcleo flotante sin cuadro alrededor */
+    .zfd-rm-emblem-core {
+        position: relative;
+        z-index: 3;
+        width: 96px;
+        height: 96px;
+        border-radius: 50%;
+        background: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        filter: drop-shadow(0 0 16px rgba(255, 23, 68, 0.8)) drop-shadow(0 0 28px rgba(157, 78, 221, 0.75));
+        animation: zfdRmCoreFloat 3.2s infinite ease-in-out;
+    }
+
+    /* Imagen limpia flotando */
+    .zfd-rm-emblem-core img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+        position: relative;
+        z-index: 2;
+    }
+
+    /* Anillo interno de rayos rojo y morado */
+    .zfd-rm-lightning-ring {
+        position: absolute;
+        inset: -6px;
+        border-radius: 50%;
+        border: 2px dashed #ff1744;
+        border-top-color: #c77dff;
+        border-bottom-color: #ff758f;
+        box-shadow: 0 0 15px rgba(255, 23, 68, 0.85), inset 0 0 10px rgba(157, 78, 221, 0.7);
+        animation: zfdRmSpinRight 4s linear infinite;
+        z-index: 1;
+    }
+
+    /* Segundo halo eléctrico girando en sentido contrario */
+    .zfd-rm-lightning-ring-outer {
+        position: absolute;
+        inset: -13px;
+        border-radius: 50%;
+        border: 1.5px dotted rgba(199, 125, 255, 0.9);
+        border-left-color: #ff1744;
+        border-right-color: transparent;
+        animation: zfdRmSpinLeft 6s linear infinite;
+        z-index: 1;
+    }
+
+    /* Campo de chispas */
+    .zfd-rm-sparks-field {
+        position: absolute;
+        width: 260px;
+        height: 120px;
+        z-index: 4;
+    }
+
+    .zfd-rm-spark {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background: #ffffff;
+        box-shadow: 0 0 8px #ff1744, 0 0 14px #9d4edd;
+        opacity: 0;
+    }
+
+    .zfd-rm-spark.s1 { animation: zfdRmSpark1 1.5s infinite ease-out; background: #ff1744; }
+    .zfd-rm-spark.s2 { animation: zfdRmSpark2 1.8s infinite ease-out 0.25s; background: #c77dff; }
+    .zfd-rm-spark.s3 { animation: zfdRmSpark3 1.4s infinite ease-out 0.5s; background: #ff8fa3; }
+    .zfd-rm-spark.s4 { animation: zfdRmSpark4 2.0s infinite ease-out 0.15s; background: #ff1744; }
+    .zfd-rm-spark.s5 { animation: zfdRmSpark5 1.6s infinite ease-out 0.7s; background: #9d4edd; }
+    .zfd-rm-spark.s6 { animation: zfdRmSpark6 1.5s infinite ease-out 0.4s; background: #ffffff; }
+    .zfd-rm-spark.s7 { animation: zfdRmSpark7 1.9s infinite ease-out 0.9s; background: #ff1744; }
+    .zfd-rm-spark.s8 { animation: zfdRmSpark8 1.7s infinite ease-out 0.6s; background: #c77dff; }
+
+    /* Animaciones */
+    @keyframes zfdRmSpinRight {
+        0% { transform: rotate(0deg) scale(1); }
+        50% { transform: rotate(180deg) scale(1.05); }
+        100% { transform: rotate(360deg) scale(1); }
+    }
+
+    @keyframes zfdRmSpinLeft {
+        0% { transform: rotate(360deg) scale(1.03); }
+        50% { transform: rotate(180deg) scale(0.98); }
+        100% { transform: rotate(0deg) scale(1.03); }
+    }
+
+    @keyframes zfdRmLightningSurge {
+        0%, 100% { opacity: 0.65; transform: scaleX(0.96); }
+        48% { opacity: 1; transform: scaleX(1); }
+        50% { opacity: 0.25; }
+        52% { opacity: 1; filter: brightness(1.7); }
+    }
+
+    @keyframes zfdRmArcFlicker {
+        0% { opacity: 0.2; transform: translateY(-1.5px); }
+        100% { opacity: 0.95; transform: translateY(1.5px); }
+    }
+
+    @keyframes zfdRmCoreFloat {
+        0%, 100% { transform: translateY(0px) scale(1); }
+        50% { transform: translateY(-5px) scale(1.04); }
+    }
+
+    @keyframes zfdRmSpark1 {
+        0% { transform: translate(0, 0) scale(1); opacity: 1; }
+        100% { transform: translate(-95px, -38px) scale(0); opacity: 0; }
+    }
+    @keyframes zfdRmSpark2 {
+        0% { transform: translate(0, 0) scale(1); opacity: 1; }
+        100% { transform: translate(100px, -32px) scale(0); opacity: 0; }
+    }
+    @keyframes zfdRmSpark3 {
+        0% { transform: translate(0, 0) scale(1); opacity: 1; }
+        100% { transform: translate(-80px, 40px) scale(0); opacity: 0; }
+    }
+    @keyframes zfdRmSpark4 {
+        0% { transform: translate(0, 0) scale(1); opacity: 1; }
+        100% { transform: translate(88px, 38px) scale(0); opacity: 0; }
+    }
+    @keyframes zfdRmSpark5 {
+        0% { transform: translate(0, 0) scale(1.2); opacity: 1; }
+        100% { transform: translate(-48px, -48px) scale(0); opacity: 0; }
+    }
+    @keyframes zfdRmSpark6 {
+        0% { transform: translate(0, 0) scale(1.2); opacity: 1; }
+        100% { transform: translate(52px, 46px) scale(0); opacity: 0; }
+    }
+    @keyframes zfdRmSpark7 {
+        0% { transform: translate(0, 0) scale(0.9); opacity: 1; }
+        100% { transform: translate(-115px, 6px) scale(0); opacity: 0; }
+    }
+    @keyframes zfdRmSpark8 {
+        0% { transform: translate(0, 0) scale(0.9); opacity: 1; }
+        100% { transform: translate(115px, -8px) scale(0); opacity: 0; }
+    }
+
+    @media (max-width: 768px) {
+        .zaard-floating-divider-rm {
+            height: 110px;
+        }
+        .zfd-rm-emblem-core {
+            width: 80px;
+            height: 80px;
+        }
+    }
+</style> 
 
     <!-- BLOQUE ZARED / PROTOCOLO PANGA & ZAARD INNOVATION -->
 <div class="fin-card" style="background: linear-gradient(135deg, rgba(18, 10, 35, 0.95), rgba(12, 6, 26, 0.98)); border: 2px solid rgba(168, 85, 247, 0.6); border-radius: 20px; padding: 25px; box-shadow: 0 0 35px rgba(168, 85, 247, 0.25); margin-bottom: 25px;">
