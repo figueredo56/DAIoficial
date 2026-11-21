@@ -6801,204 +6801,396 @@
 
 </div>
 
-<!-- BLOQUE WEB DE VERIFICACIÓN ZYM - ZAARD INNOVATION -->
+<!-- BLOQUE WEB DE VERIFICACIÓN ZYM - ZAARD INNOVATION (HIGH VOLTAGE EDITION) -->
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Rajdhani:wght@500;600;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Rajdhani:wght@500;600;700&display=swap');
 
-  .zym-wow-section {
-    max-width: 780px;
+  .zym-hv-section {
+    max-width: 800px;
     margin: 40px auto;
-    padding: 38px 25px;
-    background: linear-gradient(145deg, #020810 0%, #05131e 50%, #020d0b 100%);
-    border-radius: 22px;
-    border: 2px solid #00ff88;
-    box-shadow: 0 0 30px rgba(0, 255, 136, 0.35), inset 0 0 25px rgba(0, 212, 255, 0.15);
+    padding: 44px 26px;
+    background:
+      radial-gradient(circle at 50% 0%, rgba(0, 240, 255, 0.22) 0%, transparent 55%),
+      radial-gradient(circle at 15% 85%, rgba(168, 85, 247, 0.25) 0%, transparent 50%),
+      radial-gradient(circle at 85% 85%, rgba(0, 255, 136, 0.22) 0%, transparent 50%),
+      linear-gradient(160deg, #010409 0%, #04101c 50%, #020812 100%);
+    border-radius: 24px;
+    border: 2px solid #00f0ff;
     text-align: center;
     font-family: 'Rajdhani', sans-serif;
     color: #e6f7ff;
     position: relative;
     overflow: hidden;
-    animation: wowContainerGlow 3s infinite alternate ease-in-out;
+    animation: hvElectricBorder 2.4s infinite alternate ease-in-out;
   }
 
-  @keyframes wowContainerGlow {
+  /* Cuadrícula energética de fondo */
+  .zym-hv-grid-bg {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(0, 240, 255, 0.08) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 255, 136, 0.08) 1px, transparent 1px);
+    background-size: 32px 32px;
+    mask-image: radial-gradient(circle at center, black 45%, transparent 90%);
+    -webkit-mask-image: radial-gradient(circle at center, black 45%, transparent 90%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* Lienzo de chispas y rayos eléctricos */
+  .zym-hv-canvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .zym-hv-content {
+    position: relative;
+    z-index: 2;
+  }
+
+  @keyframes hvElectricBorder {
     0% {
       border-color: #00ff88;
-      box-shadow: 0 0 20px rgba(0, 255, 136, 0.4), inset 0 0 15px rgba(0, 212, 255, 0.1);
+      box-shadow: 0 0 25px rgba(0, 255, 136, 0.45), 0 0 60px rgba(0, 240, 255, 0.15), inset 0 0 25px rgba(0, 255, 136, 0.15);
     }
     50% {
       border-color: #00f0ff;
-      box-shadow: 0 0 35px rgba(0, 240, 255, 0.65), inset 0 0 25px rgba(0, 255, 136, 0.25);
+      box-shadow: 0 0 42px rgba(0, 240, 255, 0.85), 0 0 80px rgba(168, 85, 247, 0.35), inset 0 0 35px rgba(0, 240, 255, 0.25);
     }
     100% {
-      border-color: #a855f7;
-      box-shadow: 0 0 25px rgba(168, 85, 247, 0.5), inset 0 0 15px rgba(0, 240, 255, 0.15);
+      border-color: #b873ef;
+      box-shadow: 0 0 32px rgba(184, 115, 239, 0.65), 0 0 70px rgba(0, 255, 136, 0.25), inset 0 0 25px rgba(184, 115, 239, 0.2);
     }
   }
 
-  .zym-wow-badge {
+  .zym-hv-badge {
     display: inline-block;
-    padding: 6px 18px;
-    margin-bottom: 14px;
+    padding: 7px 20px;
+    margin-bottom: 16px;
     font-family: 'Orbitron', sans-serif;
     font-size: 0.78rem;
-    font-weight: 800;
-    letter-spacing: 2px;
+    font-weight: 900;
+    letter-spacing: 2.2px;
     text-transform: uppercase;
-    color: #020d0b;
-    background: linear-gradient(90deg, #00ff88, #00f0ff);
+    color: #01060a;
+    background: linear-gradient(90deg, #00ff88, #00f0ff, #00ff88);
+    background-size: 200% auto;
     border-radius: 50px;
-    box-shadow: 0 0 15px rgba(0, 255, 136, 0.6);
+    box-shadow: 0 0 20px rgba(0, 240, 255, 0.8);
+    animation: hvBadgePulse 3s linear infinite;
   }
 
-  .zym-wow-title {
+  @keyframes hvBadgePulse {
+    0% { background-position: 0% center; }
+    100% { background-position: 200% center; }
+  }
+
+  .zym-hv-title {
     font-family: 'Orbitron', sans-serif;
-    font-size: 1.8rem;
-    font-weight: 800;
-    margin: 0 0 12px 0;
-    background: linear-gradient(90deg, #00ff88, #00f0ff, #b873ef);
+    font-size: 2rem;
+    font-weight: 900;
+    margin: 0 0 14px 0;
+    background: linear-gradient(90deg, #ffffff, #00f0ff, #00ff88, #c084fc);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-transform: uppercase;
-    letter-spacing: 1.2px;
+    letter-spacing: 1.5px;
+    filter: drop-shadow(0 0 12px rgba(0, 240, 255, 0.45));
   }
 
-  /* EFECTO WOW DE IMAGEN HOLOGRÁFICA */
-  .zym-wow-img-container {
+  /* CONTENEDOR DE IMAGEN CON ARCO ELÉCTRICO GIRATORIO */
+  .zym-hv-img-wrapper {
     position: relative;
-    width: 290px;
-    height: 290px;
-    margin: 20px auto 24px auto;
-    padding: 5px;
-    border-radius: 20px;
-    background: linear-gradient(135deg, #00ff88, #00f0ff, #b873ef);
-    box-shadow: 0 0 25px rgba(0, 255, 136, 0.5), 0 0 45px rgba(0, 240, 255, 0.3);
-    animation: wowContainerGlow 2.5s infinite alternate;
-    transition: transform 0.4s ease;
+    width: 300px;
+    height: 300px;
+    margin: 22px auto 26px auto;
+    border-radius: 22px;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    box-shadow: 0 0 35px rgba(0, 240, 255, 0.65), 0 0 60px rgba(0, 255, 136, 0.35);
+    transition: transform 0.35s ease;
   }
 
-  .zym-wow-img-container:hover {
-    transform: scale(1.04) rotate(1deg);
+  .zym-hv-img-wrapper:hover {
+    transform: scale(1.04);
   }
 
-  .zym-wow-img-container img {
+  .zym-hv-img-wrapper::before {
+    content: "";
+    position: absolute;
+    width: 160%;
+    height: 160%;
+    background: conic-gradient(
+      from 0deg,
+      #00ff88 0deg,
+      #00f0ff 90deg,
+      transparent 140deg,
+      #b873ef 220deg,
+      #00f0ff 300deg,
+      #00ff88 360deg
+    );
+    animation: hvSpinArc 3.5s linear infinite;
+    z-index: 0;
+  }
+
+  @keyframes hvSpinArc {
+    100% { transform: rotate(360deg); }
+  }
+
+  .zym-hv-img-wrapper img {
+    position: relative;
+    z-index: 1;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 16px;
+    border-radius: 18px;
     display: block;
     background-color: #020810;
   }
 
-  .zym-wow-desc {
-    max-width: 620px;
-    margin: 0 auto 26px auto;
-    font-size: 1.08rem;
-    line-height: 1.6;
-    color: #c7e9f5;
+  .zym-hv-desc {
+    max-width: 640px;
+    margin: 0 auto 28px auto;
+    font-size: 1.1rem;
+    line-height: 1.65;
+    color: #d4f1fc;
+    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.8);
   }
 
-  .zym-wow-desc strong {
+  .zym-hv-desc strong {
     color: #00ff88;
+    text-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
   }
 
-  .zym-wow-desc span {
-    color: #b873ef;
+  .zym-hv-desc span {
+    color: #c084fc;
+    font-weight: 700;
+    text-shadow: 0 0 10px rgba(192, 132, 252, 0.5);
   }
 
-  /* GRID DE LAS 2 TARJETAS INFERIORES */
-  .zym-wow-grid {
+  /* TARJETAS INFERIORES DE VERIFICACIÓN */
+  .zym-hv-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 18px;
     margin-top: 10px;
   }
 
-  .zym-wow-card {
+  .zym-hv-card {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 18px 20px;
-    border-radius: 14px;
+    padding: 20px 22px;
+    border-radius: 16px;
     text-decoration: none;
-    background: linear-gradient(160deg, rgba(0, 255, 136, 0.08) 0%, rgba(0, 240, 255, 0.12) 100%);
-    border: 1.5px solid rgba(0, 240, 255, 0.5);
+    background: linear-gradient(160deg, rgba(4, 22, 34, 0.88) 0%, rgba(10, 14, 30, 0.92) 100%);
+    border: 1.5px solid rgba(0, 240, 255, 0.6);
+    backdrop-filter: blur(6px);
     transition: all 0.3s ease;
-    box-shadow: 0 0 15px rgba(0, 240, 255, 0.15);
+    box-shadow: 0 0 18px rgba(0, 240, 255, 0.2);
   }
 
-  .zym-wow-card:hover {
-    transform: translateY(-4px);
-    background: linear-gradient(160deg, rgba(0, 255, 136, 0.2) 0%, rgba(0, 240, 255, 0.25) 100%);
+  .zym-hv-card:hover {
+    transform: translateY(-5px);
     border-color: #00ff88;
-    box-shadow: 0 0 25px rgba(0, 255, 136, 0.6), 0 0 35px rgba(0, 240, 255, 0.4);
+    background: linear-gradient(160deg, rgba(0, 255, 136, 0.16) 0%, rgba(0, 240, 255, 0.2) 100%);
+    box-shadow: 0 0 28px rgba(0, 255, 136, 0.7), 0 0 45px rgba(0, 240, 255, 0.45);
   }
 
-  .zym-wow-card-title {
+  .zym-hv-card-title {
     font-family: 'Orbitron', sans-serif;
     font-size: 1.05rem;
-    font-weight: 800;
+    font-weight: 900;
     color: #ffffff;
-    margin-bottom: 6px;
-    text-shadow: 0 0 8px rgba(0, 255, 136, 0.4);
+    margin-bottom: 8px;
+    text-shadow: 0 0 10px rgba(0, 240, 255, 0.6);
   }
 
-  .zym-wow-card-sub {
-    font-size: 0.9rem;
-    color: #a8d8ea;
-    margin-bottom: 14px;
+  .zym-hv-card-sub {
+    font-size: 0.92rem;
+    color: #b4e2f5;
+    margin-bottom: 16px;
+    line-height: 1.45;
   }
 
-  .zym-wow-btn {
+  .zym-hv-btn {
     display: inline-block;
-    padding: 10px 14px;
-    border-radius: 8px;
+    padding: 11px 16px;
+    border-radius: 9px;
     font-family: 'Orbitron', sans-serif;
     font-size: 0.8rem;
-    font-weight: 700;
-    letter-spacing: 1px;
-    color: #020d0b;
+    font-weight: 800;
+    letter-spacing: 1.1px;
+    color: #01080c;
     background: linear-gradient(90deg, #00ff88, #00f0ff);
-    box-shadow: 0 0 12px rgba(0, 255, 136, 0.4);
+    box-shadow: 0 0 16px rgba(0, 255, 136, 0.55);
     text-transform: uppercase;
   }
 </style>
 
-<div class="zym-wow-section">
-  <div class="zym-wow-badge">● INFRAESTRUCTURA DE ALTA FIDELIDAD ●</div>
-  <h2 class="zym-wow-title">Protocolo ZYM ($ZYM)</h2>
+<div class="zym-hv-section" id="zym-hv-container">
+  <div class="zym-hv-grid-bg"></div>
+  <canvas class="zym-hv-canvas" id="zym-hv-sparks"></canvas>
 
-  <!-- Imagen con efecto WOW holográfico -->
-  <div class="zym-wow-img-container">
-    <img src="https://photos.pinksale.finance/file/pinksale-logo-upload/1794575234555-4cd11fd98f2c4eb15224b46a86a44ec5.png" alt="ZYM Protocol - ZAARD INNOVATION">
-  </div>
+  <div class="zym-hv-content">
+    <div class="zym-hv-badge">⚡ INFRAESTRUCTURA DE ALTA FIDELIDAD ⚡</div>
+    <h2 class="zym-hv-title">Protocolo ZYM ($ZYM)</h2>
 
-  <!-- Mensaje corto y súper técnico -->
-  <p class="zym-wow-desc">
-    Arquitectura criptográfica avanzada orientada a la estabilidad de suministro y valor a largo plazo dentro de <strong>ZAARD INNOVATION</strong>. Operado bajo la fuerza directriz de <strong>PANGA</strong> y bajo la custodia inmutable de <span>ZAARD XENOCRYPT</span>.
-  </p>
+    <!-- Nueva Imagen con marco de arco eléctrico -->
+    <div class="zym-hv-img-wrapper">
+      <img src="https://photos.pinksale.finance/file/pinksale-logo-upload/1795287783052-f8c0c8e84423be80e218f488d441440d.png" alt="ZYM Protocol - ZAARD INNOVATION">
+    </div>
 
-  <!-- Dos tarjetas inferiores -->
-  <div class="zym-wow-grid">
-    <!-- Tarjeta 1: Quema de Token (Burn) -->
-    <a href="https://bscscan.com/tx/0x4be0a7b0e8780fb2d5be97acefc4eeb0ec30fa9198c38c6dcdf640307675c107" target="_blank" rel="noopener noreferrer" class="zym-wow-card">
-      <div>
-        <div class="zym-wow-card-title">🔥 Quema On-Chain (Burn)</div>
-        <p class="zym-wow-card-sub">Auditoría y registro criptográfico de reducción de suministro circulante en BscScan.</p>
-      </div>
-      <span class="zym-wow-btn">Ver Transacción Tx ↗</span>
-    </a>
+    <p class="zym-hv-desc">
+      Arquitectura criptográfica avanzada orientada a la estabilidad de suministro y valor a largo plazo dentro de <strong>ZAARD INNOVATION</strong>. Operado bajo la fuerza directriz de <strong>PANGA</strong> y bajo la custodia inmutable de <span>ZAARD XENOCRYPT</span>.
+    </p>
 
-    <!-- Tarjeta 2: Contrato Oficial BSC -->
-    <a href="https://bscscan.com/address/0x5a1de9974c1279fbe989ce32899a1f4ece3fc53d" target="_blank" rel="noopener noreferrer" class="zym-wow-card">
-      <div>
-        <div class="zym-wow-card-title">🛡️ Contrato Inteligente</div>
-        <p class="zym-wow-card-sub">Inspecciona el código fuente verificado, holders y operaciones en BNB Smart Chain.</p>
-      </div>
-      <span class="zym-wow-btn">Ver Contrato BSC ↗</span>
-    </a>
+    <div class="zym-hv-grid">
+      <!-- Tarjeta 1: Firma Verificada #342478 en BscScan -->
+      <a href="https://bscscan.com/verifySig/342478" target="_blank" rel="noopener noreferrer" class="zym-hv-card">
+        <div>
+          <div class="zym-hv-card-title">✍️ Firma Verificada #342478</div>
+          <p class="zym-hv-card-sub">Validación criptográfica oficial de autoría y autenticidad on-chain en BscScan Verified Signatures.</p>
+        </div>
+        <span class="zym-hv-btn">Verificar Firma #342478 ↗</span>
+      </a>
+
+      <!-- Tarjeta 2: Renuncia de Propiedad (Tx Hash) -->
+      <a href="https://bscscan.com/tx/0xeff2effa9eabce258978153c3ec64cee420c0d0f71496b6ca6679754804fef57" target="_blank" rel="noopener noreferrer" class="zym-hv-card">
+        <div>
+          <div class="zym-hv-card-title">🔒 Renuncia de Contrato</div>
+          <p class="zym-hv-card-sub">Transacción inmutable de transferencia de propiedad a dirección cero (0x000...000) en BNB Smart Chain.</p>
+        </div>
+        <span class="zym-hv-btn">Ver Hash Renounce ↗</span>
+      </a>
+    </div>
   </div>
 </div>
+
+<script>
+  (function () {
+    const canvas = document.getElementById('zym-hv-sparks');
+    const container = document.getElementById('zym-hv-container');
+    if (!canvas || !container) return;
+    const ctx = canvas.getContext('2d');
+
+    let width, height;
+    const sparks = [];
+    const bolts = [];
+    const colors = ['#00ff88', '#00f0ff', '#ffffff', '#c084fc'];
+
+    function resize() {
+      width = canvas.width = container.offsetWidth;
+      height = canvas.height = container.offsetHeight;
+    }
+    window.addEventListener('resize', resize);
+    resize();
+
+    function createSpark() {
+      return {
+        x: Math.random() * width,
+        y: Math.random() * height,
+        vx: (Math.random() - 0.5) * 3.8,
+        vy: (Math.random() - 0.5) * 3.8 - 0.6,
+        size: Math.random() * 2.4 + 0.8,
+        alpha: Math.random() * 0.9 + 0.1,
+        decay: Math.random() * 0.02 + 0.008,
+        color: colors[Math.floor(Math.random() * colors.length)]
+      };
+    }
+
+    for (let i = 0; i < 48; i++) sparks.push(createSpark());
+
+    function spawnLightning() {
+      const startX = Math.random() * width;
+      const startY = Math.random() < 0.5 ? 0 : Math.random() * height * 0.4;
+      const segments = [];
+      let cx = startX;
+      let cy = startY;
+      const steps = 6 + Math.floor(Math.random() * 6);
+
+      for (let i = 0; i < steps; i++) {
+        cx += (Math.random() - 0.5) * 70;
+        cy += 22 + Math.random() * 35;
+        segments.push({ x: cx, y: cy });
+      }
+
+      bolts.push({
+        startX,
+        startY,
+        segments,
+        alpha: 1,
+        color: Math.random() > 0.35 ? '#00f0ff' : '#00ff88'
+      });
+    }
+
+    function animate() {
+      ctx.clearRect(0, 0, width, height);
+
+      // Dibujar chispas flotantes
+      for (let i = 0; i < sparks.length; i++) {
+        const s = sparks[i];
+        s.x += s.vx;
+        s.y += s.vy;
+        s.alpha -= s.decay;
+
+        if (s.alpha <= 0 || s.x < 0 || s.x > width || s.y < 0 || s.y > height) {
+          sparks[i] = createSpark();
+          continue;
+        }
+
+        ctx.save();
+        ctx.globalAlpha = s.alpha;
+        ctx.fillStyle = s.color;
+        ctx.shadowColor = s.color;
+        ctx.shadowBlur = 10;
+        ctx.beginPath();
+        ctx.arc(s.x, s.y, s.size, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.restore();
+      }
+
+      // Generar destello de rayo aleatorio
+      if (Math.random() < 0.045) {
+        spawnLightning();
+      }
+
+      // Dibujar rayos eléctricos
+      for (let i = bolts.length - 1; i >= 0; i--) {
+        const b = bolts[i];
+        ctx.save();
+        ctx.globalAlpha = b.alpha;
+        ctx.strokeStyle = b.color;
+        ctx.shadowColor = b.color;
+        ctx.shadowBlur = 16;
+        ctx.lineWidth = 1.6;
+        ctx.beginPath();
+        ctx.moveTo(b.startX, b.startY);
+        for (const pt of b.segments) {
+          ctx.lineTo(pt.x, pt.y);
+        }
+        ctx.stroke();
+        ctx.restore();
+
+        b.alpha -= 0.075;
+        if (b.alpha <= 0) bolts.splice(i, 1);
+      }
+
+      requestAnimationFrame(animate);
+    }
+
+    animate();
+  })();
+</script> 
 
 <!-- BLOQUE MAESTRO DE VERIFICACIÓN ZARD (ZARD INNOVATION) -->
 <div class="section" style="position: relative; overflow: hidden; border: 2px solid #ff8500; border-radius: 20px; background: linear-gradient(135deg, rgba(25, 10, 42, 0.95), rgba(45, 15, 75, 0.92)); padding: 20px; margin-bottom: 20px; box-shadow: 0 0 35px rgba(255, 133, 0, 0.35);">
