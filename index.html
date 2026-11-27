@@ -8213,8 +8213,416 @@
             height: 92px;
         }
     }
-</style>       
+</style>   
+
         
+     <!-- ============================================================
+     ZAARD INNOVATION // XENOCRYPT QUANTUM OVERDRIVE BLOCK
+     ============================================================ -->
+<section id="zaard-quantum-epic" class="zq-epic-card" aria-label="ZAARD Quantum Core">
+  <canvas id="zq-epic-canvas"></canvas>
+
+  <!-- Capa de resplandor y chispas de alta energía -->
+  <div class="zq-epic-aura"></div>
+  <span class="zq-epic-spark zq-es-1"></span>
+  <span class="zq-epic-spark zq-es-2"></span>
+  <span class="zq-epic-spark zq-es-3"></span>
+  <span class="zq-epic-spark zq-es-4"></span>
+  <span class="zq-epic-spark zq-es-5"></span>
+  <span class="zq-epic-spark zq-es-6"></span>
+
+  <div class="zq-epic-content">
+    <div class="zq-epic-top">
+      <span class="zq-epic-pill">⚡ XENOCRYPT QUANTUM MATRIX</span>
+      <span class="zq-epic-status">● OVERDRIVE ACTIVO</span>
+    </div>
+
+    <h2 class="zq-epic-title">ZAARD QUANTUM CORE</h2>
+    <p class="zq-epic-subtitle">
+      Fuerza, electricidad y llama cuántica impulsando el ecosistema descentralizado.
+    </p>
+
+    <div class="zq-epic-meters">
+      <div class="zq-meter-box">
+        <span class="zq-meter-label">VOLTAJE CUÁNTICO</span>
+        <span id="zq-volt-readout" class="zq-meter-val">98.4 THz</span>
+      </div>
+      <div class="zq-meter-box">
+        <span class="zq-meter-label">LLAMA FÉNIX</span>
+        <span id="zq-flame-readout" class="zq-meter-val">100% ACTIVA</span>
+      </div>
+      <div class="zq-meter-box">
+        <span class="zq-meter-label">PULSO DE COLOR</span>
+        <span id="zq-phase-readout" class="zq-meter-val">SPECTRA SHIFT</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .zq-epic-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 22px;
+    padding: 30px 22px;
+    margin: 22px 0;
+    background:
+      radial-gradient(circle at 20% 15%, rgba(0, 255, 204, 0.16), transparent 45%),
+      radial-gradient(circle at 80% 25%, rgba(168, 85, 247, 0.18), transparent 48%),
+      radial-gradient(circle at 50% 95%, rgba(255, 106, 0, 0.2), transparent 55%),
+      linear-gradient(155deg, #060813 0%, #100d24 48%, #050711 100%);
+    border: 1px solid rgba(0, 255, 204, 0.45);
+    box-shadow:
+      0 0 28px rgba(0, 255, 204, 0.18),
+      0 0 55px rgba(168, 85, 247, 0.16),
+      0 18px 45px rgba(0, 0, 0, 0.65),
+      inset 0 0 24px rgba(255, 255, 255, 0.04);
+    font-family: 'Orbitron', sans-serif;
+    color: #ffffff;
+    isolation: isolate;
+  }
+
+  .zq-epic-card::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border-radius: 24px;
+    padding: 2px;
+    background: linear-gradient(120deg, #00ffcc, #a855f7, #ff5500, #ffd000, #00b8ff, #00ffcc);
+    background-size: 300% 300%;
+    animation: zqBorderShift 5s linear infinite;
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    z-index: 3;
+    opacity: 0.75;
+  }
+
+  #zq-epic-canvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+    mix-blend-mode: screen;
+  }
+
+  .zq-epic-aura {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.06), transparent 70%);
+    animation: zqAuraPulse 3.2s ease-in-out infinite;
+  }
+
+  .zq-epic-content {
+    position: relative;
+    z-index: 2;
+  }
+
+  .zq-epic-top {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+
+  .zq-epic-pill {
+    font-size: 0.72rem;
+    letter-spacing: 1.2px;
+    padding: 5px 12px;
+    border-radius: 999px;
+    color: #00ffcc;
+    background: rgba(0, 255, 204, 0.1);
+    border: 1px solid rgba(0, 255, 204, 0.45);
+    box-shadow: 0 0 14px rgba(0, 255, 204, 0.22);
+  }
+
+  .zq-epic-status {
+    font-size: 0.72rem;
+    letter-spacing: 1px;
+    color: #ffd000;
+    text-shadow: 0 0 10px rgba(255, 208, 0, 0.6);
+  }
+
+  .zq-epic-title {
+    margin: 0 0 8px;
+    font-size: clamp(1.35rem, 4vw, 2rem);
+    letter-spacing: 1.5px;
+    line-height: 1.15;
+    background: linear-gradient(90deg, #00ffcc, #38bdf8, #c084fc, #ff6a00, #ffd000, #00ffcc);
+    background-size: 350% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: zqTitleSpectrum 4.5s linear infinite;
+    filter: drop-shadow(0 0 14px rgba(0, 255, 204, 0.25));
+  }
+
+  .zq-epic-subtitle {
+    margin: 0 0 20px;
+    font-family: sans-serif;
+    font-size: 0.96rem;
+    line-height: 1.55;
+    color: #e2e8f0;
+    max-width: 680px;
+  }
+
+  .zq-epic-meters {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 12px;
+  }
+
+  .zq-meter-box {
+    background: rgba(11, 15, 32, 0.78);
+    border: 1px solid rgba(192, 132, 252, 0.35);
+    border-radius: 14px;
+    padding: 12px 14px;
+    backdrop-filter: blur(6px);
+    box-shadow: inset 0 0 14px rgba(0, 255, 204, 0.06);
+  }
+
+  .zq-meter-label {
+    display: block;
+    font-size: 0.64rem;
+    letter-spacing: 1px;
+    color: #94a3b8;
+    margin-bottom: 5px;
+  }
+
+  .zq-meter-val {
+    font-size: 0.88rem;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(0, 255, 204, 0.45);
+  }
+
+  .zq-epic-spark {
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    z-index: 2;
+    pointer-events: none;
+    background: #ffffff;
+    box-shadow: 0 0 10px #00ffcc, 0 0 20px #ff5500, 0 0 32px #a855f7;
+  }
+
+  .zq-es-1 { top: 15%; left: 10%; animation: zqSparkOrbit1 2.1s infinite ease-out; }
+  .zq-es-2 { top: 22%; right: 12%; animation: zqSparkOrbit2 2.5s infinite ease-out; }
+  .zq-es-3 { top: 55%; left: 7%; animation: zqSparkOrbit3 2.3s infinite ease-out; }
+  .zq-es-4 { top: 60%; right: 9%; animation: zqSparkOrbit4 2.7s infinite ease-out; }
+  .zq-es-5 { bottom: 16%; left: 26%; animation: zqSparkOrbit5 2.4s infinite ease-out; }
+  .zq-es-6 { bottom: 18%; right: 24%; animation: zqSparkOrbit6 2.6s infinite ease-out; }
+
+  @keyframes zqBorderShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  @keyframes zqTitleSpectrum {
+    0% { background-position: 0% 50%; filter: hue-rotate(0deg); }
+    100% { background-position: 350% 50%; filter: hue-rotate(360deg); }
+  }
+
+  @keyframes zqAuraPulse {
+    0%, 100% { opacity: 0.55; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.03); }
+  }
+
+  @keyframes zqSparkOrbit1 {
+    0% { transform: translate(0, 0) scale(1.3); opacity: 1; }
+    100% { transform: translate(-70px, -50px) scale(0); opacity: 0; }
+  }
+  @keyframes zqSparkOrbit2 {
+    0% { transform: translate(0, 0) scale(1.3); opacity: 1; }
+    100% { transform: translate(75px, -45px) scale(0); opacity: 0; }
+  }
+  @keyframes zqSparkOrbit3 {
+    0% { transform: translate(0, 0) scale(1.2); opacity: 1; }
+    100% { transform: translate(-65px, 35px) scale(0); opacity: 0; }
+  }
+  @keyframes zqSparkOrbit4 {
+    0% { transform: translate(0, 0) scale(1.2); opacity: 1; }
+    100% { transform: translate(68px, 40px) scale(0); opacity: 0; }
+  }
+  @keyframes zqSparkOrbit5 {
+    0% { transform: translate(0, 0) scale(1.3); opacity: 1; }
+    100% { transform: translate(-50px, -55px) scale(0); opacity: 0; }
+  }
+  @keyframes zqSparkOrbit6 {
+    0% { transform: translate(0, 0) scale(1.3); opacity: 1; }
+    100% { transform: translate(55px, -52px) scale(0); opacity: 0; }
+  }
+</style>
+
+<script>
+  (function () {
+    const card = document.getElementById("zaard-quantum-epic");
+    const canvas = document.getElementById("zq-epic-canvas");
+    if (!card || !canvas) return;
+    const ctx = canvas.getContext("2d");
+
+    const voltEl = document.getElementById("zq-volt-readout");
+    const flameEl = document.getElementById("zq-flame-readout");
+    const phaseEl = document.getElementById("zq-phase-readout");
+
+    const phaseNames = ["CYBER CYAN", "PHOENIX FLAME", "NEON VORTEX", "SOLAR GOLD", "PLASMA STORM"];
+    let hue = 160;
+    let step = 0;
+    const embers = [];
+
+    function resizeCanvas() {
+      const rect = card.getBoundingClientRect();
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      canvas.width = Math.max(1, Math.floor(rect.width * dpr));
+      canvas.height = Math.max(1, Math.floor(rect.height * dpr));
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    }
+
+    resizeCanvas();
+    window.addEventListener("resize", resizeCanvas);
+
+    function drawElectricArc(x1, y1, x2, y2, color, glowWidth) {
+      const segments = 11;
+      const dx = (x2 - x1) / segments;
+      const dy = (y2 - y1) / segments;
+
+      ctx.save();
+      ctx.beginPath();
+      ctx.moveTo(x1, y1);
+      for (let i = 1; i < segments; i++) {
+        const snap = (Math.random() - 0.5) * 32;
+        ctx.lineTo(x1 + dx * i + snap, y1 + dy * i - snap * 0.45);
+      }
+      ctx.lineTo(x2, y2);
+      ctx.strokeStyle = color;
+      ctx.lineWidth = glowWidth;
+      ctx.shadowBlur = 20;
+      ctx.shadowColor = color;
+      ctx.stroke();
+
+      // Núcleo blanco brillante del rayo
+      ctx.strokeStyle = "rgba(255, 255, 255, 0.85)";
+      ctx.lineWidth = Math.max(0.8, glowWidth * 0.35);
+      ctx.stroke();
+      ctx.restore();
+    }
+
+    function spawnEmberAndSpark(w, h, electricCol, fireCol) {
+      const isFlame = Math.random() > 0.4;
+      embers.push({
+        x: Math.random() * w,
+        y: isFlame ? h - 2 : Math.random() * h,
+        vx: (Math.random() - 0.5) * (isFlame ? 1.8 : 3.4),
+        vy: isFlame ? -(1.8 + Math.random() * 3.4) : (Math.random() - 0.5) * 3.0,
+        life: 1,
+        decay: 0.016 + Math.random() * 0.02,
+        size: isFlame ? 3.5 + Math.random() * 5 : 1.6 + Math.random() * 2.6,
+        color: isFlame ? fireCol : electricCol
+      });
+    }
+
+    function updateTelemetry() {
+      if (step % 18 === 0) {
+        const v = (94 + Math.random() * 14).toFixed(1);
+        if (voltEl) voltEl.textContent = `${v} THz`;
+
+        const flameStates = ["100% FÉNIX", "SOBRECARGA", "ALTA LLAMA", "NÚCLEO VIVO"];
+        if (flameEl) flameEl.textContent = flameStates[Math.floor(Math.random() * flameStates.length)];
+
+        if (phaseEl) {
+          const idx = Math.floor((hue / 360) * phaseNames.length) % phaseNames.length;
+          phaseEl.textContent = phaseNames[idx];
+        }
+      }
+    }
+
+    function renderEpic() {
+      const w = canvas.clientWidth || card.clientWidth;
+      const h = canvas.clientHeight || card.clientHeight;
+      hue = (hue + 2.5) % 360;
+      step++;
+
+      const electricCol = `hsla(${hue}, 100%, 60%, 0.95)`;
+      const secondaryCol = `hsla(${(hue + 140) % 360}, 100%, 62%, 0.85)`;
+      const fireCol = `hsla(${(hue % 42) + 8}, 100%, 56%, 0.9)`;
+
+      ctx.clearRect(0, 0, w, h);
+
+      // Doble onda cuántica entrelazada
+      for (let wave = 0; wave < 2; wave++) {
+        ctx.save();
+        ctx.beginPath();
+        for (let x = 0; x <= w; x += 8) {
+          const dir = wave === 0 ? 1 : -1;
+          const y =
+            h * 0.52 +
+            Math.sin(x * 0.018 + step * 0.05 * dir) * 20 +
+            Math.cos(x * 0.042 - step * 0.035) * 9;
+          if (x === 0) ctx.moveTo(x, y);
+          else ctx.lineTo(x, y);
+        }
+        ctx.strokeStyle = wave === 0 ? electricCol : secondaryCol;
+        ctx.lineWidth = wave === 0 ? 2.4 : 1.6;
+        ctx.shadowBlur = 18;
+        ctx.shadowColor = wave === 0 ? electricCol : secondaryCol;
+        ctx.stroke();
+        ctx.restore();
+      }
+
+      // Rayos eléctricos frecuentes
+      if (step % 9 === 0) {
+        const xStart = Math.random() * w;
+        const xEnd = Math.min(w, Math.max(0, xStart + (Math.random() - 0.5) * 240));
+        drawElectricArc(xStart, 2, xEnd, h - 2, electricCol, 2.2);
+      }
+
+      // Chispas y llamas
+      for (let i = 0; i < 4; i++) {
+        if (embers.length < 130) {
+          spawnEmberAndSpark(w, h, electricCol, fireCol);
+        }
+      }
+
+      for (let i = embers.length - 1; i >= 0; i--) {
+        const e = embers[i];
+        e.x += e.vx + Math.sin(step * 0.1 + i) * 0.7;
+        e.y += e.vy;
+        e.life -= e.decay;
+
+        if (e.life <= 0) {
+          embers.splice(i, 1);
+          continue;
+        }
+
+        ctx.save();
+        ctx.globalAlpha = Math.max(0, e.life);
+        ctx.beginPath();
+        ctx.arc(e.x, e.y, e.size * e.life, 0, Math.PI * 2);
+        ctx.fillStyle = e.color;
+        ctx.shadowBlur = 16;
+        ctx.shadowColor = e.color;
+        ctx.fill();
+        ctx.restore();
+      }
+
+      updateTelemetry();
+      requestAnimationFrame(renderEpic);
+    }
+
+    renderEpic();
+  })();
+</script>   
 
      <!-- AUDITORÍA DE SEGURIDAD GOPLUS LABS -->
 <div class="section">
@@ -8246,7 +8654,7 @@
 <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin-top: 15px;">
 
     <!-- 1. PANGA -->
-    <a href="https://console.gopluslabs.io/token-security/56/0x4a6c3ea9e7132ad217c31f8252119f08c801366e" target="_blank" class="card-link" style="display: flex; align-items: center; gap: 12px; padding: 14px;">
+    <a href="https://console.gopluslabs.io/token-security/56/0x72faa326fa27a920a351f04e7abcbc4de522cea4" target="_blank" class="card-link" style="display: flex; align-items: center; gap: 12px; padding: 14px;">
         <img src="https://photos.pinksale.finance/file/pinksale-logo-upload/1790484633328-559fdd3c13098c92f8a665ac39a838c2.png" alt="PANGA" style="width: 60px; height: 60px; object-fit: cover; border-radius: 10px; flex-shrink: 0;">
         <div>
             <span style="font-weight: bold; font-size: 1rem;">Verificar PANGA en Labs</span>
