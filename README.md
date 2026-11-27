@@ -39,7 +39,7 @@ El motor financiero del ecosistema está impulsado por contratos inteligentes op
 | Token / Activo | Símbolo | Dirección de Contrato Inteligente (CA) en BSC | Enlace Directo |
 | :--- | :---: | :--- | :---: |
 | **ZARD Token (Nuevo)** | `$ZARD` | `0xE2879d1172215E728472D7827586bd2796aFA3fB` | [Ver en BscScan](https://bscscan.com/address/0xE2879d1172215E728472D7827586bd2796aFA3fB) |
-| **PANGA Token** | `$PANGA` | `0x4a6c3ea9e7132ad217c31f8252119f08c801366e` | [Ver en BscScan](https://bscscan.com/address/0x4a6c3ea9e7132ad217c31f8252119f08c801366e) |
+| **PANGA Token** | `$PANGA` | `0x72faa326fa27a920a351f04e7abcbc4de522cea4` | [Ver en BscScan](https://bscscan.com/address/0x72faa326fa27a920a351f04e7abcbc4de522cea4) |
 | **ZARED Token** | `$ZARED` | `0x073c12c7072676c9a1afd83c07e470aa7d81aeb3` | [Ver en BscScan](https://bscscan.com/address/0x073c12c7072676c9a1afd83c07e470aa7d81aeb3) |
 | **ZYM Protocol** | `$ZYM` | `0x5a1de9974c1279fbe989ce32899a1f4ece3fc53d` | [Ver en BscScan](https://bscscan.com/address/0x5a1de9974c1279fbe989ce32899a1f4ece3fc53d) |
 
@@ -52,7 +52,7 @@ El motor financiero del ecosistema está impulsado por contratos inteligentes op
 ### 1️⃣ PANGA • Poder y Renacimiento
 > *El renacimiento hecho token. Fuerza inagotable y resiliencia máxima guiando la expansión del ecosistema en BNB Smart Chain.*
 > 
-> <a href="https://app.binance.com/uni-qr/web3-token-details?utm_medium=share&tokenCA=0x4a6c3ea9e7132ad217c31f8252119f08c801366e&binanceChainId=56&chain=bsc">
+> <a href="https://app.binance.com/uni-qr/web3-token-details?utm_medium=share&tokenCA=0x72faa326fa27a920a351f04e7abcbc4de522cea4&binanceChainId=56&chain=bsc">
 >    <img src="https://img.shields.io/badge/OPERAR_PANGA_EN_BINANCE_WEB3-00D4FF?style=for-the-badge&logo=binance&logoColor=05070d" alt="Ver Token PANGA">
 > </a>
 
@@ -101,7 +101,7 @@ El motor financiero del ecosistema está impulsado por contratos inteligentes op
 </div>
 ---
 
-<img src="https://raw.githubusercontent.com/figueredo56/zaard-official/a281bdaff2bb860405fc9e32569bb7c59f9cd02d/284%20sin%20t%C3%ítulos_20260922141126_1.png" width="100%" alt="ZAARD Banner Épico" style="border-radius: 15px; border: 1px solid rgba(168, 85, 247, 0.5);" />
+<img src="https://raw.githubusercontent.com/figueredo56/zaard-official/a281bdaff2bb860405fc9e32569bb7c59f9cd02d/284%20sin%20t%C3%ADtulos_20260922141126_1.png" width="100%" alt="ZAARD Banner Épico" style="border-radius: 15px; border: 1px solid rgba(168, 85, 247, 0.5);" />
 
 </div>
 
@@ -175,7 +175,7 @@ Desarrollado por **Aracelis (Panga)** - Founder de ZAARD INNOVATION.
 
 - **Red:** BNB Smart Chain (BSC)
 - **Contrato ZARD (Nuevo):** `0xE2879d1172215E728472D7827586bd2796aFA3fB`
-- **Contrato PANGA:** `0x4a6c3ea9e7132ad217c31f8252119f08c801366e`
+- **Contrato PANGA:** `0x72faa326fa27a920a351f04e7abcbc4de522cea4`
 - **Contrato ZARED:** `0x073c12c7072676c9a1afd83c07e470aa7d81aeb3`
 - **Contrato ZYM:** `0x5a1de9974c1279fbe989ce32899a1f4ece3fc53d`
 ---
