@@ -4800,6 +4800,444 @@
     }
 </style>
 
+      <!-- =====================================================================
+     BLOQUE SUPER WOW · ZAARD INNOVATION FLAME ORBITAL & TECHNICAL CORE
+     ===================================================================== -->
+<style>
+  .zi-flame-core-wrap {
+    position: relative;
+    width: 100%;
+    max-width: 1260px;
+    margin: 28px auto;
+    padding: 20px 14px;
+    border-radius: 24px;
+    background:
+      radial-gradient(circle at 50% 42%, rgba(255, 107, 26, 0.22), transparent 46%),
+      radial-gradient(circle at 15% 20%, rgba(34, 211, 238, 0.16), transparent 45%),
+      radial-gradient(circle at 85% 80%, rgba(192, 132, 252, 0.18), transparent 50%),
+      linear-gradient(180deg, rgba(11, 5, 26, 0.98), rgba(3, 1, 9, 0.99));
+    border: 2px solid #ff6b1a;
+    color: #f8fafc;
+    overflow: hidden;
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.88), 0 0 46px rgba(255, 107, 26, 0.35);
+    animation: ziFlameBorder 8s infinite ease-in-out;
+  }
+
+  @keyframes ziFlameBorder {
+    0%   { border-color: #ff6b1a; box-shadow: 0 24px 70px rgba(0,0,0,0.88), 0 0 46px rgba(255, 107, 26, 0.45); }
+    33%  { border-color: #22d3ee; box-shadow: 0 24px 70px rgba(0,0,0,0.88), 0 0 46px rgba(34, 211, 238, 0.45); }
+    66%  { border-color: #c084fc; box-shadow: 0 24px 70px rgba(0,0,0,0.88), 0 0 46px rgba(192, 132, 252, 0.45); }
+    100% { border-color: #ff6b1a; box-shadow: 0 24px 70px rgba(0,0,0,0.88), 0 0 46px rgba(255, 107, 26, 0.45); }
+  }
+
+  .zi-fc-inner {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .zi-fc-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .zi-fc-kicker {
+    font-size: 0.72rem;
+    font-weight: 900;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: #fdba74;
+  }
+
+  .zi-fc-heading {
+    font-size: clamp(1.15rem, 4vw, 1.65rem);
+    font-weight: 900;
+    line-height: 1.15;
+    background: linear-gradient(90deg, #ff9e44, #fde047, #22d3ee, #e9d5ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .zi-fc-badge {
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 0.7rem;
+    font-weight: 900;
+    color: #fed7aa;
+    background: rgba(255, 107, 26, 0.18);
+    border: 1px solid rgba(251, 146, 60, 0.55);
+  }
+
+  /* ARENA DE LLAMAS, ÓRBITAS Y RAYOS */
+  .zi-fc-arena {
+    position: relative;
+    width: 100%;
+    height: 380px;
+    border-radius: 20px;
+    background: radial-gradient(circle at 50% 52%, rgba(255, 107, 26, 0.2), rgba(5, 2, 15, 0.98) 74%);
+    border: 1px solid rgba(255, 107, 26, 0.32);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media (max-width: 600px) {
+    .zi-fc-arena {
+      height: 330px;
+    }
+  }
+
+  #ziFcCanvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .zi-fc-center {
+    position: relative;
+    z-index: 3;
+    width: 156px;
+    height: 156px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: ziCenterLevitate 3.2s infinite alternate ease-in-out;
+  }
+
+  @media (max-width: 600px) {
+    .zi-fc-center {
+      width: 128px;
+      height: 128px;
+    }
+  }
+
+  @keyframes ziCenterLevitate {
+    0%   { transform: translateY(-7px) scale(0.98); }
+    100% { transform: translateY(7px) scale(1.03); }
+  }
+
+  .zi-fc-fire-ring {
+    position: absolute;
+    inset: -16px;
+    border-radius: 50%;
+    background: conic-gradient(from 0deg, #ff3b00, #ff9e00, #fde047, #ff6b1a, #c084fc, #22d3ee, #ff3b00);
+    filter: blur(12px);
+    opacity: 0.85;
+    animation: ziFireSpin 5s linear infinite;
+  }
+
+  @keyframes ziFireSpin {
+    from { transform: rotate(0deg) scale(0.98); }
+    50%  { transform: rotate(180deg) scale(1.06); }
+    to   { transform: rotate(360deg) scale(0.98); }
+  }
+
+  .zi-fc-logo {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    position: relative;
+    z-index: 2;
+    border: 3px solid #fff7ed;
+    box-shadow: 0 0 32px rgba(255, 107, 26, 0.9), 0 0 60px rgba(253, 224, 71, 0.45);
+  }
+
+  .zi-fc-orbit-token {
+    position: absolute;
+    z-index: 4;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ffffff;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+  }
+
+  @media (max-width: 600px) {
+    .zi-fc-orbit-token {
+      width: 44px;
+      height: 44px;
+    }
+  }
+
+  #ziFcTok-ZARD  { box-shadow: 0 0 20px #ff6b1a; }
+  #ziFcTok-PANGA { box-shadow: 0 0 20px #22d3ee; }
+  #ziFcTok-ZYM   { box-shadow: 0 0 20px #c084fc; }
+  #ziFcTok-ZARED { box-shadow: 0 0 20px #f59e0b; }
+
+  /* MENSAJE TÉCNICO DE REESTRUCTURACIÓN */
+  .zi-fc-tech-panel {
+    background: rgba(9, 4, 22, 0.95);
+    border: 1px solid rgba(34, 211, 238, 0.3);
+    border-radius: 18px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .zi-fc-tech-lead {
+    font-size: 0.9rem;
+    line-height: 1.58;
+    color: #e2e8f0;
+  }
+
+  .zi-fc-tech-lead strong {
+    color: #67e8f9;
+  }
+
+  .zi-fc-pillars {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 9px;
+  }
+
+  @media (max-width: 860px) {
+    .zi-fc-pillars {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 500px) {
+    .zi-fc-pillars {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .zi-fc-pillar {
+    background: rgba(16, 8, 38, 0.92);
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    border-radius: 12px;
+    padding: 10px 11px;
+  }
+
+  .zi-fc-pillar-title {
+    font-size: 0.76rem;
+    font-weight: 900;
+    color: #fde047;
+    margin-bottom: 4px;
+  }
+
+  .zi-fc-pillar-desc {
+    font-size: 0.72rem;
+    line-height: 1.42;
+    color: #cbd5e1;
+  }
+</style>
+
+<section class="zi-flame-core-wrap" id="ziFlameCoreBlock">
+  <div class="zi-fc-inner">
+    <div class="zi-fc-top">
+      <div>
+        <div class="zi-fc-kicker">XENOCRYPT ARCHITECTURE · REESTRUCTURACIÓN ON-CHAIN</div>
+        <h2 class="zi-fc-heading">🔥 ZAARD INNOVATION · FORJANDO UNA NUEVA ARQUITECTURA CRIPTO</h2>
+      </div>
+      <span class="zi-fc-badge">BNB SMART CHAIN · BEP-20 + DApps + NFT</span>
+    </div>
+
+    <div class="zi-fc-arena" id="ziFcArena">
+      <canvas id="ziFcCanvas"></canvas>
+
+      <div class="zi-fc-center">
+        <div class="zi-fc-fire-ring"></div>
+        <img class="zi-fc-logo" src="https://photos.pinksale.finance/file/pinksale-logo-upload/1790285851823-4955b8f5511ea8235af22dfb82371c91.png" alt="ZAARD INNOVATION Core">
+      </div>
+
+      <img id="ziFcTok-ZARD"  class="zi-fc-orbit-token" src="https://photos.pinksale.finance/file/pinksale-logo-upload/1791940828941-906fd2a3d85625f79d066e5b033f6011.png" alt="ZARD">
+      <img id="ziFcTok-PANGA" class="zi-fc-orbit-token" src="https://photos.pinksale.finance/file/pinksale-logo-upload/1790484633328-559fdd3c13098c92f8a665ac39a838c2.png" alt="PANGA">
+      <img id="ziFcTok-ZYM"   class="zi-fc-orbit-token" src="https://photos.pinksale.finance/file/pinksale-logo-upload/1793917735714-d84b28c0d04f3063f454cbc1d8a062fb.png" alt="ZYM">
+      <img id="ziFcTok-ZARED" class="zi-fc-orbit-token" src="https://photos.pinksale.finance/file/pinksale-logo-upload/1790288769685-7d9a89bc13043a812c4889cb55ac4a54.png" alt="ZARED">
+    </div>
+
+    <div class="zi-fc-tech-panel">
+      <p class="zi-fc-tech-lead">
+        <strong>ZAARD INNOVATION</strong> está reestructurando la dinámica operativa de los activos digitales en <strong>BNB Smart Chain</strong> mediante una arquitectura modular de alta transparencia: contratos <strong>BEP-20</strong> de suministro fijo, <strong>0% de impuesto en transferencias</strong> para evitar fricción en rutas AMM, <strong>renuncia de propiedad y quema de suministro</strong> para minimizar vectores de control centralizado, y un ecosistema interconectado donde liquidez, telemetría en tiempo real, DApps y mecánicas de recompensa <strong>NFT</strong> operan bajo verificación de lógica y trazabilidad on-chain.
+      </p>
+
+      <div class="zi-fc-pillars">
+        <div class="zi-fc-pillar">
+          <div class="zi-fc-pillar-title">01 · Tokenomics Determinista</div>
+          <div class="zi-fc-pillar-desc">Suministro fijo, 0% transfer tax, quema de tokens y renuncia de ownership para compatibilidad limpia con routers AMM y verificadores.</div>
+        </div>
+        <div class="zi-fc-pillar">
+          <div class="zi-fc-pillar-title">02 · Liquidez & Auditoría Lógica</div>
+          <div class="zi-fc-pillar-desc">Diseño orientado a pools profundos, inspección de bytecode en BscScan y validación continua de comportamiento de contrato.</div>
+        </div>
+        <div class="zi-fc-pillar">
+          <div class="zi-fc-pillar-title">03 · Interoperabilidad Multi-App</div>
+          <div class="zi-fc-pillar-desc">Integración directa entre suites de tokens, wallet, rastreadores de mercado y módulos financieros sin dependencias opacas.</div>
+        </div>
+        <div class="zi-fc-pillar">
+          <div class="zi-fc-pillar-title">04 · Gaming & Recompensa NFT</div>
+          <div class="zi-fc-pillar-desc">Experiencias interactivas y colecciones NFT con metadatos verificables que vinculan participación real con utilidad en cadena.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+(function() {
+  const FC_TOKENS = [
+    { id: "ZARD",  color: "#ff6b1a", speed: 1.05, phase: 0 },
+    { id: "PANGA", color: "#22d3ee", speed: 1.35, phase: Math.PI * 0.5 },
+    { id: "ZYM",   color: "#c084fc", speed: 1.55, phase: Math.PI },
+    { id: "ZARED", color: "#f59e0b", speed: 0.85, phase: Math.PI * 1.5 }
+  ];
+
+  const arena = document.getElementById("ziFcArena");
+  const canvas = document.getElementById("ziFcCanvas");
+  const ctx = canvas.getContext("2d");
+  const els = {};
+  FC_TOKENS.forEach(t => { els[t.id] = document.getElementById(`ziFcTok-${t.id}`); });
+
+  // Llamas y chispas ascendentes
+  const flames = [];
+  for (let i = 0; i < 65; i++) {
+    flames.push({
+      x: (Math.random() - 0.5) * 260,
+      y: (Math.random() - 0.5) * 140,
+      vx: (Math.random() - 0.5) * 1.2,
+      vy: -(Math.random() * 2.6 + 1.1),
+      r: Math.random() * 5 + 2,
+      life: Math.random(),
+      hue: i % 3 === 0 ? "#ff5500" : (i % 3 === 1 ? "#ffae00" : "#fde047")
+    });
+  }
+
+  function resizeArena() {
+    if (!arena) return;
+    const dpr = Math.min(2, window.devicePixelRatio || 1);
+    const r = arena.getBoundingClientRect();
+    canvas.width = Math.max(20, Math.floor(r.width * dpr));
+    canvas.height = Math.max(20, Math.floor(r.height * dpr));
+  }
+
+  window.addEventListener("resize", resizeArena);
+  setTimeout(resizeArena, 100);
+
+  let ft = 0;
+  function drawFlameArena() {
+    ft += 0.035;
+    if (!arena) return;
+
+    const w = canvas.width;
+    const h = canvas.height;
+    ctx.clearRect(0, 0, w, h);
+
+    const cx = w * 0.5;
+    const cy = h * 0.5;
+    const rxCanvas = Math.min(w, h) * 0.39;
+    const ryCanvas = Math.min(w, h) * 0.27;
+
+    // Anillos orbitales de energía
+    for (let ring = 1; ring <= 2; ring++) {
+      ctx.save();
+      ctx.translate(cx, cy);
+      ctx.rotate(ft * (ring === 1 ? 0.35 : -0.28));
+      ctx.strokeStyle = ring === 1 ? "rgba(255, 107, 26, 0.38)" : "rgba(34, 211, 238, 0.28)";
+      ctx.setLineDash(ring === 2 ? [7, 6] : []);
+      ctx.lineWidth = 1.6;
+      ctx.beginPath();
+      ctx.ellipse(0, 0, rxCanvas * (0.72 + ring * 0.16), ryCanvas * (0.72 + ring * 0.16), 0, 0, Math.PI * 2);
+      ctx.stroke();
+      ctx.restore();
+    }
+
+    // Llamas y chispas alrededor del núcleo central
+    flames.forEach(fl => {
+      fl.x += fl.vx + Math.sin(ft * 2.5 + fl.life * 8) * 0.45;
+      fl.y += fl.vy;
+      fl.life += 0.018;
+      if (fl.life >= 1 || fl.y < -h * 0.35) {
+        fl.life = 0;
+        fl.x = (Math.random() - 0.5) * Math.min(w * 0.22, 130);
+        fl.y = Math.min(h * 0.14, 55) + Math.random() * 20;
+      }
+
+      const alpha = Math.sin(fl.life * Math.PI) * 0.78;
+      ctx.save();
+      ctx.globalAlpha = Math.max(0, alpha);
+      ctx.fillStyle = fl.hue;
+      ctx.shadowColor = fl.hue;
+      ctx.shadowBlur = 14;
+      ctx.beginPath();
+      ctx.arc(cx + fl.x, cy + fl.y, fl.r * (1 - fl.life * 0.55), 0, Math.PI * 2);
+      ctx.fill();
+      ctx.restore();
+    });
+
+    // Posicionar las 4 monedas orbitando y lanzar rayos eléctricos
+    const rect = arena.getBoundingClientRect();
+    const domCx = rect.width * 0.5;
+    const domCy = rect.height * 0.5;
+    const domRx = Math.min(rect.width * 0.39, 210);
+    const domRy = Math.min(rect.height * 0.33, 125);
+
+    FC_TOKENS.forEach((tk, idx) => {
+      const ang = ft * 0.75 * tk.speed + tk.phase;
+      const ox = domCx + Math.cos(ang) * domRx;
+      const oy = domCy + Math.sin(ang) * domRy;
+
+      const el = els[tk.id];
+      if (el) {
+        const depth = 0.86 + 0.24 * ((Math.sin(ang) + 1) * 0.5);
+        el.style.left = `${ox}px`;
+        el.style.top = `${oy}px`;
+        el.style.transform = `translate(-50%, -50%) scale(${depth.toFixed(3)})`;
+      }
+
+      // Estela en el canvas
+      const nCanvasX = cx + Math.cos(ang) * rxCanvas;
+      const nCanvasY = cy + Math.sin(ang) * ryCanvas;
+
+      ctx.save();
+      ctx.strokeStyle = tk.color;
+      ctx.globalAlpha = 0.28;
+      ctx.lineWidth = 1.4;
+      ctx.beginPath();
+      ctx.moveTo(cx, cy);
+      ctx.lineTo(nCanvasX, nCanvasY);
+      ctx.stroke();
+
+      // Rayo eléctrico intermitente entre núcleo y moneda
+      if (Math.random() < 0.085) {
+        ctx.globalAlpha = 0.95;
+        ctx.beginPath();
+        ctx.moveTo(cx, cy);
+        for (let s = 1; s <= 6; s++) {
+          const f = s / 6;
+          const jx = cx + (nCanvasX - cx) * f + (Math.random() - 0.5) * 20;
+          const jy = cy + (nCanvasY - cy) * f + (Math.random() - 0.5) * 20;
+          ctx.lineTo(jx, jy);
+        }
+        ctx.strokeStyle = "#ffffff";
+        ctx.shadowColor = tk.color;
+        ctx.shadowBlur = 18;
+        ctx.lineWidth = 2.4;
+        ctx.stroke();
+      }
+      ctx.restore();
+    });
+
+    requestAnimationFrame(drawFlameArena);
+  }
+
+  drawFlameArena();
+})();
+</script>  
+
         <!-- ======================================================== -->
 <!-- BLOQUE WEB3: ZAARD_ALX - ZAARD INNOVATION XENOCRYPT      -->
 <!-- ======================================================== -->
